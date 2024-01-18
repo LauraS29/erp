@@ -16,7 +16,7 @@
             <a href="#">Productos</a><br>
             <a href="#">Ventas</a><br>
             <a href="#">Compra</a><br>
-            <a href="#">Pedidoss</a><br>
+            <a href="#">Pedidos</a><br>
         </div>
     </header>
     <section>
