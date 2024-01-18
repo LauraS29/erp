@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-        <div class="navegacion">
+        <div class="navegacion" id="p1">
             <a href="#">Clientes</a><br>
             <a href="#">Proveedores</a><br>
             <a href="#">Personal</a><br>
@@ -30,7 +30,7 @@
             <div>
                 <h2>Datos del cliente</h2>
             </div>
-            <form action="clientes.php" method="post">
+            <form class="fondo_form" action="clientes.php" method="post">
                 <div class="flex">
                     <div class="pr">
                         <p>Código:</p>
@@ -84,7 +84,9 @@
             </form>
         </div>
     </section>
-
-    
 </body>
 </html>
+
+<?php
+
+?>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class="fondo_azul">
-    <header >
+    <header class="menu_header" >
         <img src="" alt="">
         <h2>Hola, </h2>
 

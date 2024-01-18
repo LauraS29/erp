@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body>
-
-    
+    <header>
+        <div class="navegacion">
+            <a href="#">Clientes</a><br>
+            <a href="#">Proveedores</a><br>
+            <a href="#">Personal</a><br>
+            <a href="#">Productos</a><br>
+            <a href="#">Ventas</a><br>
+            <a href="#">Compra</a><br>
+            <a href="#">Pedidos</a><br>
+        </div>
+    </header>
+    <section>
+        <div class="b1">
+            <div class="center">
+                <img src="Assets/img/personas.png" alt="">
+                <p>Clientes</p>
+            </div>
+        </div>
+        <div class="b2">
+            <div>
+                <h2>Datos de proveedores</h2>
+            </div>
+            <form class="form" action="clientes.php" method="post">
+            </form>
+        </div>
+    </section>
 </body>
 </html>

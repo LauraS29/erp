@@ -76,8 +76,6 @@
     cursor: pointer;
 }
 
-
-
 /* menuprinc.php, proveedores1.php,  */
 
 body 
@@ -107,8 +105,77 @@ header
 }
 .fondo_form
 {
-    background-color:#5CDFD7 ;
+    background-color: #666;
 }
 
 
 /* proveedores1.php */
+.navegacion 
+{
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos a la izquierda */
+    align-items: flex-start; 
+    padding: 20px;
+}
+
+.navegacion a 
+{
+    background-color: #444;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    padding-right: 80px;
+    /* Ajusta el tamaño de la letra */
+    font-size: 20px; 
+}
+
+.navegacion a:hover 
+{
+    /* Cambia el color de fondo al pasar el ratón sobre el enlace */
+    background-color: #555; 
+}
+
+section h2
+{
+    text-align: center;
+}
+
+.b1
+{
+    display: flex;
+    background-color: #555;
+}
+
+.b2
+{
+    background-color: #777;
+    min-width: 175.3vh;
+    min-height: 93.2vh;
+}
+
+.b2 h2
+{
+    padding: 20px;
+    font-size: 100px;
+}
+
+.center
+{
+    display: flex;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.pr
+{
+    padding-right: 25%;
+}
+/* .form1
+{
+    background-color: #666;
+    margin: 0 1%;
+} */
