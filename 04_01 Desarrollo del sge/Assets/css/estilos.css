@@ -4,17 +4,10 @@
     box-sizing: border-box;
 }
 
-.fondo_azul{
-    background-color: #a9e1ee;
-}
+                  /* Inicio.php */
 
-.fondo_header{
-    background-color:#5CDFD7 ;
-}
-
-/*inicio*/
-
-.inicio{
+.inicio
+{
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
@@ -23,13 +16,8 @@
     height: 100vh;
 }
 
-
-
-img{
-    max-width: 25%;
-}
-
-.contenedor_inicio{
+.contenedor_inicio
+{
     background-color: #fff;
     padding: 20px;
     padding-bottom: 110px;
@@ -38,12 +26,21 @@ img{
     text-align: center;
 }
 
-.iniciar h2{
+.iniciar h2
+{
     margin-bottom: 20px;
 }
 
-.iniciar input{
-    width: 70%;
+
+.iniciar img
+{
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.iniciar input
+{
+    width: 60%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid;
@@ -51,24 +48,27 @@ img{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.links a{
+.links
+{
+    display: flex;
+}
+
+.links a
+{
     text-decoration: none;
     color: #007BFF;
     font-size: 12px;
     margin-top: 10px;
-    margin-left: 95px;
+    margin-left: 103px;
 
 }
 
-.links{
-    display: flex;
-}
-
-.btn{
+.btn
+{
     margin-top: 15px ;
     margin-bottom: 15px;
     background-color: #4caf50;
-    color: #f8f4f4;
+    color: #fff;
     width: 30%;
     padding: 10px;
     border: none;
@@ -76,64 +76,39 @@ img{
     cursor: pointer;
 }
 
-/*Clientes*/
 
-.forma{
+
+/* menuprinc.php, proveedores1.php,  */
+
+body 
+{
+    background-color: #2222;
     margin: 0;
     display: flex;
+    /* Asegura que el cuerpo tenga al menos el 100% de la altura de la ventana */
     min-height: 100vh; 
 }
 
-header{   
+header 
+{
     background-color: #333;
     color: #fff;
     padding: 10px;
 }
 
-.navegacion{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    padding: 20px;
+.fondo_section
+{
+    background-color: #a9e1ee;
 }
 
-.navegacion a{
-    background-color: #444;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    padding-right: 80px;
-    font-size: 20px; 
+.fondo_div
+{
+    background-color:#5CDFD7 ;
+}
+.fondo_form
+{
+    background-color:#5CDFD7 ;
 }
 
-.navegacion a:hover{
 
-    background-color: #555; 
-
-}
-
-section h2{
-
-    text-align: center;
-
-}
-
-.b1{
-    display: flex;
-    background-color: #555;
-    width: 122%;
-}
-
-.b2{
-    display: flex;
-    background-color: #777;
-    width: 122%;
-}
-
-.flex{
-    display: flex;
-}
-
-.pr{
-    padding-right: 25%;
-}
+/* proveedores1.php */
