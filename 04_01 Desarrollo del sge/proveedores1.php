@@ -19,18 +19,56 @@
             <a href="#">Pedidos</a><br>
         </div>
     </header>
-    <section>
-        <div class="b1">
-            <div class="center">
-                <img src="Assets/img/personas.png" alt="">
-                <p>Clientes</p>
-            </div>
+    <section class="fondo_section">
+        <div class="flex div1">
+            <img src="Assets/img/repartidor.png" alt="">
+            <p>Proveedores</p>
         </div>
-        <div class="b2">
+        <div class="fondo_div">
             <div>
                 <h2>Datos de proveedores</h2>
             </div>
-            <form class="form" action="clientes.php" method="post">
+            <form class="fondo_form" action="proveedores1.php" method="post">
+                <table>
+                    <tr>
+                        <th>Código</th>
+                        <th>Proveedores</th>
+                        <th>Teléfono</th>
+                        <th>.........</th>
+                    </tr>
+                    <tr>
+                        <td onclick>01</td>
+                        <td onclick>Pepe</td>
+                        <td onclick>516516849</td>
+                        <td class="peq">
+                            <img src="Assets/img/eliminar.png" style="width: 30pxd; max-width: 100px; border: black;">
+                            <img src="Assets/img/flechas-girando.png" style="width: 30px; max-width: 100px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick>02</td>
+                        <td onclick>Pepa</td>
+                        <td onclick>411981627</td>
+                    </tr>
+                    <tr>
+                        <td onclick>03</td>
+                        <td onclick>Ramon</td>
+                        <td onclick>483271657</td>
+                    </tr>
+                    <tr>
+                        <td onclick>04</td>
+                        <td onclick>Ramona</td>
+                        <td onclick>671583498</td>
+                    </tr>
+                    <tr>
+                        <td onclick>05</td>
+                        <td onclick>Eustaquio</td>
+                        <td onclick>561816851</td>
+                    </tr>
+                </table>
+
+    <!-- <input type="submit" value="Enviar">
+    <input type="reset" value="Cancelar"> -->
             </form>
         </div>
     </section>

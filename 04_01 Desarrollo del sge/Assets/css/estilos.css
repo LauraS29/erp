@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-                  /* Inicio.php */
+/*----------------------Inicio.php-------------------*/
 
 .inicio
 {
@@ -94,22 +94,33 @@ header
     padding: 10px;
 }
 
+.flex
+{
+    display: flex;
+}
+
 .fondo_section
 {
-    background-color: #a9e1ee;
+    background-color: #d9251f;
+    min-width: 175.3vh;
+    min-height: 93.2vh;
 }
 
 .fondo_div
 {
     background-color:#5CDFD7 ;
+    min-height: 92vh;
 }
+
 .fondo_form
 {
     background-color: #666;
+    min-height: 75vh;
+    margin: 0 0.4%;
 }
 
 
-/* proveedores1.php */
+/*-------------------proveedores1.php----------------*/
 .navegacion 
 {
     display: flex;
@@ -141,39 +152,64 @@ section h2
     text-align: center;
 }
 
-.b1
-{
-    display: flex;
-    background-color: #555;
-}
-
-.b2
-{
-    background-color: #777;
-    min-width: 175.3vh;
-    min-height: 93.2vh;
-}
-
-.b2 h2
+.fondo_section h2
 {
     padding: 20px;
-    font-size: 100px;
+    font-size: 50px;
 }
 
-.center
+.div1 img
 {
-    display: flex;
+  width: 2%;
+  margin: 20px;
 }
 
-.flex
+.div1 p
 {
-    display: flex;
+    
 }
 
-.pr
+/* form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+table
+{
+    min-width: 174vh;
+    min-height: 75vh;
+    padding: 20px;
+}
+table th
+{
+    font-size: 30px; 
+}
+
+table th, td 
+{
+    background-color: white;
+    border: black;
+    text-align: center;
+}
+
+/* .peq img
+{
+    width: 50%; 
+    max-width: 100px;
+} */
+
+/* table td:hover
+{
+    cursor: pointer;
+} */
+
+/* .pr
 {
     padding-right: 25%;
-}
+} */
 /* .form1
 {
     background-color: #666;
