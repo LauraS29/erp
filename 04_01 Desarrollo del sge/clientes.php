@@ -88,5 +88,49 @@
 </html>
 
 <?php
+// Llamada a la conexión
+require_once 'Db/Con1Db.php';
+// Llamada al modelo
+require_once 'Models/clienteModel.php';
+
+// Instancia del objeto
+$oData = new Datos;
+
+// Llamada al método
+$sql = "select * from Cliente order by CP, DNI, Nombre, Apellido";
+$data = $oData->getData1($sql);
+
+if(empty($data))
+{
+    echo
+    "
+        <div class='bloque1 negrita'>
+            No hay datos.
+        </div>
+    ";
+}
+else
+{
+    echo
+    "
+    <div class='bloque0 negrita'>
+        <div class='bloque1'>Codigo Postal</div>
+        <div class='bloque1'>DNI</div>
+        <div class='bloque1'>Nombre</div>
+        <div class='bloque1'>Apellidos</div>
+    </div>
+    ";
+    foreach ($data as $row)
+    {
+        echo
+        "
+        <div class='bloque0'>
+            <div class='bloque1'>$row->mar_coc</div>
+            <div class='bloque1'>$row->mod_coc</div>
+            <div class='bloque1'>$row->aut_coc</div>
+        </div>
+        ";
+    }
+}
 
 ?>
