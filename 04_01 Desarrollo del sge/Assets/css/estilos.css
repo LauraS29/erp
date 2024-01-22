@@ -214,10 +214,10 @@ table th, td
     max-width: 100px;
 } */
 
-/* table td:hover
+table td:hover
 {
     cursor: pointer;
-} */
+}
 
 /* .pr
 {
@@ -228,3 +228,9 @@ table th, td
     background-color: #666;
     margin: 0 1%;
 } */
+
+.button_prov
+{
+    text-align: center;
+    margin-bottom: 2%;
+}

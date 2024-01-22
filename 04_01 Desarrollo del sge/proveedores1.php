@@ -40,12 +40,12 @@
                         <td onclick>01</td>
                         <td onclick>Pepe</td>
                         <td onclick>516516849</td>
-                        <td class="image">
+                        <!-- <td class="image">
                             <img src="Assets/img/eliminar.png">
                         </td>
                         <td class="image">
                             <img src="Assets/img/flechas-girando.png">
-                        </td>  
+                        </td>   -->
                     </tr>
 
                     <tr>
@@ -69,9 +69,9 @@
                         <td onclick>561816851</td>
                     </tr>
                 </table>
-
-    <!-- <input type="submit" value="Enviar">
-    <input type="reset" value="Cancelar"> -->
+                <div>
+                     <input class="button_prov" type="submit" value="Añadir">
+                </div>
             </form>
         </div>
     </section>
