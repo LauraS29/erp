@@ -40,11 +40,14 @@
                         <td onclick>01</td>
                         <td onclick>Pepe</td>
                         <td onclick>516516849</td>
-                        <td class="peq">
-                            <img src="Assets/img/eliminar.png" style="width: 30pxd; max-width: 100px; border: black;">
-                            <img src="Assets/img/flechas-girando.png" style="width: 30px; max-width: 100px;">
+                        <td class="image">
+                            <img src="Assets/img/eliminar.png">
                         </td>
+                        <td class="image">
+                            <img src="Assets/img/flechas-girando.png">
+                        </td>  
                     </tr>
+
                     <tr>
                         <td onclick>02</td>
                         <td onclick>Pepa</td>

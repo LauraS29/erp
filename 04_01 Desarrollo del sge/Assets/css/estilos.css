@@ -183,6 +183,7 @@ table
     min-height: 75vh;
     padding: 20px;
 }
+
 table th
 {
     font-size: 30px; 
@@ -195,6 +196,18 @@ table th, td
     text-align: center;
 }
 
+.image
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+}
+.image img
+{
+    width: 2%;
+}
 /* .peq img
 {
     width: 50%; 
