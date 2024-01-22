@@ -36,41 +36,25 @@
                         <th>Teléfono</th>
                         <th>.........</th>
                     </tr>
-                    <!-- <tr>
-                        <td onclick>01</td>
-                        <td onclick>Pepe</td>
-                        <td onclick>516516849</td>
-                        <td class="image">
-                            <img src="Assets/img/eliminar.png">
-                        </td>
-                        <td class="image">
-                            <img src="Assets/img/flechas-girando.png">
-                        </td>  
-                    </tr> -->
+                    <?php
+                    $proveedores = array(
+                        array("02", "Pepa", "411981627"),
+                        array("03", "Ramon", "483271657"),
+                        array("04", "Ramona", "671583498"),
+                        array("05", "Eustaquio", "561816851")
+                    );
 
-                    <tr>
-                        <td onclick>02</td>
-                        <td onclick>Pepa</td>
-                        <td onclick>411981627</td>
-                    </tr>
-                    <tr>
-                        <td onclick>03</td>
-                        <td onclick>Ramon</td>
-                        <td onclick>483271657</td>
-                    </tr>
-                    <tr>
-                        <td onclick>04</td>
-                        <td onclick>Ramona</td>
-                        <td onclick>671583498</td>
-                    </tr>
-                    <tr>
-                        <td onclick>05</td>
-                        <td onclick>Eustaquio</td>
-                        <td onclick>561816851</td>
-                    </tr>
+                    foreach ($proveedores as $proveedor) {
+                        echo "<tr>";
+                        foreach ($proveedor as $value) {
+                            echo "<td>$value</td>";
+                        }
+                        echo "</tr>";
+                    }
+                    ?>
                 </table>
                 <div class="button_prov">
-                     <input type="submit" value="Añadir">
+                     <input type="submit" name="add_proveedor" value="Añadir">
                 </div>
             </form>
         </div>
@@ -78,7 +62,10 @@
 </body>
 </html>
 
+
 <?php
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
     $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
