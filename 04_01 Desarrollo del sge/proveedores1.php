@@ -36,17 +36,17 @@
                         <th>Teléfono</th>
                         <th>.........</th>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td onclick>01</td>
                         <td onclick>Pepe</td>
                         <td onclick>516516849</td>
-                        <!-- <td class="image">
+                        <td class="image">
                             <img src="Assets/img/eliminar.png">
                         </td>
                         <td class="image">
                             <img src="Assets/img/flechas-girando.png">
-                        </td>   -->
-                    </tr>
+                        </td>  
+                    </tr> -->
 
                     <tr>
                         <td onclick>02</td>
@@ -69,11 +69,24 @@
                         <td onclick>561816851</td>
                     </tr>
                 </table>
-                <div>
-                     <input class="button_prov" type="submit" value="Añadir">
+                <div class="button_prov">
+                     <input type="submit" value="Añadir">
                 </div>
             </form>
         </div>
     </section>
 </body>
 </html>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
+    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
+
+    header("Location: proveedores2.php");
+    exit();
+}
+
+
+?>

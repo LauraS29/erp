@@ -76,7 +76,7 @@
     cursor: pointer;
 }
 
-/* menuprinc.php, proveedores1.php,  */
+/* proveedores1.php,  */
 
 body 
 {
@@ -113,13 +113,16 @@ header
 }
 
 .fondo_form
-{
+{   
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
     background-color: #666;
     min-height: 75vh;
     margin: 0 0.4%;
 }
-
-
+  
+  
 /*-------------------proveedores1.php----------------*/
 .navegacion 
 {
@@ -162,11 +165,6 @@ section h2
 {
   width: 2%;
   margin: 20px;
-}
-
-.div1 p
-{
-    
 }
 
 /* form {
@@ -232,5 +230,86 @@ table td:hover
 .button_prov
 {
     text-align: center;
-    margin-bottom: 2%;
+    padding-bottom: 1%;
 }
+
+.button_prov input
+{
+    padding: 5px 10%;
+    border-radius: 10px;
+    background-color: #ae85e0;
+}
+
+.button_prov input:hover
+{
+    cursor: pointer;
+}
+
+/*-------------------proveedores2.png---------------*/
+  
+.pr
+  {
+    margin-right: 20%;
+  }
+
+  .pr p
+  {
+    font-size: 150%;
+  }
+
+  .pr1 p
+  {
+    font-size: 150%;
+  }
+
+  .pr input
+  {
+      width: 140%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .pr1 input, textarea
+  {
+      width: 140%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .imagen-botones img
+ {
+    width: 50%;
+  }
+  
+  .primer_div 
+  {
+    width: 65%;
+    margin-left: 5%;
+  }
+
+  .segundo_div 
+  {
+    width: 20%;
+  }
+
+  .buttons
+  {
+    margin-left: 40px;
+  }
+
+  .buttons input
+  {
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    
+  }
+  
+  
