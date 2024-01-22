@@ -125,9 +125,10 @@ else
         echo
         "
         <div class='bloque0'>
-            <div class='bloque1'>$row->mar_coc</div>
-            <div class='bloque1'>$row->mod_coc</div>
-            <div class='bloque1'>$row->aut_coc</div>
+            <div class='bloque1'>$row->CP</div>
+            <div class='bloque1'>$row->DNI</div>
+            <div class='bloque1'>$row->Nombre</div>
+            <div class='bloque1'>$row->Apellido</div>
         </div>
         ";
     }
