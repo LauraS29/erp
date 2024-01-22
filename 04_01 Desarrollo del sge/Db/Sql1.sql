@@ -49,3 +49,5 @@ CREATE TABLE Empleados (
     Cód_Empleado INT,
     Telefono INT
 );
+
+
