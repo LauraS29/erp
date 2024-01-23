@@ -132,7 +132,8 @@ require_once 'Models/clienteModel.php';
 $oData = new Datos;
 
 // Llamada al método
-$sql = "select * from Cliente order by CP, DNI, Nombre, Apellido";
+$sql = "select * from Cliente order by Cod_cliente, DNI_cliente, Nom_cliente, Ape_cliente, Localidad, Provicia, Tlf_cliente, email_cliente,
+Dni_cliente, CP";
 $data = $oData->getData1($sql);
 
 if(empty($data))

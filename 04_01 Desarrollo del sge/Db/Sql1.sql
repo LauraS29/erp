@@ -2,8 +2,9 @@ CREATE DATABASE IF NOT EXISTS trabajo;
 USE trabajo;
 
 CREATE TABLE Proveedores (
-    CP INT PRIMARY KEY,
+    Cod_producto INT PRIMARY KEY,
     Cod_proveedor INT,
+   
     Nom_proveedor VARCHAR(25),
     Email_proveedor VARCHAR(25),
     Fecha_envio DATE
@@ -24,11 +25,13 @@ CREATE TABLE Cliente (
 
 CREATE TABLE Producto (
     CP INT PRIMARY KEY,
-    Precio DECIMAL(10, 2)
+    Precio DECIMAL(10, 2),
+
 );
 
 CREATE TABLE Empresa (
-    CP_Proveedor INT,
+    CP_Proveedor INT, 
+    Nom_empresa VARCHAR(25),
     CP_Cliente INT,
     FOREIGN KEY (CP_Proveedor) REFERENCES Proveedores(CP),
     FOREIGN KEY (CP_Cliente) REFERENCES Cliente(CP),
