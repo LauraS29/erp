@@ -120,6 +120,11 @@ header
     background-color: #555; 
 }
 
+.negrita
+{
+    font-weight: bold;
+}
+
 section h2
 {
     text-align: center;
