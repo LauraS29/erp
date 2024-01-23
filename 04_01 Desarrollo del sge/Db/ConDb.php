@@ -4,7 +4,7 @@ class Connection
     public static function conn1()
     {
        
-        $mysqli = new mysqli('localhost', 'admin', 'madrid', 'bd1');
+        $mysqli = new mysqli('localhost', 'admin', 'madrid', 'admin');
 
         if($mysqli->connect_errno)
         {

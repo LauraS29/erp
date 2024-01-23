@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXIST trabajo;
+USE trabajo;
+
+
 CREATE TABLE Proveedores (
     Nombre VARCHAR(25),
     Apellido VARCHAR(25),
