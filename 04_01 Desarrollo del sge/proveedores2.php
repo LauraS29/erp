@@ -42,8 +42,8 @@
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Nombre:</p>
-                            <input type="text" name="nombre">
+                            <p>Nombre Empresa:</p>
+                            <input type="text" name="nombreEmpresa">
                         </div>
                         <div class="pr1">
                             <p>Email:</p>
@@ -52,18 +52,8 @@
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Apellidos:</p>
-                            <input type="text" name="apellidos">
-                        </div>
-                        <div class="pr1">
-                            <p>DNI:</p>
-                            <input type="text" name="dni">
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="pr">
-                            <p>Localidad:</p>
-                            <input type="text" name="localidad">
+                            <p>Nombre Proveedor:</p>
+                            <input type="text" name="nombreProveedor">
                         </div>
                         <div class="pr1">
                             <p>Código Postal:</p>
@@ -72,12 +62,12 @@
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Provincia/Pais:</p>
-                            <input type="text" name="pais">
+                            <p>Localidad:</p>
+                            <input type="text" name="localidad">
                         </div>
                         <div class="pr1">
-                            <p>Observaciones:</p>
-                            <textarea name="observaciones" id="" cols="30" rows="10"></textarea>
+                            <p>Provincia/Pais:</p>
+                            <input type="text" name="pais">
                         </div>
                     </div>
                 </div>
