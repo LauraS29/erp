@@ -132,7 +132,7 @@ require_once 'Models/clienteModel.php';
 $oData = new Datos;
 
 // Llamada al método
-$sql = "select * from Cliente order by Cod_cliente, DNI_cliente, Nom_cliente, Ape_cliente, Localidad, Provicia, Tlf_cliente, email_cliente,
+$sql = "select * from Cliente order by Cod_cliente, DNI_cliente, Nom_cliente, Ape_cliente, Localidad, Provincia, Tlf_cliente, email_cliente,
 Dni_cliente, CP";
 $data = $oData->getData1($sql);
 
@@ -172,7 +172,7 @@ else
             <div class='bloque1'>$row->Nom_cliente</div>
             <div class='bloque1'>$row->Ape_cliente</div>
             <div class='bloque1'>$row->Localidad</div>
-            <div class='bloque1'>$row->Provicia</div>
+            <div class='bloque1'>$row->Provincia</div>
             <div class='bloque1'>$row->Tlf_cliente</div>
             <div class='bloque1'>$row->email_cliente</div>
             <div class='bloque1'>$row->Dni_cliente</div>
