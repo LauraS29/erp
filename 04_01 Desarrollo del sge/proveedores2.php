@@ -28,7 +28,7 @@
             <div>
                 <h2>Datos de proveedores</h2>
             </div>
-            <form class="flex fondo_form" action="proveedores2.php" method="post">
+            <form class="flex fondo_form" action="proveedores1.php" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
@@ -78,7 +78,7 @@
                             <input type="submit" value="Guardar">
                         </div>
                         <div>
-                            <input type="button" value="Actualizar">
+                            <input type="button" value="Actualizar" disabled>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
 }
 ?>
-
 
 
 
