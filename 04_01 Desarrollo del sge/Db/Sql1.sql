@@ -1,53 +1,61 @@
+CREATE DATABASE IF NOT EXISTS trabajo;
+USE trabajo;
+
 CREATE TABLE Proveedores (
-    Nombre VARCHAR(25),
+    CP INT PRIMARY KEY,
+    Nom_proveedor VARCHAR(25),
     Apellido VARCHAR(25),
     Fecha DATE
 );
 
+CREATE TABLE Cliente (
+    CP INT PRIMARY KEY,
+    Cod_cliente INT,
+    DNI_cliente VARCHAR(10),
+    Nom_cliente VARCHAR(25),
+    Ap_cliente VARCHAR(25),
+    Localidad VARCHAR(25),
+    Provicia VARCHAR(25),
+    Email_cliente VARCHAR(25),
+    Tlf_cliente VARCHAR(25),
+    Observaciones VARCHAR(25),
 
-CREATE TABLE Empresa (
-    FOREIGN KEY (Cód_Producto) REFERENCES Proveedores(CP),
-    FOREIGN KEY (Cód_Cliente) REFERENCES Cliente(CP)
 );
-
-
-CREATE TABLE Tienda (
-    Cód_Cliente INT,
-    Cód_Producto INT,
-    Cód_Empleado INT,
-    N_Stock INT,
-    FOREIGN KEY (Cód_Cliente) REFERENCES Cliente(CP),
-    FOREIGN KEY (Cód_Producto) REFERENCES Producto(CP),
-    FOREIGN KEY (Cód_Empleado) REFERENCES Empleados(Cód_Empleado)
-);
-
-
-CREATE TABLE Almacén (
-    Cod_almacén INT,
-    FOREIGN KEY (Cód_Producto) REFERENCES Producto(CP)
-);
-
 
 CREATE TABLE Producto (
     CP INT PRIMARY KEY,
     Precio DECIMAL(10, 2)
 );
 
-
-CREATE TABLE Cliente (
-    CP INT PRIMARY KEY,
-    DNI VARCHAR(10),
-    Nombre VARCHAR(25),
-    Apellido VARCHAR(25)
+CREATE TABLE Empresa (
+    CP_Proveedor INT,
+    CP_Cliente INT,
+    FOREIGN KEY (CP_Proveedor) REFERENCES Proveedores(CP),
+    FOREIGN KEY (CP_Cliente) REFERENCES Cliente(CP),
+    PRIMARY KEY (CP_Proveedor, CP_Cliente)
 );
 
+CREATE TABLE Tienda (
+    CP_Cliente INT,
+    CP_Producto INT,
+    CP_Empleado INT,
+    N_Stock INT,
+    FOREIGN KEY (CP_Cliente) REFERENCES Cliente(CP),
+    FOREIGN KEY (CP_Producto) REFERENCES Producto(CP),
+    FOREIGN KEY (CP_Empleado) REFERENCES Empleados(CP),
+    PRIMARY KEY (CP_Cliente, CP_Producto, CP_Empleado)
+);
+
+CREATE TABLE Almacén (
+    Cod_almacén INT PRIMARY KEY,
+    CP_Producto INT,
+    FOREIGN KEY (CP_Producto) REFERENCES Producto(CP)
+);
 
 CREATE TABLE Empleados (
-    Nombre VARCHAR(25),
-    Apellido VARCHAR(25),
-    DNI VARCHAR(10) PRIMARY KEY,
-    Cód_Empleado INT,
-    Telefono INT
+    CP INT PRIMARY KEY,
+    Nom_empleado VARCHAR(25),
+    Ape_Empleado VARCHAR(25),
+    DNI_Empleado VARCHAR(10),
+    Tlf_empleado INT
 );
-
-

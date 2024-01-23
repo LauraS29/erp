@@ -19,66 +19,77 @@
             <a href="#">Pedidos</a><br>
         </div>
     </header>
-    <section>
-        <div class="b1">
-            <div class="flex">
-                <img src="Assets/img/personas.png" alt="">
-                <p>Clientes</p>
-            </div>
+    <section class="fondo_section">
+        <div class="flex div1">
+            <img src="Assets/img/repartidor.png" alt="">
+            <p>Proveedores</p>
         </div>
-        <div class="b2">
+        <div class="fondo_div">
             <div>
-                <h2>Datos del cliente</h2>
+                <h2>Datos de Clientes</h2>
             </div>
-            <form class="fondo_form" action="clientes.php" method="post">
-                <div class="flex">
-                    <div class="pr">
-                        <p>Código:</p>
-                        <input type="text" name="correo">
+            <form class="flex fondo_form" action="clientes.php" method="post">
+                <div class="primer_div">
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Código:</p>
+                            <input type="text" name="codigo">
+                        </div>
+                        <div class="pr1">
+                            <p>Teléfono:</p>
+                            <input type="text" name="telefono">
+                        </div>
                     </div>
-                    <div>
-                        <p>Tlf:</p>
-                        <input type="text" name="correo">
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Nombre:</p>
+                            <input type="text" name="nombre">
+                        </div>
+                        <div class="pr1">
+                            <p>Email:</p>
+                            <input type="text" name="email">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Apellidos:</p>
+                            <input type="text" name="apellidos">
+                        </div>
+                        <div class="pr1">
+                            <p>DNI:</p>
+                            <input type="text" name="dni">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Localidad:</p>
+                            <input type="text" name="localidad">
+                        </div>
+                        <div class="pr1">
+                            <p>Código Postal:</p>
+                            <input type="text" name="codigopostal">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Provincia/Pais:</p>
+                            <input type="text" name="pais">
+                        </div>
+                        <div class="pr1">
+                            <p>Observaciones:</p>
+                            <textarea name="observaciones" id="" cols="30" rows="10"></textarea>
+                        </div>
                     </div>
                 </div>
-                <div class="flex">
-                    <div class="pr">
-                        <p>Nombre:</p>
-                        <input type="text" name="correo">
-                    </div>
-                    <div>
-                        <p>Email:</p>
-                        <input type="text" name="correo">
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="pr">
-                        <p>Apellidos:</p>
-                        <input type="text" name="correo">
-                    </div>
-                    <div>
-                        <p>DNI:</p>
-                        <input type="text" name="correo">
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="pr">
-                        <p>Localidad:</p>
-                        <input type="text" name="correo">
-                    </div>
-                    <div>
-                        <p>Código Postal:</p>
-                        <input type="text" name="correo">
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="pr">
-                        <p>Provincia/Pais:</p>
-                        <input type="text" name="correo">
-                    </div>
-                    <div>
-                        <p>Observaciones:</p>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                <div class="segundo_div imagen-botones">
+                    <img src="Assets/img/usuario.png" alt="">
+                    <div class="buttons">
+                        <div>
+                            <input type="submit" value="Guardar">
+                        </div>
+                        <div>
+                            <input type="button" value="Actualizar">
+                        </div>
                     </div>
                 </div>
             </form>
@@ -88,8 +99,32 @@
 </html>
 
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+    // Verifica si todos los campos están llenos
+    $campos_llenos = true;
+    $campos = ['codigo', 'telefono', 'nombre', 'email', 'apellidos', 'dni', 'localidad', 'codigopostal', 'pais', 'observaciones'];
+
+    foreach ($campos as $campo) 
+    {
+        if (empty($_POST[$campo])) 
+        {
+            $campos_llenos = false;
+            break;
+        }
+    }
+
+    if ($campos_llenos) 
+    {
+        // Aquí puedes realizar la lógica de guardar en la base de datos u otras operaciones necesarias
+
+        // Muestra una alerta de éxito en JavaScript
+        echo '<script>alert("Guardado exitosamente");</script>';
+    }
+}
+
 // Llamada a la conexión
-require_once 'Db/Con1Db.php';
+require_once 'Db/ConDb.php';
 // Llamada al modelo
 require_once 'Models/clienteModel.php';
 
@@ -114,10 +149,16 @@ else
     echo
     "
     <div class='bloque0 negrita'>
-        <div class='bloque1'>Codigo Postal</div>
-        <div class='bloque1'>DNI</div>
+        <div class='bloque1'>Código</div>
         <div class='bloque1'>Nombre</div>
         <div class='bloque1'>Apellidos</div>
+        <div class='bloque1'>Localidad</div>
+        <div class='bloque1'>Provincia/Pais</div>
+        <div class='bloque1'>Télefono</div>
+        <div class='bloque1'>Email</div>
+        <div class='bloque1'>DNI</div>
+        <div class='bloque1'>Código postal</div>
+
     </div>
     ";
     foreach ($data as $row)
@@ -125,10 +166,16 @@ else
         echo
         "
         <div class='bloque0'>
+            <div class='bloque1'>$row->Cod_cliente</div>
+            <div class='bloque1'>$row->DNI_cliente</div>
+            <div class='bloque1'>$row->Nom_cliente</div>
+            <div class='bloque1'>$row->Ape_cliente</div>
+            <div class='bloque1'>$row->Localidad</div>
+            <div class='bloque1'>$row->Provicia</div>
+            <div class='bloque1'>$row->Tlf_cliente</div>
+            <div class='bloque1'>$row->email_cliente</div>
+            <div class='bloque1'>$row->Dni_cliente</div>
             <div class='bloque1'>$row->CP</div>
-            <div class='bloque1'>$row->DNI</div>
-            <div class='bloque1'>$row->Nombre</div>
-            <div class='bloque1'>$row->Apellido</div>
         </div>
         ";
     }
