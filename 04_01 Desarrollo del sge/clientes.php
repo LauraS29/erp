@@ -164,6 +164,10 @@ else
             <div class='bloque1'>$row->DNI</div>
             <div class='bloque1'>$row->Nombre</div>
             <div class='bloque1'>$row->Apellido</div>
+            <div class='bloque1'>$row->Apellido</div>
+            <div class='bloque1'>$row->Apellido</div>
+            <div class='bloque1'>$row->Apellido</div>
+            
         </div>
         ";
     }
