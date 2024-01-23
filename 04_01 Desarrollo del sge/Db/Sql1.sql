@@ -17,7 +17,7 @@ CREATE TABLE Cliente (
     Nom_cliente VARCHAR(25),
     Ap_cliente VARCHAR(25),
     Localidad VARCHAR(25),
-    Provicia VARCHAR(25),
+    Provincia VARCHAR(25),
     Email_cliente VARCHAR(25),
     Tlf_cliente VARCHAR(25),
     Observaciones VARCHAR(25),
