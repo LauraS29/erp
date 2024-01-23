@@ -3,9 +3,10 @@ USE trabajo;
 
 CREATE TABLE Proveedores (
     CP INT PRIMARY KEY,
+    Cod_proveedor INT,
     Nom_proveedor VARCHAR(25),
-    Apellido VARCHAR(25),
-    Fecha DATE
+    Email_proveedor VARCHAR(25),
+    Fecha_envio DATE
 );
 
 CREATE TABLE Cliente (
@@ -19,7 +20,6 @@ CREATE TABLE Cliente (
     Email_cliente VARCHAR(25),
     Tlf_cliente VARCHAR(25),
     Observaciones VARCHAR(25),
-
 );
 
 CREATE TABLE Producto (
