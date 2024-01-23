@@ -28,7 +28,7 @@
             <div>
                 <h2>Datos de Clientes</h2>
             </div>
-            <form class="flex fondo_form" action="proveedores2.php" method="post">
+            <form class="flex fondo_form" action="clientes.php" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
@@ -36,7 +36,7 @@
                             <input type="text" name="codigo">
                         </div>
                         <div class="pr1">
-                            <p>Tlf:</p>
+                            <p>Teléfono:</p>
                             <input type="text" name="telefono">
                         </div>
                     </div>
@@ -149,10 +149,16 @@ else
     echo
     "
     <div class='bloque0 negrita'>
-        <div class='bloque1'>Codigo Postal</div>
-        <div class='bloque1'>DNI</div>
+        <div class='bloque1'>Código</div>
         <div class='bloque1'>Nombre</div>
         <div class='bloque1'>Apellidos</div>
+        <div class='bloque1'>Localidad</div>
+        <div class='bloque1'>Provincia/Pais</div>
+        <div class='bloque1'>Télefono</div>
+        <div class='bloque1'>Email</div>
+        <div class='bloque1'>DNI</div>
+        <div class='bloque1'>Código postal</div>
+
     </div>
     ";
     foreach ($data as $row)
@@ -160,14 +166,16 @@ else
         echo
         "
         <div class='bloque0'>
+            <div class='bloque1'>$row->Cod_cliente</div>
+            <div class='bloque1'>$row->DNI_cliente</div>
+            <div class='bloque1'>$row->Nom_cliente</div>
+            <div class='bloque1'>$row->Ape_cliente</div>
+            <div class='bloque1'>$row->Localidad</div>
+            <div class='bloque1'>$row->Provicia</div>
+            <div class='bloque1'>$row->Tlf_cliente</div>
+            <div class='bloque1'>$row->email_cliente</div>
+            <div class='bloque1'>$row->Dni_cliente</div>
             <div class='bloque1'>$row->CP</div>
-            <div class='bloque1'>$row->DNI</div>
-            <div class='bloque1'>$row->Nombre</div>
-            <div class='bloque1'>$row->Apellido</div>
-            <div class='bloque1'>$row->Apellido</div>
-            <div class='bloque1'>$row->Apellido</div>
-            <div class='bloque1'>$row->Apellido</div>
-            
         </div>
         ";
     }

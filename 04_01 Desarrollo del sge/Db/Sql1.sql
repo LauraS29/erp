@@ -3,16 +3,23 @@ USE trabajo;
 
 CREATE TABLE Proveedores (
     CP INT PRIMARY KEY,
-    Nombre VARCHAR(25),
+    Nom_proveedor VARCHAR(25),
     Apellido VARCHAR(25),
     Fecha DATE
 );
 
 CREATE TABLE Cliente (
     CP INT PRIMARY KEY,
-    DNI VARCHAR(10),
-    Nombre VARCHAR(25),
-    Apellido VARCHAR(25)
+    Cod_cliente INT,
+    DNI_cliente VARCHAR(10),
+    Nom_cliente VARCHAR(25),
+    Ap_cliente VARCHAR(25),
+    Localidad VARCHAR(25),
+    Provicia VARCHAR(25),
+    Email_cliente VARCHAR(25),
+    Tlf_cliente VARCHAR(25),
+    Observaciones VARCHAR(25),
+
 );
 
 CREATE TABLE Producto (
@@ -47,8 +54,8 @@ CREATE TABLE Almacén (
 
 CREATE TABLE Empleados (
     CP INT PRIMARY KEY,
-    Nombre VARCHAR(25),
-    Apellido VARCHAR(25),
-    DNI VARCHAR(10),
-    Telefono INT
+    Nom_empleado VARCHAR(25),
+    Ape_Empleado VARCHAR(25),
+    DNI_Empleado VARCHAR(10),
+    Tlf_empleado INT
 );
