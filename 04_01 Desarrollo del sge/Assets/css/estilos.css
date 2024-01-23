@@ -76,7 +76,7 @@
     cursor: pointer;
 }
 
-/* proveedores1.php,  */
+/* TODOS  */
 
 body 
 {
@@ -94,36 +94,6 @@ header
     padding: 10px;
 }
 
-.flex
-{
-    display: flex;
-}
-
-.fondo_section
-{
-    background-color: #d9251f;
-    min-width: 175.3vh;
-    min-height: 93.2vh;
-}
-
-.fondo_div
-{
-    background-color:#5CDFD7 ;
-    min-height: 92vh;
-}
-
-.fondo_form
-{   
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    background-color: #666;
-    min-height: 75vh;
-    margin: 0 0.4%;
-}
-  
-  
-/*-------------------proveedores1.php----------------*/
 .navegacion 
 {
     display: flex;
@@ -153,10 +123,6 @@ header
 section h2
 {
     text-align: center;
-}
-
-.fondo_section h2
-{
     padding: 20px;
     font-size: 50px;
 }
@@ -167,15 +133,41 @@ section h2
   margin: 20px;
 }
 
-/* form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} */
 
-table
+
+
+.flex
+{
+    display: flex;
+}
+
+.fondo_section
+{
+    background-color: #7bebe2;
+    min-width: 175.3vh;
+    min-height: 93.2vh;
+}
+
+.fondo_div
+{
+    background-color:#79c1e0 ;
+    min-height: 92vh;
+}
+
+.fondo_form
+{   
+    justify-content: center;
+    align-items: center;
+    background-color: #a8a8a8;
+    min-height: 75vh;
+    margin: 0 0.4%;
+}
+  
+  
+/*-------------------proveedores1.php----------------*/
+
+                                                       /* TABLA */
+/* table
 {
     min-width: 174vh;
     min-height: 75vh;
@@ -206,28 +198,30 @@ table th, td
 {
     width: 2%;
 }
-/* .peq img
+.peq img
 {
     width: 50%; 
     max-width: 100px;
-} */
+}
 
 table td:hover
 {
     cursor: pointer;
 }
 
-/* .pr
+.pr
 {
     padding-right: 25%;
-} */
-/* .form1
+}
+
+.form1
 {
     background-color: #666;
     margin: 0 1%;
 } */
 
-.button_prov
+                                                /* BOTON */
+/* .button_prov
 {
     text-align: center;
     padding-bottom: 1%;
@@ -243,73 +237,71 @@ table td:hover
 .button_prov input:hover
 {
     cursor: pointer;
-}
+} */
 
 /*-------------------proveedores2.png---------------*/
-  
-.pr
-  {
-    margin-right: 20%;
-  }
 
-  .pr p
-  {
-    font-size: 150%;
-  }
-
-  .pr1 p
-  {
-    font-size: 150%;
-  }
-
-  .pr input
-  {
-      width: 140%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .pr1 input, textarea
-  {
-      width: 140%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .imagen-botones img
- {
-    width: 50%;
-  }
-  
-  .primer_div 
-  {
+.primer_div 
+{
     width: 65%;
     margin-left: 5%;
-  }
+} 
 
-  .segundo_div 
-  {
+.pr
+{
+    margin-right: 20%;
+}
+
+.pr p
+{
+    font-size: 150%;
+}
+
+.pr1 p
+{
+    font-size: 150%;
+}
+
+.pr input
+{
+    width: 140%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pr1 input, textarea
+{
+    width: 140%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.segundo_div 
+{
     width: 20%;
-  }
+}
 
-  .buttons
-  {
+.imagen-botones img
+{
+    width: 50%;
+}
+  
+.buttons
+{
     margin-left: 40px;
-  }
+}
 
-  .buttons input
-  {
+.buttons input
+{
     flex-direction: column;
     margin-top: 15px;
     padding: 5px 20px;
     border-radius: 10px;
     
-  }
-  
-  
+}
