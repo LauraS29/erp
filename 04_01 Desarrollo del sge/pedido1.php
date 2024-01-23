@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra</title>
+    <title>Pedidos</title>
     <script src="./Assets/js/motor.js"></script>
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
@@ -15,21 +15,21 @@
             <a href="personal1.php">Personal</a><br>
             <a href="productos1.php">Productos</a><br>
             <a href="ventas.php">Ventas</a><br>
-            <a class="negrita" href="compra1.php">Compra</a><br>
-            <a href="pedido1.php">Pedidos</a><br>
+            <a href="compra1.php">Compra</a><br>
+            <a class="negrita" href="pedido1.php">Pedidos</a><br>
         </div>
     </header>
     <section class="fondo_section">
         <div class="flex div1">
-            <img src="Assets/img/compra.png" alt="">
-            <p>Compra</p>
+            <img src="Assets/img/pedido.png" alt="">
+            <p>Pedidos</p>
         </div>
         <div class="fondo_div">
             <div>
-                <h2>Datos de las compras</h2>
+                <h2>Datos de los pedidos</h2>
             </div>
-            <form class="fondo_form" action="compra1.php" method="post">
-                
+            <form class="fondo_form" action="pedido1.php" method="post">
+  
                 <div class="button_prov">
                      <input type="submit" name="add_proveedor" value="Añadir">
                 </div>
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
     $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
 
-    header("Location: compra2.php");
+    header("Location: pedido2.php");
     exit();
 }
 

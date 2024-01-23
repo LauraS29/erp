@@ -10,13 +10,13 @@
 <body>
     <header>
         <div class="navegacion">
-        <a href="clientes.php">Clientes</a><br>
+            <a href="clientes1.php">Clientes</a><br>
             <a class="negrita" href="proveedores1.php">Proveedores</a><br>
-            <a href="personal.php">Personal</a><br>
-            <a href="productos.php">Productos</a><br>
+            <a href="personal1.php">Personal</a><br>
+            <a href="productos1.php">Productos</a><br>
             <a href="ventas.php">Ventas</a><br>
             <a href="compra1.php">Compra</a><br>
-            <a href="pedido.php">Pedidos</a><br>
+            <a href="pedido1.php">Pedidos</a><br>
         </div>
     </header>
     <section class="fondo_section">

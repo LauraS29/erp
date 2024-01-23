@@ -10,29 +10,42 @@
 <body>
     <header>
         <div class="navegacion">
-            <a href="clientes.php">Clientes</a><br>
+            <a href="clientes1.php">Clientes</a><br>
             <a href="proveedores1.php">Proveedores</a><br>
-            <a href="personal.php">Personal</a><br>
-            <a href="productos.php">Productos</a><br>
+            <a href="personal1.php">Personal</a><br>
+            <a href="productos1.php">Productos</a><br>
             <a class="negrita" href="ventas.php">Ventas</a><br>
             <a href="compra1.php">Compra</a><br>
-            <a href="pedido.php">Pedidos</a><br>
+            <a href="pedido1.php">Pedidos</a><br>
         </div>
     </header>
-    <section>
-        <div class="b1">
-            <div class="center">
-                <img src="Assets/img/personas.png" alt="">
-                <p>Clientes</p>
-            </div>
+    <section class="fondo_section">
+        <div class="flex div1">
+            <img src="Assets/img/venta.png" alt="">
+            <p>Ventas</p>
         </div>
-        <div class="b2">
+        <div class="fondo_div">
             <div>
-                <h2>.........</h2>
+                <h2>Datos de las ventas</h2>
             </div>
-            <form class="fondo_form" action="clientes.php" method="post">
+            <form class="fondo_form" action="venta.php" method="post">
+
             </form>
         </div>
     </section>
 </body>
 </html>
+
+                <!------------PHP------------->
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
+    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
+
+    header("Location: clientes2.php");
+    exit();
+}
+
+?>

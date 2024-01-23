@@ -10,23 +10,23 @@
 <body>
     <header>
         <div class="navegacion">
-            <a href="clientes.php">Clientes</a><br>
+            <a href="clientes1.php">Clientes</a><br>
             <a href="proveedores1.php">Proveedores</a><br>
-            <a class="negrita" href="personal.php">Personal</a><br>
-            <a href="productos.php">Productos</a><br>
+            <a class="negrita" href="personal1.php">Personal</a><br>
+            <a href="productos1.php">Productos</a><br>
             <a href="ventas.php">Ventas</a><br>
             <a href="compra1.php">Compra</a><br>
-            <a href="pedido.php">Pedidos</a><br>
+            <a href="pedido1.php">Pedidos</a><br>
         </div>
     </header>
     <section class="fondo_section">
         <div class="flex div1">
-            <img src="Assets/img/repartidor.png" alt="">
-            <p>Proveedores</p>
+            <img src="Assets/img/personal.png" alt="">
+            <p>Personal</p>
         </div>
         <div class="fondo_div">
             <div>
-                <h2>Datos de proveedores</h2>
+                <h2>Datos del personal</h2>
             </div>
             <form class="flex fondo_form" action="proveedores2.php" method="post">
                 <div class="primer_div">
@@ -67,7 +67,7 @@
                         </div>
                         <div class="pr1">
                             <p>Código Postal:</p>
-                            <input type="text" name="codigopostal">
+                            <input type="text" name="codigoPostal">
                         </div>
                     </div>
                     <div class="flex">
