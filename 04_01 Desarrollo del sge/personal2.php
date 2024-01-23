@@ -36,7 +36,7 @@
                             <input type="text" name="codigo">
                         </div>
                         <div class="pr1">
-                            <p>Tlf:</p>
+                            <p>Teléfono:</p>
                             <input type="text" name="telefono">
                         </div>
                     </div>
