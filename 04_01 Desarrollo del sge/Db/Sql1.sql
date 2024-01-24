@@ -12,7 +12,7 @@ CREATE TABLE Proveedores (
 
 CREATE TABLE Cliente (
     CP INT PRIMARY KEY,
-    Cod_cliente INT,
+    Cod_cliente INT AUTOINCREMENT,
     DNI_cliente VARCHAR(10),
     Nom_cliente VARCHAR(25),
     Ap_cliente VARCHAR(25),
