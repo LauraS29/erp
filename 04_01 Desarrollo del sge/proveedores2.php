@@ -90,29 +90,7 @@
 
                 <!------------PHP------------->
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    // Verifica si todos los campos están llenos
-    $campos_llenos = true;
-    $campos = ['codigo', 'telefono', 'nombre', 'email', 'apellidos', 'dni', 'localidad', 'codigopostal', 'pais', 'observaciones'];
 
-    foreach ($campos as $campo) 
-    {
-        if (empty($_POST[$campo])) 
-        {
-            $campos_llenos = false;
-            break;
-        }
-    }
-
-    if ($campos_llenos) 
-    {
-        // Aquí puedes realizar la lógica de guardar en la base de datos u otras operaciones necesarias
-
-        // Muestra una alerta de éxito en JavaScript
-        echo '<script>alert("Guardado exitosamente");</script>';
-    }
-}
 ?>
 
 
