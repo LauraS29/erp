@@ -36,25 +36,9 @@
                         <th>Teléfono</th>
                     </tr>
 
-                    <?php
-                        // Obtener datos del formulario de proveedores2.php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['codigo'])) 
-                        {
-                            $codigo = $_POST['codigo'];
-                            $nombreProveedor = $_POST['nombreProveedor'];
-                            $telefono = $_POST['telefono'];
-
-                            // Añadir fila a la tabla
-                            echo "<tr>
-                                    <td>$codigo</td>
-                                    <td>$nombreProveedor</td>
-                                    <td>$telefono</td>
-                                  </tr>";
-                        }
-                    ?>
                 </table>
                 <div class="button_prov">
-                    <input type="submit" name="add_proveedor" value="Añadir">
+                    <input type="submit" value="Añadir">
                 </div>
             </form>
         </div>
@@ -65,11 +49,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
-
+    // Redirige a la página proveedores2.php
     header("Location: proveedores2.php");
-    exit();
+
+    // Asegura que no se ejecuten más líneas después de la redirección
+    // exit();
 }
 ?>
 
