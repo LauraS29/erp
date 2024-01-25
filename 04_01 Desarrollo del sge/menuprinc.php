@@ -7,9 +7,9 @@
     <script src="./Assets/js/motor.js"></script>
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
-<body class="fondo_azul">
-    <header class="menu_header" >
-        <img src="" alt="">
+<body class="">
+    <header>
+        <img src="Assets/img/usuario.png" alt="">
         <h2>Hola, </h2>
 
         <img src="" alt="">

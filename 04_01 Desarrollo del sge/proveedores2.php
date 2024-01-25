@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body>
-    <header>
+    <header class = "header2">
         <div class="navegacion">
             <a href="clientes1.php">Clientes</a><br>
             <a class="negrita" href="proveedores1.php">Proveedores</a><br>

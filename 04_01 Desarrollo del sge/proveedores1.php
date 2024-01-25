@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body>
-    <header>
+    <header class = "header2">
         <div class="navegacion">
             <a href="clientes1.php">Clientes</a><br>
             <a class="negrita" href="proveedores1.php">Proveedores</a><br>
@@ -36,9 +36,25 @@
                         <th>Teléfono</th>
                     </tr>
 
+                    <?php
+                        // Obtener datos del formulario de proveedores2.php
+                        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['codigo'])) 
+                        {
+                            $codigo = $_POST['codigo'];
+                            $nombreProveedor = $_POST['nombreProveedor'];
+                            $telefono = $_POST['telefono'];
+
+                            // Añadir fila a la tabla
+                            echo "<tr>
+                                    <td>$codigo</td>
+                                    <td>$nombreProveedor</td>
+                                    <td>$telefono</td>
+                                  </tr>";
+                        }
+                    ?>
                 </table>
                 <div class="button_prov">
-                    <input type="submit" value="Añadir">
+                    <input type="submit" name="add_proveedor" value="Añadir">
                 </div>
             </form>
         </div>
@@ -49,10 +65,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    // Redirige a la página proveedores2.php
-    header("Location: proveedores2.php");
+    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
+    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
 
-    // Asegura que no se ejecuten más líneas después de la redirección
-    // exit();
+    header("Location: proveedores2.php");
+    exit();
 }
 ?>
+
