@@ -77,13 +77,69 @@
 }
 /*--------------------menuprinc.php-----------------*/
 
+.espacio 
+{
+    margin: 20px;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.left 
+{
+    display: flex; 
+    align-items: center;
+    
+}
+
+.left img 
+{
+    width: 10%;
+}
 
 
+.right img 
+{
+    /* width: 20%; */
+}
 
+.mg
+{
+    margin-left: 20px;
+}
 
+.separacion
+{
+    justify-content: center;
+    align-items: center;
+}
 
+.separacion div
+{
+    margin: 3%;
+    text-align: center;
+}
 
+.separacion img 
+{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10%;
+}
 
+.separacion a 
+{
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.separacion a:hover 
+{
+    font-weight: bold;
+}
 
 /* TODOS  */
 
@@ -91,7 +147,6 @@ body
 {
     background-color: #2222;
     margin: 0;
-    display: flex;
     /* Asegura que el cuerpo tenga al menos el 100% de la altura de la ventana */
     min-height: 100vh; 
 }
