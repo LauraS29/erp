@@ -7,7 +7,7 @@
     <script src="./Assets/js/motor.js"></script>
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
-<body>
+<body class = "flex">
 <header class = "header2">
         <div class="navegacion" id="p1">
             <a class="negrita" href="clientes1.php">Clientes</a><br>
