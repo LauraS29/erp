@@ -15,7 +15,9 @@
         </div>
         <div class="right">
             <img src="Assets/img/ayudar.png" alt="">
-            <img class="mg" src="Assets/img/cerrar-sesion.png" alt="">
+            <a href="Inicio.php">
+                <img class="mg" src="Assets/img/cerrar-sesion.png" alt="">
+            </a>
         </div>
     </header>
 

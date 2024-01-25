@@ -50,11 +50,6 @@
 
 .links
 {
-    display: flex;
-}
-
-.links a
-{
     text-decoration: none;
     color: #007BFF;
     font-size: 12px;
