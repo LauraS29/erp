@@ -75,7 +75,7 @@
                     <img src="Assets/img/usuario.png" alt="">
                     <div class="buttons">
                         <div>
-                            <input type="submit" value="Guardar">
+                            <input type="submit" id="boton1" value="Guardar">
                         </div>
                         <div>
                             <input type="button" value="Actualizar" disabled>
