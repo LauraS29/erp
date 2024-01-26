@@ -9,7 +9,9 @@
     $textoInsercion6 = empty($_POST['textoInsercion6']) ? '' : $_POST['textoInsercion6'];
     $textoInsercion7 = empty($_POST['textoInsercion7']) ? '' : $_POST['textoInsercion7'];
     $textoInsercion8 = empty($_POST['textoInsercion8']) ? '' : $_POST['textoInsercion8'];
-    $textoInsercion9 = empty($_POST['textoInsercion9']) ? '' : $_POST['textoInsercion9'];
+    $textoInsercion9 = empty($_POST['textoInsercion9']) ? '' : $_POST['textoInsercion9']; 
+    $textoInsercion10 = empty($_POST['textoInsercion10']) ? '' : $_POST['textoInsercion10'];
+
     // Llamada a la conexión
     require_once '../Db/ConDb.php';
     // Llamada al modelo
@@ -20,7 +22,7 @@
 
     // Llamada al método
     $sql = "insert into trabajo (Cod_cliente, DNI_cliente, Nom_cliente, Ape_cliente, Localidad, Provincia, Tlf_cliente, email_cliente,
-    Dni_cliente, Cod_postal) values ('$textoInsercion1', '$textoInsercion2', '$textoInsercion3', '$textoInsercion4', '$textoInsercion5', '$textoInsercion6', '$textoInsercion7', '$textoInsercion8', '$textoInsercion9');";
+    Dni_cliente, Cod_postal) values ('$textoInsercion1', '$textoInsercion2', '$textoInsercion3', '$textoInsercion4', '$textoInsercion5', '$textoInsercion6', '$textoInsercion7', '$textoInsercion8', '$textoInsercion9', '$textoInsercion10');";
     $sql .= "select * from trabajo order by Cod_cliente, DNI_cliente, Nom_cliente, Ape_cliente, Localidad, Provincia, Tlf_cliente, email_cliente,
     Dni_cliente, Cod_postal";
     $data = $oData->setGetData1($sql);
