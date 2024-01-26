@@ -1,13 +1,13 @@
 CREATE DATABASE IF NOT EXISTS trabajo;
 USE trabajo;
 
-CREATE TABLE Producto (
+CREATE TABLE IF NOT EXISTS Producto (
     Cod_producto INT AUTO_INCREMENT PRIMARY KEY,
     Precio DECIMAL(10, 2),
     Cantidad INT
 );
 
-CREATE TABLE Proveedores (
+CREATE TABLE IF NOT EXISTS Proveedores (
     Cod_proveedor INT AUTO_INCREMENT PRIMARY KEY,
     Nom_proveedor VARCHAR(25),
     Email_proveedor VARCHAR(25),
@@ -16,7 +16,7 @@ CREATE TABLE Proveedores (
     FOREIGN KEY (Cod_producto) REFERENCES Producto(Cod_producto) 
 );
 
-CREATE TABLE Cliente (
+CREATE TABLE IF NOT EXISTS Cliente (
     Cod_cliente INT AUTO_INCREMENT PRIMARY KEY,
     DNI_cliente VARCHAR(10),
     Nom_cliente VARCHAR(25),
@@ -29,7 +29,7 @@ CREATE TABLE Cliente (
     Observaciones VARCHAR(25)
 );
 
-CREATE TABLE Empleados (
+CREATE TABLE IF NOT EXISTS Empleados (
     Cod_Empleado INT AUTO_INCREMENT PRIMARY KEY,
     Nom_empleado VARCHAR(25),
     Ape_Empleado VARCHAR(25),
@@ -38,7 +38,7 @@ CREATE TABLE Empleados (
     Clave_acceso VARCHAR(25)
 );
 
-CREATE TABLE Tienda (
+CREATE TABLE IF NOT EXISTS Tienda (
     Cod_cliente INT,
     Cod_producto INT,
     Cod_Empleado INT,
@@ -48,7 +48,7 @@ CREATE TABLE Tienda (
     PRIMARY KEY (Cod_cliente, Cod_producto, Cod_Empleado)
 );
 
-CREATE TABLE Almacén (
+CREATE TABLE IF NOT EXISTS Almacén (
     Cod_almacén INT AUTO_INCREMENT PRIMARY KEY,
     Cod_producto INT,
     FOREIGN KEY (Cod_producto) REFERENCES Producto(Cod_producto)
