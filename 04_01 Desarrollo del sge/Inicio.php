@@ -16,9 +16,15 @@
             <form action="menuprinc.php" method="post" onsubmit="return onSubmitForm()">
                 <input type="text" name="email" placeholder="Usuario /Correo">
                 <input type="password" name="contrasena" placeholder="Contraseña">
+                <!-- ----------- -->
+                <div class="links">
+                    <p><a href="#">¿Olvidaste la contraseña?</a></p>
+                    <p><a href="#">Registrarse</a></p>
+                </div>
+                <button type="submit" class="btn">Iniciar</button>
 
-                <a class= "flex links" href="#">¿Olvidaste la contraseña?</a>
-                <button type="submit" class="btn" name="inicio">Iniciar</button>
+                <!-- <a class= "flex links" href="#">¿Olvidaste la contraseña?</a>
+                <button type="submit" class="btn" name="inicio">Iniciar</button> -->
             </form>
 
         </div>
