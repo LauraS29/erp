@@ -83,6 +83,14 @@
                 </div>
                 <div class="segundo_div imagen-botones">
                     <img src="Assets/img/usuario.png" alt="">
+                    <div class="buttons">
+                        <div>
+                            <input type="submit" value="Guardar">
+                        </div>
+                        <div>
+                            <input type="button" value="Actualizar" disabled>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

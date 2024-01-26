@@ -9,17 +9,16 @@
 </head>
 
 <body class="inicio">
-
     <section class="contenedor_inicio">
         <div class="iniciar">
             <img src="./Assets/img/usuario.png" alt="">
             <h2>Inicio de sesión</h2>
             <form action="menuprinc.php" method="post" onsubmit="return onSubmitForm()">
-                <input type="text" name="correo" placeholder="Usuario /Correo">
+                <input type="text" name="email" placeholder="Usuario /Correo">
                 <input type="password" name="contrasena" placeholder="Contraseña">
 
                 <a class= "flex links" href="#">¿Olvidaste la contraseña?</a>
-                <button type="submit" class="btn">Iniciar</button>
+                <button type="submit" class="btn" name="inicio">Iniciar</button>
             </form>
 
         </div>
