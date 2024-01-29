@@ -1,20 +1,12 @@
 <?php
-class Connection
-{
-    public static function conn1()
-    {
-       
-        $mysqli = new mysqli('localhost', 'admin', 'madrid', 'trabajo');
+$host = 'localhost';
+$usuario = 'admin';
+$contraseña = 'madrid';
+$base_Datos = 'trabajo';
 
-        if($mysqli->connect_errno)
-        {
-            printf("Error en la conexion: %s\n", $mysqli->connect_errno);
-        }
-        else
-        {
-            $mysqli->set_charset("utf8");
-            return $mysqli;
-        }
-    }
+$conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
+
+if (!$conexion) {
+    die("Error de conexión: " . mysqli_connect_error());
 }
 ?>

@@ -3,6 +3,7 @@ USE trabajo;
 
 CREATE TABLE IF NOT EXISTS Usuarios (
     Cod_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_usuario VARCHAR(50),
     Correo_usuario VARCHAR(100),
     Contraseña_usuario VARCHAR(255)
 );

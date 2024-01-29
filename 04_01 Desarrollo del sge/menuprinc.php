@@ -1,3 +1,16 @@
+<?php
+session_start();
+include_once('Db/ConDb.php');
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['UsuarioNombre'])) {
+    header("Location: Inicio.php");
+    exit();
+}
+
+$nombreUsuario = $_SESSION['UsuarioNombre'];
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +24,7 @@
     <header class="flex espacio">
         <div class="left">
             <img src="Assets/img/usuario.png" alt="">
-            <h2 class="mg">Hola, </h2>
+            <h2 class="mg">Hola, <?php echo $nombreUsuario; ?></h2>
         </div>
         <div class="right">
             <img src="Assets/img/ayudar.png" alt="">
