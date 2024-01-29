@@ -1,13 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 /*----------------------Inicio.php-------------------*/
 
-.inicio
-{
+.inicio {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
@@ -16,8 +16,7 @@
     height: 100vh;
 }
 
-.contenedor_inicio
-{
+.contenedor_inicio {
     background-color: #fff;
     padding: 20px;
     padding-bottom: 110px;
@@ -26,20 +25,16 @@
     text-align: center;
 }
 
-.iniciar h2
-{
+.iniciar h2 {
     margin-bottom: 20px;
 }
 
-
-.iniciar img
-{
+.iniciar img {
     width: 20%;
     margin-bottom: 20px;
 }
 
-.iniciar input
-{
+.iniciar input {
     width: 60%;
     padding: 10px;
     margin-bottom: 10px;
@@ -47,21 +42,23 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+
 /* ---------- */
-.links
-{
+
+.links {
     display: flex;
 }
 
-.links a
-{
+.links a {
     text-decoration: none;
     color: #007BFF;
     font-size: 12px;
     margin-top: 10px;
     margin-left: 103px;
-
 }
+
+
 /* .links
 {
     text-decoration: none;
@@ -72,9 +69,8 @@
 
 } */
 
-.btn
-{
-    margin-top: 15px ;
+.btn {
+    margin-top: 15px;
     margin-bottom: 15px;
     background-color: #4caf50;
     color: #fff;
@@ -84,52 +80,44 @@
     border-radius: 50px;
     cursor: pointer;
 }
+
+
 /*--------------------menuprinc.php-----------------*/
 
-.espacio 
-{
+.espacio {
     margin: 20px;
     justify-content: space-between;
     margin-bottom: 5%;
 }
 
-.left 
-{
-    display: flex; 
+.left {
+    display: flex;
     align-items: center;
-    
 }
 
-.left img 
-{
+.left img {
     width: 10%;
 }
 
-
-.right img 
-{
+.right img {
     width: 50px;
 }
 
-.mg
-{
+.mg {
     margin-left: 20px;
 }
 
-.separacion
-{
+.separacion {
     justify-content: center;
     align-items: center;
 }
 
-.separacion div
-{
+.separacion div {
     margin: 3%;
     text-align: center;
 }
 
-.separacion img 
-{
+.separacion img {
     width: 150px;
     height: 150px;
     background-color: white;
@@ -137,208 +125,183 @@
     border-radius: 10%;
 }
 
-.separacion a 
-{
+.separacion a {
     color: black;
     text-decoration: none;
     font-weight: normal;
     font-size: 25px;
 }
 
-.separacion a:hover 
-{
+.separacion a:hover {
     font-weight: bold;
 }
 
+
 /* TODOS  */
 
-body 
-{
+body {
     background-color: #2222;
     margin: 0;
     /* Asegura que el cuerpo tenga al menos el 100% de la altura de la ventana */
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
-.header2 
-{
+.header2 {
     background-color: #333;
     color: #fff;
     padding: 10px;
 }
 
-.navegacion 
-{
+.navegacion {
     display: flex;
     flex-direction: column;
     /* Alinea los elementos a la izquierda */
-    align-items: flex-start; 
+    align-items: flex-start;
     padding: 20px;
 }
 
-.navegacion a 
-{
+.navegacion a {
     background-color: #444;
     text-decoration: none;
     color: #fff;
     padding: 10px;
     padding-right: 80px;
     /* Ajusta el tamaño de la letra */
-    font-size: 20px; 
+    font-size: 20px;
 }
 
-.navegacion a:hover 
-{
+.navegacion a:hover {
     /* Cambia el color de fondo al pasar el ratón sobre el enlace */
-    background-color: #555; 
+    background-color: #555;
 }
 
-.negrita
-{
+.negrita {
     font-weight: bold;
 }
 
-section h2
-{
+section h2 {
     text-align: center;
-    padding: 20px;
-    font-size: 50px;
+    padding: 15px;
+    font-size: 40px;
 }
 
-.div1 img
-{
-  width: 2%;
-  margin: 20px;
+.div1 img {
+    width: 2%;
+    margin: 20px;
 }
 
-.flex
-{
+.flex {
     display: flex;
 }
 
-.fondo_section
-{
+.fondo_section {
     background-color: #7bebe2;
     min-width: 175.3vh;
     min-height: 93.2vh;
 }
 
-.fondo_div
-{
-    background-color:#79c1e0 ;
+.fondo_div {
+    background-color: #79c1e0;
     min-height: 92vh;
 }
 
-.fondo_form
-{   
+.fondo_form {
     justify-content: center;
     align-items: center;
     background-color: #a8a8a8;
     min-height: 75vh;
     margin: 0 0.4%;
 }
-  
-  
+
+
 /*-------------------proveedores1.php----------------*/
 
-                                                       /* TABLA */
-/* table
-{
+
+/* TABLA */
+
+table {
     min-width: 174vh;
     min-height: 75vh;
     padding: 20px;
 }
 
-table th
-{
-    font-size: 30px; 
+table th,
+td {
+    font-size: 20px;
 }
 
-table th, td 
-{
+table th,
+td {
     background-color: white;
     border: black;
     text-align: center;
 }
 
-.image
-{
+.image {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1px;
 }
-.image img
-{
+
+.image img {
     width: 2%;
 }
-.peq img
-{
-    width: 50%; 
+
+.peq img {
+    width: 50%;
     max-width: 100px;
 }
 
-table td:hover
-{
+table td:hover {
     cursor: pointer;
 }
 
-.pr
-{
-    padding-right: 25%;
-}
-
-.form1
-{
+.form1 {
     background-color: #666;
     margin: 0 1%;
-} */
+}
 
-                                                /* BOTON */
-/* .button_prov
-{
+
+/* BOTON */
+
+.button_prov {
     text-align: center;
     padding-bottom: 1%;
 }
 
-.button_prov input
-{
+.button_prov input {
     padding: 5px 10%;
     border-radius: 10px;
     background-color: #ae85e0;
 }
 
-.button_prov input:hover
-{
+.button_prov input:hover {
     cursor: pointer;
-} */
+}
+
 
 /*-------------------proveedores2.png---------------*/
 
-.primer_div 
-{
+.primer_div {
     width: 65%;
     margin-left: 5%;
-} 
+}
 
-.pr
-{
+.pr {
     margin-right: 20%;
 }
 
-.pr p
-{
+.pr p {
     font-size: 150%;
 }
 
-.pr1 p
-{
+.pr1 p {
     font-size: 150%;
 }
 
-.pr input
-{
+.pr input {
     width: 140%;
     padding: 10px;
     margin-bottom: 10px;
@@ -347,8 +310,8 @@ table td:hover
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.pr1 input, textarea
-{
+.pr1 input,
+textarea {
     width: 140%;
     padding: 10px;
     margin-bottom: 10px;
@@ -357,26 +320,21 @@ table td:hover
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.segundo_div 
-{
+.segundo_div {
     width: 20%;
 }
 
-.imagen-botones img
-{
+.imagen-botones img {
     width: 50%;
 }
-  
-.buttons
-{
-    margin-left: 40px;
+
+.buttons {
+    margin-left: 15px;
 }
 
-.buttons input
-{
+.buttons input {
     flex-direction: column;
     margin-top: 15px;
     padding: 5px 20px;
     border-radius: 10px;
-    
 }
