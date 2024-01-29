@@ -193,23 +193,34 @@ section h2 {
 .flex {
     display: flex;
 }
+.flex1
+{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.flex1 p
+{
+    padding-top: 25px;
+    padding-left: 10px;
+}
 
 .fondo_section {
     background-color: #7bebe2;
-    min-width: 175.3vh;
-    min-height: 93.2vh;
+    min-width: 174.7vh;
 }
 
 .fondo_div {
     background-color: #79c1e0;
-    min-height: 92vh;
+    min-height: 90.7vh;
 }
 
 .fondo_form {
     justify-content: center;
     align-items: center;
     background-color: #a8a8a8;
-    min-height: 75vh;
+    min-height: 81vh;
     margin: 0 0.4%;
 }
 
@@ -218,57 +229,86 @@ section h2 {
 
 
 /* TABLA */
-
 table {
+    margin-top: 20px;
+    width: 85%;
+    /* border-collapse: collapse; */
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin: 0 auto;
+  }
+  
+  table th,
+  td {
+    padding-left: 10px;
+    padding-right: 10px;  
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  
+  }
+  
+  table th {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  table td {
+    background-color: #fff;
+  }
+  
+/* table {
     min-width: 174vh;
-    min-height: 75vh;
+    min-height: 70vh;
     padding: 20px;
-}
-
-table th,
-td {
+    table-layout: fixed;
+  }
+  
+  table th,
+  td {
     font-size: 20px;
-}
-
-table th,
-td {
+    padding: 20px;
+  }
+  
+  table th,
+  td {
     background-color: white;
     border: black;
     text-align: center;
-}
-
-.image {
+  } */
+  
+  .image {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1px;
-}
-
-.image img {
+  }
+  
+  .image img {
     width: 2%;
-}
-
-.peq img {
+  }
+  
+  .peq img {
     width: 50%;
     max-width: 100px;
-}
-
-table td:hover {
+  }
+  
+  table td:hover {
     cursor: pointer;
-}
-
-.form1 {
+  }
+  
+  .form1 {
     background-color: #666;
     margin: 0 1%;
-}
+  }
 
 
 /* BOTON */
-
 .button_prov {
     text-align: center;
     padding-bottom: 1%;
+    margin-top: 10px;
 }
 
 .button_prov input {
@@ -281,6 +321,14 @@ table td:hover {
     cursor: pointer;
 }
 
+.pequeño img
+{
+    width: 30px;
+}
+.rect1, .rect2 {
+    padding: 4px;
+    border: 1px solid black;
+  }
 
 /*-------------------proveedores2.png---------------*/
 
