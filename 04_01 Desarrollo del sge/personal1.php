@@ -22,7 +22,6 @@ if (!$resultadoPersonal)
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
