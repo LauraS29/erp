@@ -18,7 +18,6 @@
     $Ape_empleado = '';
     $DNI_empleado = '';
     $Tlf_empleado = '';
-    $Email_empleado = '';
     $readonly = '';
     
     // Proceso del formulario
@@ -29,7 +28,6 @@
         $Nom_empleado = $_POST['Nom_empleado'];
         $DNI_empleado = $_POST['DNI_empleado'];
         $Tlf_empleado = $_POST['Tlf_empleado'];
-        $Email_empleado = $_POST['Email_empleado'];
         $Ape_empleado = $_POST['Ape_empleado'];
         
         // Verificar si se recibió un ID para la edición
@@ -38,7 +36,7 @@
         if ($personalId) 
         {
             // Actualizar los datos del proveedor existente
-            $actualizarDatos = "UPDATE empleados SET Cod_empleado='$Cod_empleado', Nom_empleado='$Nom_empleado', Tlf_empleado='$Tlf_empleado', DNI_empleado='$DNI_empleado', Email_empleado='$Email_empleado', Ape_empleado='$Ape_empleado' WHERE Cod_empleado = $personalId";
+            $actualizarDatos = "UPDATE empleados SET Cod_empleado='$Cod_empleado', Nom_empleado='$Nom_empleado', Tlf_empleado='$Tlf_empleado', DNI_empleado='$DNI_empleado', Ape_empleado='$Ape_empleado' WHERE Cod_empleado = $personalId";
 
     
             $ejecutarActualizar = mysqli_query($conexion, $actualizarDatos);
@@ -53,7 +51,7 @@
             exit();
         } else {
             // Insertar todos los datos en la tabla proveedores
-            $insertarDatos = "INSERT INTO empleados (Cod_empleado, Nom_empleado, Tlf_empleado, DNI_empleado, Email_empleado, Ape_empleado) VALUES ('$Cod_empleado', '$Nom_empleado', '$Tlf_empleado', '$Email_empleado',  '$Ape_empleado', '$DNI_empleado')";
+            $insertarDatos = "INSERT INTO empleados (Cod_empleado, Nom_empleado, Tlf_empleado, DNI_empleado, Ape_empleado) VALUES ('$Cod_empleado', '$Nom_empleado', '$Tlf_empleado', '$Ape_empleado', '$DNI_empleado')";
     
             $ejecutarInsertar = mysqli_query($conexion, $insertarDatos);
     
@@ -90,7 +88,6 @@
             $Cod_empleado= $rowPersonal['Cod_empleado'];
             $Nom_empleado = $rowPersonal['Nom_empleado'];
             $Tlf_empleado = $rowPersonal['Tlf_empleado'];
-            $Email_empleado = $rowPersonal['Email_empleado'];
             $Ape_empleado= $rowPersonal['Ape_empleado'];
 
     
@@ -151,10 +148,7 @@
                             <p>Nombre:</p>
                             <input type="text" name="Nom_empleado" value="<?php echo $Nom_empleado; ?>" <?php echo $readonly; ?>>
                         </div>
-                        <div class="pr1">
-                            <p>Email:</p>
-                            <input type="email" name="Email_empleado" value="<?php echo $Email_empleado; ?>" <?php echo $readonly; ?>>
-                        </div>
+                        
                     </div>
                     <div class="flex">
                         <div class="pr">
@@ -172,14 +166,14 @@
                     <img src="Assets/img/usuario.png" alt="">
                     <div class="buttons">
                         <div>
-                            <input type="submit" value="Guardar">
+                            <input type="submit" name="guardar" id="boton1" value="Guardar" <?php echo $readonly; ?>>
                         </div>
                         <div>
-                            <input type="button" value="Actualizar">
+                            <input type="button" value="Actualizar" <?php echo (isset($_GET['modo']) && $_GET['modo'] === 'editar') ? '' : 'disabled'; ?>>
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             </form>
         </div>
     </section>
