@@ -70,9 +70,11 @@
                             <textarea name="informacion" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
-                    <div>
-                        <p>Provincia/Pais:</p>
-                        <input type="text" name="pais">
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Provincia/Pais:</p>
+                            <input type="text" name="pais"> 
+                        </div>
                     </div>
                 </div>
                 <div class="segundo_div imagen-botones">
