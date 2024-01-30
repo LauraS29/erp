@@ -34,9 +34,9 @@ if (!$resultadoPersonal)
 <body class = "flex">
     <header class = "header2">
         <div class="navegacion">
-            <a class="negrita" href="clientes1.php">Clientes</a><br>
+            <a href="clientes1.php">Clientes</a><br>
             <a href="proveedores1.php">Proveedores</a><br>
-            <a href="personal1.php">Personal</a><br>
+            <a class="negrita" href="personal1.php">Personal</a><br>
             <a href="productos1.php">Productos</a><br>
             <a href="ventas.php">Ventas</a><br>
             <a href="compra1.php">Compra</a><br>
