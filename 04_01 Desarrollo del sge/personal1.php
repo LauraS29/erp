@@ -1,3 +1,28 @@
+<?php
+// Conexión a la base de datos
+$host = 'localhost';
+$usuario = 'admin';
+$contraseña = 'madrid';
+$base_Datos = 'trabajo';
+
+$conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
+
+if (!$conexion) 
+{
+    die("Error de conexión: " . mysqli_connect_error());
+}
+
+// Consulta a la base de datos
+$sqlPersonal = "SELECT * FROM empleados";
+$resultadoPersonal = mysqli_query($conexion, $sqlPersonal);
+
+if (!$resultadoPersonal) 
+{
+    die("Error en la consulta: " . mysqli_error($conexion));
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,11 +54,44 @@
                 <h2>Datos del personal</h2>
             </div>
             <form class="fondo_form" action="personal1.php" method="post">
-  
+                <table>
+                    <div class="tabla">
+                        <tr>
+                            <th>Cód.Empleado</th>
+                            <th>Nombre</th>
+                            <th>Teléfono contacto</th>
+                        </tr> 
+                    
+                        <?php
+                        // Bucle para mostrar los datos de proveedores
+                        /* Verifica que $resultadoProveedores sea válido */
+                        while ($row = mysqli_fetch_assoc($resultadoPersonal)) 
+                        {
+                        ?>
+                            <tr>
+                                <td><?php echo $row['Cod_empleado']; ?></td>
+                                <td><a href="personal2.php?codigo=<?php echo $row['Cod_empleado']; ?>&modo=editar"><?php echo $row['Nom_empleado']; ?></a></td>
+                                <td><?php echo $row['Tlf_empleado']; ?></td>
+                                <td class="pequeño">
+                                    <div class="rect1">
+                                        <img src="Assets/img/actualizar.png" alt="Actualizar">
+                                    </div>
+                                    <div class="rect2">
+                                        <img src="Assets/img/eliminar.png" alt="Eliminar">
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    
+                </table>
+
                 <div class="button_prov">
                      <input type="submit" name="add_proveedor" value="Añadir">
                 </div>
-            </form>
+                
         </div>
     </section>
 </body>
