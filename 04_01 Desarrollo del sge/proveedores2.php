@@ -133,7 +133,7 @@
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/repartidor.png" alt="">
-            <p class ="medio">Proveedores</p>
+            <p>Proveedores</p>
         </div>
         <div class="fondo_div">
             <div>

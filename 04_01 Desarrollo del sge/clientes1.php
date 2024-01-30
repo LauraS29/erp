@@ -54,7 +54,7 @@ if (!$resultadoCliente)
             </div>
             <form class="fondo_form" action="clientes1.php" method="post">
             <table>
-                    <div class="tabla">
+                <div class="tabla">
                         <tr>
                             <th>Cód.Cliente</th>
                             <th>Nom.cliente</th>
@@ -83,7 +83,7 @@ if (!$resultadoCliente)
                         <?php
                         }
                         ?>
-                    </div>
+                </div>
                     
                 </table>
   
