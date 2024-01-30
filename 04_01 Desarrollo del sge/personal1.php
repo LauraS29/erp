@@ -84,13 +84,11 @@ if (!$resultadoPersonal)
                         }
                         ?>
                     </div>
-                    
                 </table>
-
                 <div class="button_prov">
                      <input type="submit" name="add_proveedor" value="Añadir">
                 </div>
-                
+            </form>
         </div>
     </section>
 </body>

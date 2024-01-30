@@ -155,27 +155,13 @@
                         </div>
                         <div class="pr1">
                             <p>Teléfono:</p>
-                            <input type="text" name="Codigo_postal_proveedor" value="<?php echo $Codigo_postal_proveedor; ?>" <?php echo $readonly; ?>>
+                            <input type="text" name="Tlf_empleado" value="<?php echo $Tlf_empleado; ?>" <?php echo $readonly; ?>>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Provincia/Pais:</p>
-                            <input type="text" name="Provincia_pais_proveedor" value="<?php echo $Provincia_pais_proveedor; ?>" <?php echo $readonly; ?>>
-                        </div>
-                        <div class="pr1">
-                            <p>Localidad:</p>
-                            <input type="text" name="Localidad_proveedor" value="<?php echo $Localidad_proveedor; ?>" <?php echo $readonly; ?>>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="pr">
-                            <p>Código Empresa:</p>
-                            <input type="text" name="Cod_empresa" value="<?php echo $Cod_empresa; ?>" <?php echo $readonly; ?>>
-                        </div>
-                        <div class="pr1">
-                            <p>Nombre Empresa:</p>
-                            <input type="text" name="Nombre_empresa" value="<?php echo $Nombre_empresa; ?>" <?php echo $readonly; ?>>
+                            <p>Clave acceso:</p>
+                            <input type="text" name="Clave_acceso" value="<?php echo $Clave_acceso; ?>" <?php echo $readonly; ?>>
                         </div>
                     </div>
                 </div>
