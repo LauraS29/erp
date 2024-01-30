@@ -13,33 +13,35 @@
     }
     
     /* Inicio de los input y para la variable $readonly que se utilizará para controlar si los campos son de solo lectura */
-    $Cod_empleado = '';
     $Nom_empleado = '';
     $Ape_empleado = '';
-    $DNI_empleado = '';
-    $Tlf_empleado = '';
-    $Email_empleado = '';
+    $DNI_empleado= '';
+    $Tlf_empleado= '';
+    $Clave_acceso = '';
     $readonly = '';
     
     // Proceso del formulario
     if (isset($_POST['guardar'])) 
     {
         // Obtener los datos del formulario
-        $Cod_empleado = $_POST['Cod_empleado'];
         $Nom_empleado = $_POST['Nom_empleado'];
+        $Ape_empleado = $_POST['Ape_empleado'];
         $DNI_empleado = $_POST['DNI_empleado'];
         $Tlf_empleado = $_POST['Tlf_empleado'];
-        $Email_empleado = $_POST['Email_empleado'];
-        $Ape_empleado = $_POST['Ape_empleado'];
-        
+        $Clave_acceso = $_POST['Clave_acceso'];
+    
         // Verificar si se recibió un ID para la edición
         $personalId = isset($_GET['codigo']) ? $_GET['codigo'] : null;
     
         if ($personalId) 
         {
             // Actualizar los datos del proveedor existente
-            $actualizarDatos = "UPDATE empleados SET Cod_empleado='$Cod_empleado', Nom_empleado='$Nom_empleado', Tlf_empleado='$Tlf_empleado', DNI_empleado='$DNI_empleado', Email_empleado='$Email_empleado', Ape_empleado='$Ape_empleado' WHERE Cod_empleado = $personalId";
-
+            $actualizarDatos = "UPDATE empleados SET Nom_empleado='$Nom_empleado', 
+            Ape_empleado='$Ape_empleado', 
+            DNI_empleado='$DNI_empleado',
+            Tlf_empleado='$Tlf_empleado',
+            Clave_acceso='$Clave_acceso'
+            WHERE Cod_empleado = $personalId";
     
             $ejecutarActualizar = mysqli_query($conexion, $actualizarDatos);
     
@@ -48,12 +50,12 @@
                 die("Error al actualizar datos: " . mysqli_error($conexion));
             }
     
-            // Redireccionar a personal1.php
+            // Redireccionar a proveedores1.php
             header("Location: personal1.php");
             exit();
         } else {
             // Insertar todos los datos en la tabla proveedores
-            $insertarDatos = "INSERT INTO empleados (Cod_empleado, Nom_empleado, Tlf_empleado, DNI_empleado, Email_empleado, Ape_empleado) VALUES ('$Cod_empleado', '$Nom_empleado', '$Tlf_empleado', '$Email_empleado',  '$Ape_empleado', '$DNI_empleado')";
+            $insertarDatos = "INSERT INTO empleados (Nom_empleado, Ape_empleado, DNI_empleado, Tlf_empleado, Clave_acceso) VALUES ('$Nom_empleado', '$Ape_empleado', '$DNI_empleado', '$Tlf_empleado', '$Clave_acceso')";
     
             $ejecutarInsertar = mysqli_query($conexion, $insertarDatos);
     
@@ -87,18 +89,17 @@
         if ($rowPersonal = mysqli_fetch_assoc($resultadoPersonal)) 
         {
             // Datos del proveedor
-            $Cod_empleado= $rowPersonal['Cod_empleado'];
             $Nom_empleado = $rowPersonal['Nom_empleado'];
+            $Ape_empleado = $rowPersonal['Ape_empleado'];
+            $DNI_empleado = $rowPersonal['DNI_empleado'];
             $Tlf_empleado = $rowPersonal['Tlf_empleado'];
-            $Email_empleado = $rowPersonal['Email_empleado'];
-            $Ape_empleado= $rowPersonal['Ape_empleado'];
-
+            $Clave_acceso = $rowPersonal['Clave_acceso'];
     
             // Agregar readonly a los campos si se está editando un proveedor existente
             $readonly = "readonly";
         } else {
             // Manejar el caso en que no se encuentren datos del proveedor
-            die("Empleado no encontrado");
+            die("Personal no encontrado");
         }
     }
 ?>
@@ -113,20 +114,21 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class = "flex">
-    <header class = "header2">
+    <header class="header2">
         <div class="navegacion">
             <a href="clientes1.php">Clientes</a><br>
             <a href="proveedores1.php">Proveedores</a><br>
-            <a class="negrita" href="personal1.php">Personal</a><br>
+            <a href="personal1.php">Personal</a><br>
             <a href="productos1.php">Productos</a><br>
             <a href="ventas.php">Ventas</a><br>
             <a href="compra1.php">Compra</a><br>
-            <a href="pedido1.php">Pedidos</a><br>
+            <a class="negrita" href="pedido1.php">Pedidos</a><br>
+            <a href="empresa1.php">Empresa</a><br>
         </div>
     </header>
     <section class="fondo_section">
         <div class="flex div1">
-            <img src="Assets/img/personal.png" alt="">
+            <img src="Assets/img/repartidor.png" alt="">
             <p class ="medio">Personal</p>
         </div>
         <div class="fondo_div">
@@ -135,53 +137,68 @@
             </div>
             <form class="flex fondo_form" action="personal2.php?codigo=
             <?php echo $personalId; ?>" method="post">
-            <div class="primer_div">
+                <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
-                            <p>Código empleado:</p>
-                            <input type="text" name="Cod_empleado" value="<?php echo $Cod_empleado; ?>" <?php echo $readonly; ?>>
-                        </div>
-                        <div class="pr1">
-                            <p>Teléfono de contacto:</p>
-                            <input type="text" name="Tlf_empleado" value="<?php echo $Tlf_empleado; ?>" <?php echo $readonly; ?>>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="pr">
-                            <p>Nombre:</p>
+                            <p>Nombre Empleado:</p>
                             <input type="text" name="Nom_empleado" value="<?php echo $Nom_empleado; ?>" <?php echo $readonly; ?>>
                         </div>
                         <div class="pr1">
-                            <p>Email:</p>
-                            <input type="email" name="Email_empleado" value="<?php echo $Email_empleado; ?>" <?php echo $readonly; ?>>
+                            <p>Apellido:</p>
+                            <input type="text" name="Ape_empleado" value="<?php echo $Ape_empleado; ?>" <?php echo $readonly; ?>>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Apellidos:</p>
-                            <input type="text" name="Ape_empleado" value="<?php echo $Ape_empleado; ?>" <?php echo $readonly; ?>>
-                        </div>
-                        <div class="pr1">
                             <p>DNI:</p>
                             <input type="text" name="DNI_empleado" value="<?php echo $DNI_empleado; ?>" <?php echo $readonly; ?>>
                         </div>
+                        <div class="pr1">
+                            <p>Teléfono:</p>
+                            <input type="text" name="Codigo_postal_proveedor" value="<?php echo $Codigo_postal_proveedor; ?>" <?php echo $readonly; ?>>
+                        </div>
                     </div>
-                    
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Provincia/Pais:</p>
+                            <input type="text" name="Provincia_pais_proveedor" value="<?php echo $Provincia_pais_proveedor; ?>" <?php echo $readonly; ?>>
+                        </div>
+                        <div class="pr1">
+                            <p>Localidad:</p>
+                            <input type="text" name="Localidad_proveedor" value="<?php echo $Localidad_proveedor; ?>" <?php echo $readonly; ?>>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Código Empresa:</p>
+                            <input type="text" name="Cod_empresa" value="<?php echo $Cod_empresa; ?>" <?php echo $readonly; ?>>
+                        </div>
+                        <div class="pr1">
+                            <p>Nombre Empresa:</p>
+                            <input type="text" name="Nombre_empresa" value="<?php echo $Nombre_empresa; ?>" <?php echo $readonly; ?>>
+                        </div>
+                    </div>
                 </div>
                 <div class="segundo_div imagen-botones">
                     <img src="Assets/img/usuario.png" alt="">
                     <div class="buttons">
                         <div>
-                            <input type="submit" value="Guardar">
+                            <input type="submit" name="guardar" id="boton1" value="Guardar" <?php echo $readonly; ?>>
                         </div>
                         <div>
-                            <input type="button" value="Actualizar">
+                            <input type="button" value="Actualizar" <?php echo (isset($_GET['modo']) && $_GET['modo'] === 'editar') ? '' : 'disabled'; ?>>
                         </div>
                     </div>
-                </div>
                 </div>
             </form>
         </div>
     </section>
 </body>
 </html>
+
+                <!------------PHP------------->
+
+
+
+
+
