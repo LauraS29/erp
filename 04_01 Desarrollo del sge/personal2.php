@@ -38,7 +38,8 @@
         if ($personalId) 
         {
             // Actualizar los datos del proveedor existente
-            $actualizarDatos = "UPDATE empleados SET Cod_empleado='$Cod_empleado',Nom_empleado='$Nom_empleado', Tlf_empleado='$Tlf_empleado',DNI_empleado='$DNI_empleado', Email_empleado='$Email_empleado', Ape_empleado='$Ape_empleado' WHERE Cod_empleado = $personalId";
+            $actualizarDatos = "UPDATE empleados SET Cod_empleado='$Cod_empleado', Nom_empleado='$Nom_empleado', Tlf_empleado='$Tlf_empleado', DNI_empleado='$DNI_empleado', Email_empleado='$Email_empleado', Ape_empleado='$Ape_empleado' WHERE Cod_empleado = $personalId";
+
     
             $ejecutarActualizar = mysqli_query($conexion, $actualizarDatos);
     
