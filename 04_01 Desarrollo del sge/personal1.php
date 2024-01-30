@@ -1,11 +1,11 @@
 <?php
 // Conexión a la base de datos
-$host = 'localhost';
-$usuario = 'admin';
-$contraseña = 'madrid';
-$base_Datos = 'trabajo';
+$servidor = 'localhost';
+$usuario = 'root';
+$clave = '';
+$baseDeDatos = 'trabajo';
 
-$conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
+$conexion = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
 
 if (!$conexion) 
 {
@@ -68,18 +68,18 @@ if (!$resultadoPersonal)
                         {
                         ?>
                             <tr>
-                                <td><?php echo $row['Cod_empleado']; ?></td>
-                                <td><a href="personal2.php?codigo=<?php echo $row['Cod_empleado']; ?>&modo=editar"><?php echo $row['Nom_empleado']; ?></a></td>
-                                <td><?php echo $row['Tlf_empleado']; ?></td>
-                                <td class="pequeño">
-                                    <div class="rect1">
-                                        <img src="Assets/img/actualizar.png" alt="Actualizar">
-                                    </div>
-                                    <div class="rect2">
-                                        <img src="Assets/img/eliminar.png" alt="Eliminar">
-                                    </div>
-                                </td>
-                            </tr>
+                            <td><?php echo $row['Cod_empleado']; ?></td>
+                            <td><a href="personal2.php?codigo=<?php echo $row['Cod_empleado']; ?>&modo=editar"><?php echo $row['Nom_empleado']; ?></a></td>
+                            <td><?php echo $row['Tlf_empleado']; ?></td>
+                            <td class="pequeño">
+                                <div class="rect1">
+                                    <img src="Assets/img/actualizar.png" alt="Actualizar">
+                                </div>
+                                <div class="rect2">
+                                    <img src="Assets/img/eliminar.png" alt="Eliminar">
+                                </div>
+                            </td>
+                        </tr>
                         <?php
                         }
                         ?>

@@ -70,6 +70,14 @@ if (!$resultadoProveedores)
                             <td><?php echo $row['Cod_proveedor']; ?></td>
                             <td><a href="proveedores2.php?codigo=<?php echo $row['Cod_proveedor']; ?>&modo=editar"><?php echo $row['Nombre_proveedor']; ?></a></td>
                             <td><?php echo $row['Telefono_proveedor']; ?></td>
+                            <td class="pequeño">
+                                <div class="rect1">
+                                    <img src="Assets/img/actualizar.png" alt="Actualizar">
+                                </div>
+                                <div class="rect2">
+                                    <img src="Assets/img/eliminar.png" alt="Eliminar">
+                                </div>
+                            </td>
                         </tr>
                     <?php
                     }
