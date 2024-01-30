@@ -1,11 +1,11 @@
 <?php
 // Conexión a la base de datos
-$host = 'localhost';
-$usuario = 'admin';
-$contraseña = 'madrid';
-$base_Datos = 'trabajo';
+$servidor = 'localhost';
+$usuario = 'root';
+$clave = '';
+$baseDeDatos = 'trabajo';
 
-$conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
+$conexion = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
 
 if (!$conexion) 
 {
@@ -31,7 +31,7 @@ if (!$resultadoProveedores)
     <script src="./Assets/js/motor.js"></script>
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
-<body class = "flex">
+<body class="flex">
     <header class="header2">
         <div class="navegacion">
             <a href="clientes1.php">Clientes</a><br>
@@ -45,17 +45,9 @@ if (!$resultadoProveedores)
         </div>
     </header>
     <section class="fondo_section">
-        <div class="flex1">
-            <div class="flex">
-                <img src="Assets/img/repartidor.png" alt="">
-                <p class ="medio">Proveedores</p>
-            </div>
-            <div>
-                <img src="Assets/img/ayudar.png" alt="">
-                <a href="Inicio.php">
-                    <img class="mg" src="Assets/img/cerrar-sesion.png" alt="">
-                </a>
-            </div>
+        <div class="flex div1">
+            <img src="Assets/img/repartidor.png" alt="">
+            <p>Proveedores</p>
         </div>
         <div class="fondo_div">
             <div>
@@ -63,37 +55,25 @@ if (!$resultadoProveedores)
             </div>
             <form class="fondo_form" action="proveedores1.php" method="post">
                 <table>
-                    <div class="tabla">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre_proveedor</th>
+                        <th>Teléfono</th>
+                    </tr>
+                    <?php
+                    // Bucle para mostrar los datos de proveedores
+                    /* Verifica que $resultadoProveedores sea válido */
+                    while ($row = mysqli_fetch_assoc($resultadoProveedores)) 
+                    {
+                    ?>
                         <tr>
-                            <th>Código</th>
-                            <th>Proveedores</th>
-                            <th>Teléfono</th>
-                        </tr> 
-                    
-                        <?php
-                        // Bucle para mostrar los datos de proveedores
-                        /* Verifica que $resultadoProveedores sea válido */
-                        while ($row = mysqli_fetch_assoc($resultadoProveedores)) 
-                        {
-                        ?>
-                            <tr>
-                                <td><?php echo $row['Cod_proveedor']; ?></td>
-                                <td><a href="proveedores2.php?codigo=<?php echo $row['Cod_proveedor']; ?>&modo=editar"><?php echo $row['Nombre_proveedor']; ?></a></td>
-                                <td><?php echo $row['Telefono_proveedor']; ?></td>
-                                <td class="pequeño">
-                                    <div class="rect1">
-                                        <img src="Assets/img/actualizar.png" alt="Actualizar">
-                                    </div>
-                                    <div class="rect2">
-                                        <img src="Assets/img/eliminar.png" alt="Eliminar">
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                    
+                            <td><?php echo $row['Cod_proveedor']; ?></td>
+                            <td><a href="proveedores2.php?codigo=<?php echo $row['Cod_proveedor']; ?>&modo=editar"><?php echo $row['Nombre_proveedor']; ?></a></td>
+                            <td><?php echo $row['Telefono_proveedor']; ?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
                 </table>
                 <div class="button_prov">
                     <input type="submit" name="add_proveedor" value="Añadir">
@@ -104,14 +84,17 @@ if (!$resultadoProveedores)
 </body>
 </html>
 
+<!-- Manejo del formulario -->
 <?php
+/* Verifica si el formulario ha sido enviado mediante POST */
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
+    /* Obtiene los valores de correo y contraseña del formulario */
     $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
     $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
 
+    /* Redirige a la página "proveedores2.php" utilizando header */
     header("Location: proveedores2.php");
     exit();
 }
 ?>
-
