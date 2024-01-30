@@ -5,40 +5,44 @@ include_once('Db/ConDb.php');
 // Inicializa el mensaje de error como vacío
 $errorMsg = '';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
     // Obtén los datos del formulario
     $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
     $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
 
     // Validar que ambos campos estén completos
-    if (empty($correo) || empty($contrasena)) {
+    if (empty($correo) || empty($contrasena)) 
+    {
         $errorMsg = "Ambos campos (correo y contraseña) son obligatorios.";
     } else {
         // Validar el formato del correo electrónico
-        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) 
+        {
             $errorMsg = "Formato de correo electrónico no válido.";
         } else {
             // Realiza la consulta para obtener el nombre del usuario
             $sql = "SELECT Nombre_usuario, Contraseña_usuario FROM Usuarios WHERE Correo_usuario = '$correo'";
             $resultado = mysqli_query($conexion, $sql);
 
-            if ($resultado && mysqli_num_rows($resultado) > 0) {
+            if ($resultado && mysqli_num_rows($resultado) > 0) 
+            {
                 $row = mysqli_fetch_assoc($resultado);
                 $hashContrasena = $row['Contraseña_usuario'];
 
                 // Verificar la contraseña
-                if (password_verify($contrasena, $hashContrasena)) {
+                if (password_verify($contrasena, $hashContrasena)) 
+                {
                     $_SESSION['UsuarioNombre'] = $row['Nombre_usuario'];
 
                     // Redirige a menuprinc.php solo si la autenticación es exitosa
                     header("Location: menuprinc.php");
-                    exit(); // Asegura que no se procese nada más después de la redirección
+                    // Asegura que no se procese nada más después de la redirección
+                    exit(); 
                 } else {
-                    // Contraseña incorrecta
                     $errorMsg = "Contraseña incorrecta";
                 }
             } else {
-                // Usuario no encontrado
                 $errorMsg = "Usuario no encontrado";
             }
         }
@@ -56,8 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 
-<body class="inicio">
-
+<body class="inicio fondo_inicio">
     <section class="contenedor_inicio">
         <div class="iniciar">
             <img src="./Assets/img/usuario.png" alt="">
@@ -79,6 +82,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </section>
-
 </body>
 </html>

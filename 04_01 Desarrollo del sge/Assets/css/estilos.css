@@ -6,14 +6,30 @@
 
 
 /*----------------------Inicio.php-------------------*/
+.fondo_inicio
+{
+    background-image: url('../img/paisaje.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Asegura que no haya márgenes en el cuerpo */
+    margin: 0; 
+    /* Asegura que no haya relleno en el cuerpo */
+    padding: 0; 
+    /* Hace que la imagen de fondo cubra toda la altura de la ventana gráfica */
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .inicio {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100vh; */
 }
 
 .contenedor_inicio {
@@ -201,6 +217,12 @@ section h2 {
 }
 
 .flex1 p
+{
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+.medio
 {
     padding-top: 25px;
     padding-left: 10px;

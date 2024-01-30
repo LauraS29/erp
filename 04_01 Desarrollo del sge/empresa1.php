@@ -44,7 +44,7 @@ if (!$resultadoEmpresas) {
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/repartidor.png" alt="">
-            <p>Empresas</p>
+            <p class ="medio">Empresas</p>
         </div>
         <div class="fondo_div">
             <div>
