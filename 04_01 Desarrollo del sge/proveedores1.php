@@ -48,7 +48,7 @@ if (!$resultadoProveedores)
         <div class="flex1">
             <div class="flex">
                 <img src="Assets/img/repartidor.png" alt="">
-                <p>Proveedores</p>
+                <p class ="medio">Proveedores</p>
             </div>
             <div>
                 <img src="Assets/img/ayudar.png" alt="">

@@ -80,7 +80,7 @@ if (!$resultadoEmpresas) {
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/repartidor.png" alt="">
-            <p>Proveedores</p>
+            <p class ="medio">Proveedores</p>
         </div>
         <div class="fondo_div">
             <div>

@@ -127,7 +127,7 @@
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/personal.png" alt="">
-            <p>Personal</p>
+            <p class ="medio">Personal</p>
         </div>
         <div class="fondo_div">
             <div>

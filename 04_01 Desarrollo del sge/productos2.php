@@ -110,7 +110,7 @@ if (isset($_POST['guardar']))
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/caja.png" alt="">
-            <p>Productos</p>
+            <p class ="medio">Productos</p>
         </div>
         <div class="fondo_div">
             <div>

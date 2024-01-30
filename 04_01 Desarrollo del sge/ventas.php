@@ -22,7 +22,7 @@
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/venta.png" alt="">
-            <p>Ventas</p>
+            <p class ="medio">Ventas</p>
         </div>
         <div class="fondo_div">
             <div>

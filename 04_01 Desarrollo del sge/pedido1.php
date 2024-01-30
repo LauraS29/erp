@@ -22,7 +22,7 @@
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/pedido.png" alt="">
-            <p>Pedidos</p>
+            <p class ="medio">Pedidos</p>
         </div>
         <div class="fondo_div">
             <div>

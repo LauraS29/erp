@@ -133,7 +133,7 @@
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/clientes.png" alt="">
-            <p>Clientes</p>
+            <p class ="medio">Clientes</p>
         </div>
         <div class="fondo_div">
             <div>
