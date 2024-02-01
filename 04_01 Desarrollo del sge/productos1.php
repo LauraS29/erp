@@ -63,7 +63,7 @@ if (!$resultadoProductos)
                                 <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Cantidad_producto']; ?></a></td>
                                 <td class="pequeño">
                                     <div class="rect1">
-                                    <a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><img src="Assets/img/actualizar.png" alt="Actualizar"></a>
+                                        <a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><img src="Assets/img/actualizar.png" alt="Actualizar"></a>
                                     </div>
                                     <div class="rect2">
                                         <img src="Assets/img/eliminar.png" alt="Eliminar">

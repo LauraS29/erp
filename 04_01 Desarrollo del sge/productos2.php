@@ -111,7 +111,7 @@ if ($productoId)
             <div>
                 <h2>Datos de los productos</h2>
             </div>
-            <form class="flex fondo_form" action="productos2.php?codigo=<?php echo $productoId; ?>" method="post">
+            <form class="flex fondo_form" action="productos2.php?codigo=<?php echo $productoId; ?>&modo=editar" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
