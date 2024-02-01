@@ -246,6 +246,11 @@ section h2 {
     margin: 0 0.4%;
 }
 
+a
+{
+    text-decoration: none;
+    color: black;
+}
 
 /*-------------------proveedores1.php----------------*/
 

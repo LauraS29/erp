@@ -57,10 +57,10 @@ if (!$resultadoProductos)
                         {
                         ?>
                             <tr>
-                                <td><?php echo $row['Cod_producto']; ?></td>
+                                <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Cod_producto']; ?></a></td>
                                 <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Nombre_producto']; ?></a></td>
-                                <td><?php echo $row['Precio_producto']; ?></td>
-                                <td><?php echo $row['Cantidad_producto']; ?></td>
+                                <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Precio_producto']; ?></a></td>
+                                <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Cantidad_producto']; ?></a></td>
                                 <td class="pequeño">
                                     <div class="rect1">
                                     <a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><img src="Assets/img/actualizar.png" alt="Actualizar"></a>
