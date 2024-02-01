@@ -1,8 +1,8 @@
 <?php
 // Conexión a la base de datos
 $host = 'localhost';
-$usuario = 'root';
-$contraseña = '';
+$usuario = 'admin';
+$contraseña = 'madrid';
 $base_Datos = 'trabajo';
 
 /* mysqli_connect (se utiliza para establecer la conexión) */
