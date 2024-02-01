@@ -120,13 +120,13 @@ if ($productoId)
                         </div>
                         <div class="pr1">
                             <p>Precio del producto:</p>
-                            <input type="text" name="Precio_producto" value="<?php echo $Precio_producto; ?>" <?php echo $modoEditar ? '' : 'readonly'; ?>>
+                            <input type="text" name="Precio_producto" value="<?php echo $Precio_producto; ?>" <?php echo 'readonly'; ?>>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Cantidad del producto:</p>
-                            <input type="text" name="Cantidad_producto" value="<?php echo $Cantidad_producto; ?>" <?php echo $modoEditar ? '' : 'readonly'; ?>>
+                            <input type="text" name="Cantidad_producto" value="<?php echo $Cantidad_producto; ?>" <?php echo 'readonly'; ?>>
                         </div>
                     </div>
                 </div>
@@ -134,11 +134,10 @@ if ($productoId)
                     <img src="Assets/img/caja.png" alt="">
                     <div class="buttons">
                         <div>
-                            <?php if ($modoEditar) : ?>
-                                <input type="submit" name="guardar" id="boton1" value="Guardar">
-                            <?php else : ?>
-                                <span>Modo de visualización</span>
-                            <?php endif; ?>
+                            <input type="submit" name="guardar" id="boton1" value="Guardar" <?php echo $readonly; ?>>
+                        </div>
+                        <div>
+                            <input type="button" value="Actualizar" <?php echo (isset($_GET['modo']) && $_GET['modo'] === 'editar') ? '' : 'disabled'; ?>>
                         </div>
                     </div>
                 </div>
