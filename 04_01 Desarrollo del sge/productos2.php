@@ -120,13 +120,13 @@ if ($productoId)
                         </div>
                         <div class="pr1">
                             <p>Precio del producto:</p>
-                            <input type="text" name="Precio_producto" value="<?php echo $Precio_producto; ?>" <?php echo 'readonly'; ?>>
+                            <input type="text" name="Precio_producto" value="<?php echo $Precio_producto; ?>" <?php echo $readonly; ?>>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Cantidad del producto:</p>
-                            <input type="text" name="Cantidad_producto" value="<?php echo $Cantidad_producto; ?>" <?php echo 'readonly'; ?>>
+                            <input type="text" name="Cantidad_producto" value="<?php echo $Cantidad_producto; ?>" <?php echo $readonly; ?>>
                         </div>
                     </div>
                 </div>
