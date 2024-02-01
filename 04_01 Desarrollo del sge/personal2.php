@@ -1,16 +1,6 @@
 <?php
-    $host = 'localhost';
-    $usuario = 'admin';
-    $contraseña = 'madrid';
-    $base_Datos = 'trabajo';
-
-    $conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
-
-
-    if (!$conexion) 
-    {
-        die("Error de conexión: " . mysqli_connect_error());
-    }
+session_start();
+include_once('Db/ConDb.php');
     
     /* Inicio de los input y para la variable $readonly que se utilizará para controlar si los campos son de solo lectura */
     $Nom_empleado = '';
@@ -73,7 +63,7 @@
     }
     
     // Obtener datos del proveedor para editar si se proporciona un ID
-    $personalId = isset($_GET['Cod_empleado']) ? $_GET['Cod_empleado'] : null;
+    $personalId = isset($_GET['codigo']) ? $_GET['codigo'] : null;
     
     if ($personalId) 
     {

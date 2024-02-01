@@ -1,3 +1,8 @@
+<?php
+session_start();
+include_once('Db/ConDb.php');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

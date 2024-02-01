@@ -1,16 +1,6 @@
 <?php
-// Conectar a la base de datos (incluye tu archivo de conexión si es necesario)
-$host = 'localhost';
-$usuario = 'admin';
-$contraseña = 'madrid';
-$base_Datos = 'trabajo';
-
-$conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
-
-// Verificar la conexión
-if ($conexion->connect_error) {
-    die("Error de conexión: " . $conexion->connect_error);
-}
+session_start();
+include_once('Db/ConDb.php');
 
 // Procesar el formulario cuando se envía
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

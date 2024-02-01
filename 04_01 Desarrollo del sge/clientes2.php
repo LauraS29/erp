@@ -1,40 +1,35 @@
 <?php
-    $host = 'localhost';
-    $usuario = 'admin';
-    $contraseña = 'madrid';
-    $base_Datos = 'trabajo';
+session_start();
+include_once('Db/ConDb.php');
 
-    $conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
-
-
-    if (!$conexion) 
-    {
-        die("Error de conexión: " . mysqli_connect_error());
-    }
+if (!$conexion) 
+{
+    die("Error de conexión: " . mysqli_connect_error());
+}
     
-    /* Inicio de los input y para la variable $readonly que se utilizará para controlar si los campos son de solo lectura */
-    $Cod_cliente = '';
-    $Nom_cliente = '';
-    $Ap_cliente = '';
-    $Tlf_cliente = '';
-    $Email_cliente = '';
-    $DNI_cliente = '';
-    $Provincia = '';
-    $Localidad = '';
-    $readonly = '';
+/* Inicio de los input y para la variable $readonly que se utilizará para controlar si los campos son de solo lectura */
+$Cod_cliente = '';
+$Nom_cliente = '';
+$Ap_cliente = '';
+$Tlf_cliente = '';
+$Email_cliente = '';
+$DNI_cliente = '';
+$Provincia = '';
+$Localidad = '';
+$readonly = '';
     
-    // Proceso del formulario
-    if (isset($_POST['guardar'])) 
-    {
-        // Obtener los datos del formulario
-        $Cod_cliente = $_POST['Cod_cliente'];
-        $Nom_cliente = $_POST['Nom_cliente'];
-        $Ap_cliente = $_POST['Ap_cliente'];
-        $Tlf_cliente = $_POST['Tlf_cliente'];
-        $Email_cliente = $_POST['Email_cliente'];
-        $DNI_cliente = $_POST['DNI_cliente'];
-        $Provincia = $_POST['Provincia'];
-        $Localidad = $_POST['Localidad'];
+// Proceso del formulario
+if (isset($_POST['guardar'])) 
+{
+    // Obtener los datos del formulario
+    $Cod_cliente = $_POST['Cod_cliente'];
+    $Nom_cliente = $_POST['Nom_cliente'];
+    $Ap_cliente = $_POST['Ap_cliente'];
+    $Tlf_cliente = $_POST['Tlf_cliente'];
+    $Email_cliente = $_POST['Email_cliente'];
+    $DNI_cliente = $_POST['DNI_cliente'];
+    $Provincia = $_POST['Provincia'];
+    $Localidad = $_POST['Localidad'];
         
         // Verificar si se recibió un ID para la edición
         $clienteId = isset($_GET['codigo']) ? $_GET['codigo'] : null;

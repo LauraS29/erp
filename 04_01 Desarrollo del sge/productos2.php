@@ -1,48 +1,11 @@
 <?php
-$host = 'localhost';
-$usuario = 'admin';
-$contraseña = 'madrid';
-$base_Datos = 'trabajo';
-
-$conexion = mysqli_connect($host, $usuario, $contraseña, $base_Datos);
-
-if (!$conexion) 
-{
-    die("Error de conexión: " . mysqli_connect_error());
-}
+session_start();
+include_once('Db/ConDb.php');
 
 $Nombre_producto = '';
 $Precio_producto = '';
 $Cantidad_producto = '';
 $readonly = '';
-
-$productoId = isset($_GET['codigo']) ? $_GET['codigo'] : null;
-$modoEditar = isset($_GET['modo']) && $_GET['modo'] === 'editar';
-
-if ($productoId && $modoEditar) 
-{
-    // Realizar la consulta para obtener los datos del producto
-    $consultaProducto = "SELECT * FROM Productos WHERE Cod_producto = $productoId";
-    $resultadoProducto = mysqli_query($conexion, $consultaProducto);
-
-    if (!$resultadoProducto) 
-    {
-        die("Error al obtener datos del producto: " . mysqli_error($conexion));
-    }
-
-    if ($rowProducto = mysqli_fetch_assoc($resultadoProducto)) 
-    {
-        $Nombre_producto = $rowProducto['Nombre_producto'];
-        $Precio_producto = $rowProducto['Precio_producto'];
-        $Cantidad_producto = $rowProducto['Cantidad_producto'];
-
-        $readonly = "readonly";
-    } 
-    else 
-    {
-        die("Producto no encontrado");
-    }
-}
 
 if (isset($_POST['guardar'])) 
 {
@@ -50,9 +13,12 @@ if (isset($_POST['guardar']))
     $Precio_producto  = $_POST['Precio_producto'];
     $Cantidad_producto = $_POST['Cantidad_producto'];
 
+    // Verificar si se recibió un ID para la edición
+    $productoId = isset($_GET['codigo']) ? $_GET['codigo'] : null;
+
     if ($productoId) 
     {
-        $actualizarDatos = "UPDATE Productos SET Nombre_producto='$Nombre_producto', Precio_producto='$Precio_producto', Cantidad_producto='$Cantidad_producto' WHERE Cod_producto = $productoId";
+        $actualizarDatos = "UPDATE productos SET Nombre_producto='$Nombre_producto', Precio_producto='$Precio_producto', Cantidad_producto='$Cantidad_producto' WHERE Cod_producto = $productoId";
 
         $ejecutarActualizar = mysqli_query($conexion, $actualizarDatos);
 
@@ -68,7 +34,7 @@ if (isset($_POST['guardar']))
     else 
     {
         // Manejar la inserción de un nuevo producto
-        $insertarDatos = "INSERT INTO Productos (Nombre_producto, Precio_producto, Cantidad_producto) VALUES ('$Nombre_producto', '$Precio_producto', '$Cantidad_producto')";
+        $insertarDatos = "INSERT INTO productos (Nombre_producto, Precio_producto, Cantidad_producto) VALUES ('$Nombre_producto', '$Precio_producto', '$Cantidad_producto')";
 
         $ejecutarInsertar = mysqli_query($conexion, $insertarDatos);
 
@@ -82,6 +48,35 @@ if (isset($_POST['guardar']))
         // Redirigir a productos1.php después de insertar
         header("Location: productos1.php?id=$lastInsertId");
         exit();
+    }
+}
+
+// Obtener datos del proveedor para editar si se proporciona un ID
+$productoId = isset($_GET['codigo']) ? $_GET['codigo'] : null;
+
+if ($productoId) 
+{
+    $consultaProducto = "SELECT * FROM productos WHERE Cod_producto = $productoId";
+    $resultadoProducto = mysqli_query($conexion, $consultaProducto);
+
+    if (!$resultadoProducto) 
+    {
+        die("Error al obtener datos del producto: " . mysqli_error($conexion));
+    }
+
+    // Verificar si se encontraron datos del proveedor
+    if ($rowProducto = mysqli_fetch_assoc($resultadoProducto)) 
+    {
+        // Datos del proveedor
+        $Nombre_producto = $rowProducto['Nombre_producto'];
+        $Precio_producto = $rowProducto['Precio_producto'];
+        $Cantidad_producto = $rowProducto['Cantidad_producto'];
+
+        // Agregar readonly a los campos si se está editando un proveedor existente
+        $readonly = "readonly";
+    } else {
+        // Manejar el caso en que no se encuentren datos del proveedor
+        die("Producto no encontrado");
     }
 }
 ?>
@@ -116,12 +111,12 @@ if (isset($_POST['guardar']))
             <div>
                 <h2>Datos de los productos</h2>
             </div>
-            <form class="flex fondo_form" action="productos2.php?codigo=<?php echo $productoId; ?>&modo=editar" method="post">
+            <form class="flex fondo_form" action="productos2.php?codigo=<?php echo $productoId; ?>" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
                             <p>Nombre del producto:</p>
-                            <input type="text" name="Nombre_producto" value="<?php echo $Nombre_producto; ?>" <?php echo $modoEditar ? '' : 'readonly'; ?>>
+                            <input type="text" name="Nombre_producto" value="<?php echo $Nombre_producto; ?>" <?php echo $readonly; ?>>
                         </div>
                         <div class="pr1">
                             <p>Precio del producto:</p>

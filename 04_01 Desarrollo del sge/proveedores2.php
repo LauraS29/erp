@@ -1,15 +1,6 @@
 <?php
-$servidor = 'localhost';
-$usuario = 'root';
-$clave = '';
-$baseDeDatos = 'trabajo';
-
-$conexion = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-if (!$conexion) 
-{
-    die("Error de conexión: " . mysqli_connect_error());
-}
+session_start();
+include_once('Db/ConDb.php');
 
 /* Inicio de los input y para la variable $readonly que se utilizará para controlar si los campos son de solo lectura */
 $Nombre_proveedor = '';

@@ -1,19 +1,6 @@
 <?php
-// Conexión a la base de datos 
-
-$servidor = 'localhost';
-$usuario = 'root';
-$clave = '';
-$baseDeDatos = 'trabajo';
-
-/* mysqli_connect (se utiliza para establecer la conexión) */
-$conexion = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-/* verifica si la conexión fue exitosa. Si no, termina el script y muestra un mensaje de error */
-if (!$conexion) 
-{
-    die("Error de conexión: " . mysqli_connect_error());
-}
+session_start();
+include_once('Db/ConDb.php');
 
 // Formulario
 

@@ -1,16 +1,6 @@
 <?php
-// Conexión a la base de datos
-$servidor = 'localhost';
-$usuario = 'root';
-$clave = '';
-$baseDeDatos = 'trabajo';
-
-$conexion = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-if (!$conexion) 
-{
-    die("Error de conexión: " . mysqli_connect_error());
-}
+session_start();
+include_once('Db/ConDb.php');
 
 // Consulta a la base de datos
 $sqlPersonal = "SELECT * FROM empleados";

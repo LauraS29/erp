@@ -1,10 +1,6 @@
 <?php
-$servidor = 'localhost';
-$usuario = 'root';
-$clave = '';
-$baseDeDatos = 'trabajo';
-
-$conexion = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+session_start();
+include_once('Db/ConDb.php');
 
 if (!$conexion) {
     die("Error de conexión: " . mysqli_connect_error());
