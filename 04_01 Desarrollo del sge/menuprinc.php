@@ -1,16 +1,3 @@
-<?php
-session_start();
-include_once('Db/ConDb.php');
-
-// Verificar si el usuario está autenticado
-if (!isset($_SESSION['UsuarioNombre'])) {
-    header("Location: Inicio.php");
-    exit();
-}
-
-$nombreUsuario = $_SESSION['UsuarioNombre'];
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>

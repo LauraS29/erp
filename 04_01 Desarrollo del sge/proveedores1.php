@@ -1,17 +1,3 @@
-<?php
-session_start();
-include_once('Db/ConDb.php');
-
-// Consulta a la base de datos
-$sqlProveedores = "SELECT * FROM proveedores";
-$resultadoProveedores = mysqli_query($conexion, $sqlProveedores);
-
-if (!$resultadoProveedores) 
-{
-    die("Error en la consulta: " . mysqli_error($conexion));
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
