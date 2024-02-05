@@ -1,20 +1,3 @@
-<?php
-    session_start();
-    // Base de datos
-    include_once('Db/ConDb.php');
-    // HEADER
-    include_once('Models/navegacion.php');
-
-    // Consulta a la base de datos
-    $sqlCliente = "SELECT * FROM cliente";
-    $resultadoCliente = mysqli_query($conexion, $sqlCliente);
-
-    if (!$resultadoCliente) 
-    {
-        die("Error en la consulta: " . mysqli_error($conexion));
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,12 +28,6 @@
                             <th>Dni</th>
                         </tr> 
                     
-                        <?php
-                            // Bucle para mostrar los datos de proveedores
-                            /* Verifica que $resultadoProveedores sea válido */
-                            while ($row = mysqli_fetch_assoc($resultadoCliente)) 
-                            {
-                        ?>
                         <tr>
                             <td>
                                 <a href="clientes2.php?codigo=<?php echo $row['Cod_cliente']; 
@@ -69,10 +46,6 @@
                                 <img class="img_elim" src="Assets/img/eliminar.png" alt="">
                             </td>
                         </tr>
-                        
-                        <?php
-                            }
-                        ?>
                     </div>   
                 </table>
                 <div class="button_prov">
