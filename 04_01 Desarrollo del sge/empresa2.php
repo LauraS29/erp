@@ -1,6 +1,9 @@
 <?php
-session_start();
-include_once('Db/ConDb.php');
+    session_start();
+    // Base de datos
+    include_once('Db/ConDb.php');
+    // HEADER
+    include_once('Models/navegacion.php');
 
 // Formulario
 
@@ -11,17 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (isset($_POST['guardar'])) 
     {
         /* Obtener los datos del formulario ($_POST) y se asignan a variables */
-        $Nombre_empresa = $_POST['Nombre_empresa'];
-        $Telefono_empresa = $_POST['Telefono_empresa'];
+        $Cod_empresa = $_POST['Cod_empresa'];
+        $Nom_empresa = $_POST['Nom_empresa'];
+        $Tlf_empresa = $_POST['Tlf_empresa'];
         $Email_empresa = $_POST['Email_empresa'];
-        $Codigo_postal_empresa = $_POST['Codigo_postal_empresa'];
+        $Cod_postal_empresa = $_POST['Cod_postal_empresa'];
         $Provincia_pais_empresa = $_POST['Provincia_pais_empresa'];
         $Localidad_empresa = $_POST['Localidad_empresa'];
+        $Provincia_empresa = $_POST['Provincia_empresa'];
         $Direccion_empresa = $_POST['Direccion_empresa'];
-        $Cod_empresa = $_POST['Cod_empresa'];
-
+        
         // Insertar todos los datos en la tabla empresa
-        $insertarDatos = "INSERT INTO Empresa (Cod_empresa, Nombre_empresa, Telefono_empresa, Email_empresa, Codigo_postal_empresa, Provincia_pais_empresa, Localidad_empresa, Direccion_empresa) VALUES ('$Cod_empresa', '$Nombre_empresa', '$Telefono_empresa', '$Email_empresa', '$Codigo_postal_empresa', '$Provincia_pais_empresa', '$Localidad_empresa', '$Direccion_empresa')";
+        $insertarDatos = "INSERT INTO Empresa (Cod_empresa, Nom_empresa, Tlf_empresa, Email_empresa, Cod_postal_empresa, Localidad_empresa,Provincia_empresa,  Direccion_empresa) VALUES ('$Cod_empresa', '$Nombre_empresa', '$Telefono_empresa', '$Email_empresa', '$Codigo_postal_empresa', '$Provincia_pais_empresa', '$Localidad_empresa', '$Direccion_empresa')";
 
         /* mysqli_query (ejecuta la consulta y devuelve un resultado que se almacena en $ejecutarInsertar) */
         $ejecutarInsertar = mysqli_query($conexion, $insertarDatos);
@@ -34,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 }
 
 // Obtener datos de empresas para mostrar en la tabla
-$consultaEmpresas = "SELECT Cod_empresa, Nombre_empresa, Telefono_empresa FROM Empresa";
+$consultaEmpresas = "SELECT Cod_empresa, Nom_empresa, Tlf_empresa FROM empresa";
 $resultadoEmpresas = mysqli_query($conexion, $consultaEmpresas);
 
 if (!$resultadoEmpresas) {
@@ -52,8 +56,18 @@ if (!$resultadoEmpresas) {
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class = "flex">
-    <?php require_once "Views/encabezado.php"; ?>
-
+    <header class = "header2">
+        <div class="navegacion">
+            <a href="clientes1.php">Clientes</a><br>
+            <a href="proveedores1.php">Proveedores</a><br>
+            <a href="personal1.php">Personal</a><br>
+            <a href="productos1.php">Productos</a><br>
+            <a href="ventas.php">Ventas</a><br>
+            <a href="compra1.php">Compra</a><br>
+            <a href="pedido1.php">Pedidos</a><br>
+            <a class="negrita" href="empresa1.php">Empresa</a><br>
+        </div>
+    </header>
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/repartidor.png" alt="">
@@ -68,11 +82,11 @@ if (!$resultadoEmpresas) {
                     <div class="flex">
                         <div class="pr">
                             <p>Nombre Empresa:</p>
-                            <input type="text" name="Nombre_empresa">
+                            <input type="text" name="Nom_empresa">
                         </div>
                         <div class="pr1">
                             <p>Teléfono Empresa:</p>
-                            <input type="text" name="Telefono_empresa">
+                            <input type="text" name="Tlf_empresa">
                         </div>
                     </div>
                     <div class="flex">
@@ -82,17 +96,17 @@ if (!$resultadoEmpresas) {
                         </div>
                         <div class="pr1">
                             <p>Código Postal:</p>
-                            <input type="text" name="Codigo_postal_empresa">
+                            <input type="text" name="Cod_postal_empresa">
                         </div>
                     </div>
                     <div class="flex">
-                        <div class="pr">
-                            <p>Provincia/Pais:</p>
-                            <input type="text" name="Provincia_pais_empresa">
-                        </div>
                         <div class="pr1">
                             <p>Localidad:</p>
                             <input type="text" name="Localidad_empresa">
+                        </div>
+                        <div class="pr">
+                            <p>Provincia:</p>
+                            <input type="text" name="Provincia_empresa">
                         </div>
                     </div>
                     <div class="flex">
@@ -104,7 +118,6 @@ if (!$resultadoEmpresas) {
                             <p>Código Empresa:</p>
                             <input type="text" name="Cod_empresa">
                         </div>
-
                     </div>
                 </div>
                 <div class="segundo_div imagen-botones">

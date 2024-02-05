@@ -6,14 +6,14 @@ include_once('Db/ConDb.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recuperar datos del formulario
     $nombre = $_POST["nombre"];
-    $correo = $_POST["correo"];
+    $email = $_POST["email"];
     $contrasena = $_POST["contrasena"];
 
     // Hash de la contraseña (para mayor seguridad)
     $hash_contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
 
     // Insertar datos en la base de datos
-    $sql = "INSERT INTO Usuarios (Nombre_usuario, Contraseña_usuario, Correo_usuario) VALUES ('$nombre', '$hash_contrasena', '$correo')";
+    $sql = "INSERT INTO Usuarios (Nom_usuario, Email_usuario, Contraseña_usuario) VALUES ('$nombre', '$email', '$hash_contrasena')";
 
     if ($conexion->query($sql) === TRUE) {
         echo "Usuario registrado con éxito.";
@@ -21,11 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al registrar el usuario: " . $conexion->error;
     }
 }
-
-// Cerrar la conexión
-$conexion->close();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -40,8 +36,8 @@ $conexion->close();
         <label for="nombre">Usuario:</label>
         <input type="text" name="nombre" required>
 
-        <label for="correo">Correo:</label>
-        <input type="email" name="correo" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
 
         <label for="contrasena">Contraseña:</label>
         <input type="password" name="contrasena" required>
