@@ -3,39 +3,39 @@ USE trabajo;
 
 CREATE TABLE IF NOT EXISTS Usuarios (
     Cod_usuario INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre_usuario VARCHAR(50),
-    Correo_usuario VARCHAR(100),
+    Nom_usuario VARCHAR(50),
+    Email_usuario VARCHAR(100),
     Contraseña_usuario VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Productos (
     Cod_producto INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre_producto VARCHAR(100),
-    Precio_producto DECIMAL(10, 2),
+    Nom_producto VARCHAR(100),
+    Pre_producto DECIMAL(10, 2),
     Cantidad_producto INT
 );
 
 CREATE TABLE IF NOT EXISTS Empresa (
     Cod_empresa INT PRIMARY KEY,
-    Nombre_empresa VARCHAR(50),
-    Telefono_empresa VARCHAR(15),
+    Nom_empresa VARCHAR(50),
+    Tlf_empresa VARCHAR(15),
     Email_empresa VARCHAR(50),
-    Codigo_postal_empresa VARCHAR(10),
+    Cod_postal_empresa VARCHAR(10),
     Localidad_empresa VARCHAR(50),
-    Provincia_pais_empresa VARCHAR(50),
+    Provincia_empresa VARCHAR(50),
     Direccion_empresa VARCHAR(100)
 );
 
 CREATE TABLE IF NOT EXISTS Proveedores (
     Cod_proveedor INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre_proveedor VARCHAR(50),
-    Telefono_proveedor VARCHAR(15),
+    Nom_proveedor VARCHAR(50),
+    Tlf_proveedor VARCHAR(15),
     Email_proveedor VARCHAR(50),
-    Codigo_postal_proveedor VARCHAR(10),
-    Provincia_pais_proveedor VARCHAR(50),
+    Cod_postal_proveedor VARCHAR(10),
+    Provincia_proveedor VARCHAR(50),
     Localidad_proveedor VARCHAR(50),
     Cod_empresa INT,
-    Nombre_empresa VARCHAR(50),
+    Nom_empresa VARCHAR(50),
     FOREIGN KEY (Cod_empresa) REFERENCES Empresa(Cod_empresa)
 );
 
@@ -44,10 +44,10 @@ CREATE TABLE IF NOT EXISTS Cliente (
     Cod_cliente INT AUTO_INCREMENT PRIMARY KEY,
     DNI_cliente VARCHAR(10),
     Nom_cliente VARCHAR(25),
-    Ap_cliente VARCHAR(25),
+    Ape_cliente VARCHAR(25),
     Cod_postal_cliente VARCHAR(25),
-    Localidad VARCHAR(25),
-    Provincia VARCHAR(25),
+    Localidad_cliente VARCHAR(25),
+    Provincia_cliente VARCHAR(25),
     Email_cliente VARCHAR(25),
     Tlf_cliente VARCHAR(25),
     Observaciones VARCHAR(25)
