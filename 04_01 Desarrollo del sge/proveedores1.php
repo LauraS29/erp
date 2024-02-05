@@ -1,3 +1,20 @@
+<?php
+session_start();
+// Base de datos
+include_once('Db/ConDb.php');
+// HEADER
+include_once('Models/navegacion.php');
+
+    // Consulta a la base de datos
+$sqlProveedores = "SELECT * FROM proveedores";
+$resultadoProveedores = mysqli_query($conexion, $sqlProveedores);
+
+if (!$resultadoProveedores) 
+{
+    die("Error en la consulta: " . mysqli_error($conexion));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,23 +24,11 @@
     <script src="./Assets/js/motor.js"></script>
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
-<body class="flex">
-    <header class="header2">
-        <div class="navegacion">
-            <a href="clientes1.php">Clientes</a><br>
-            <a class="negrita" href="proveedores1.php">Proveedores</a><br>
-            <a href="personal1.php">Personal</a><br>
-            <a href="productos1.php">Productos</a><br>
-            <a href="ventas.php">Ventas</a><br>
-            <a href="compra1.php">Compra</a><br>
-            <a href="pedido1.php">Pedidos</a><br>
-            <a href="empresa1.php">Empresa</a><br>
-        </div>
-    </header>
+<body>
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/repartidor.png" alt="">
-            <p>Proveedores</p>
+            <p class ="medio">Proveedores</p>
         </div>
         <div class="fondo_div">
             <div>
@@ -31,33 +36,42 @@
             </div>
             <form class="fondo_form" action="proveedores1.php" method="post">
                 <table>
-                    <tr>
-                        <th>Código</th>
-                        <th>Nombre_proveedor</th>
-                        <th>Teléfono</th>
-                    </tr>
-                    <?php
-                    // Bucle para mostrar los datos de proveedores
-                    /* Verifica que $resultadoProveedores sea válido */
-                    while ($row = mysqli_fetch_assoc($resultadoProveedores)) 
-                    {
-                    ?>
+                    <div class="tabla">
                         <tr>
-                            <td><?php echo $row['Cod_proveedor']; ?></td>
-                            <td><a href="proveedores2.php?codigo=<?php echo $row['Cod_proveedor']; ?>&modo=editar"><?php echo $row['Nombre_proveedor']; ?></a></td>
-                            <td><?php echo $row['Telefono_proveedor']; ?></td>
+                            <th>Cod.proveedor</th>
+                            <th>Nom.proveedor</th>
+                            <th>Telefono</th>
+                        </tr> 
+                    
+                        <?php
+                            // Bucle para mostrar los datos de proveedores
+                            /* Verifica que $resultadoProveedores sea válido */
+                            while ($row = mysqli_fetch_assoc($resultadoProveedores)) 
+                            {
+                        ?>
+                        <tr>
+                            <td>
+                                <a href="proveedores2.php?codigo=<?php echo $row['Cod_proveedor']; 
+                                ?>"><?php echo $row['Cod_proveedor']; ?></a>
+                            </td>
+                            <td>
+                                <a href="proveedores2.php?codigo=<?php echo $row['Cod_proveedor']; ?>"><?php echo $row['Nom_proveedor']; ?></a>
+                            </td>
+                            <td>
+                                <a href="clientes2.php?codigo=<?php echo $row['Cod_proveedor'];?>"><?php echo $row['Tlf_proveedor']; ?></a>
+                            </td>
                             <td class="pequeño">
-                                <div class="rect1">
-                                    <img src="Assets/img/actualizar.png" alt="Actualizar">
-                                </div>
-                                <div class="rect2">
-                                    <img src="Assets/img/eliminar.png" alt="Eliminar">
-                                </div>
+                                <a href="clientes2.php?codigo=<?php echo $row['Cod_proveedor']; ?>">
+                                <img src="Assets/img/actualizar.png" alt="">
+                                </a>
+                                <img class="img_elim" src="Assets/img/eliminar.png" alt="">
                             </td>
                         </tr>
-                    <?php
-                    }
-                    ?>
+                        
+                        <?php
+                            }
+                        ?>
+                    </div>   
                 </table>
                 <div class="button_prov">
                     <input type="submit" name="add_proveedor" value="Añadir">

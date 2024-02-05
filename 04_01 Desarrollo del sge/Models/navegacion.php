@@ -80,16 +80,3 @@
     </header>
 </body>
 </html>
-                <!------------PHP------------->
-<?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
-
-    header("Location: clientes2.php");
-    exit();
-}
-
-?>
