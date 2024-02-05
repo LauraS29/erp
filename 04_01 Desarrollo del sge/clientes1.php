@@ -30,17 +30,16 @@
                     
                         <tr>
                             <td>
-                                <a href="clientes2.php?codigo=<?php echo $row['Cod_cliente']; 
-                                ?>"><?php echo $row['Cod_cliente']; ?></a>
+                                <a href="clientes2.php?codigo="></a>
                             </td>
                             <td>
-                                <a href="clientes2.php?codigo=<?php echo $row['Cod_cliente']; ?>"><?php echo $row['Nom_cliente']; ?></a>
+                                <a href="clientes2.php?codigo="></a>
                             </td>
                             <td>
-                                <a href="clientes2.php?codigo=<?php echo $row['Cod_cliente'];?>"><?php echo $row['DNI_cliente']; ?></a>
+                                <a href="clientes2.php?codigo="></a>
                             </td>
                             <td class="pequeño">
-                                <a href="clientes2.php?codigo=<?php echo $row['Cod_cliente']; ?>">
+                                <a href="clientes2.php?codigo=">
                                 <img src="Assets/img/actualizar.png" alt="">
                                 </a>
                                 <img class="img_elim" src="Assets/img/eliminar.png" alt="">
