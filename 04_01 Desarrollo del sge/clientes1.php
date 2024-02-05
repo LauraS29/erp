@@ -1,3 +1,22 @@
+<?php
+    session_start();
+    // Base de datos
+    include_once('Db/ConDb.php');
+    // HEADER
+    include_once('Models/navegacion.php');
+    
+    
+
+    // Consulta a la base de datos
+    $sqlCliente = "SELECT * FROM cliente";
+    $resultadoCliente = mysqli_query($conexion, $sqlCliente);
+
+    if (!$resultadoCliente) 
+    {
+        die("Error en la consulta: " . mysqli_error($conexion));
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

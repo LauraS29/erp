@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 
 /*----------------------Inicio.php-------------------*/
 .fondo_inicio
@@ -59,9 +63,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
-/* ---------- */
-
 .links {
     display: flex;
 }
@@ -74,17 +75,6 @@
     margin-left: 103px;
 }
 
-
-/* .links
-{
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 12px;
-    margin-top: 10px;
-    margin-left: 103px;
-
-} */
-
 .btn {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -96,7 +86,6 @@
     border-radius: 50px;
     cursor: pointer;
 }
-
 
 /*--------------------menuprinc.php-----------------*/
 

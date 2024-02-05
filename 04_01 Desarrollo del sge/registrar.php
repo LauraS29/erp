@@ -21,11 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al registrar el usuario: " . $conexion->error;
     }
 }
-
-// Cerrar la conexión
-$conexion->close();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
