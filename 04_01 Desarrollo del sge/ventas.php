@@ -1,8 +1,3 @@
-<?php
-session_start();
-include_once('Db/ConDb.php');
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +9,7 @@ include_once('Db/ConDb.php');
 </head>
 <body class = "flex">
     <?php require_once "Views/encabezado.php"; ?>
-    
+
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/venta.png" alt="">
