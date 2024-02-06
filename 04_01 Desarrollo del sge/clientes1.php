@@ -19,7 +19,7 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <form class="fondo_form" action="clientes1.php" method="post">
+            <form class="fondo_form" action="clientes2.php" method="post">
                 <table>
                     <div class="tabla">
                         <tr>
