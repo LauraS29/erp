@@ -19,17 +19,16 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <form class="flex fondo_form" action="clientes2.php?codigo=
-            <?php echo $clienteId; ?>" method="post">
+            <form class="flex fondo_form" action="clientes2.php?codigo=" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr1">
                             <p>Nombre:</p>
-                            <input type="text" name="Nom_cliente">
+                            <input type="text" name="Nom_cliente" value="<?php echo $Nom_cliente; ?>" <?php echo $readonly; ?>>
                         </div>
                         <div class="pr">
                             <p>Apellidos:</p>
-                            <input type="text" name="Ap_cliente">
+                            <input type="text" name="Ap_cliente" value="<?php echo $Ap_cliente; ?>" <?php echo $readonly; ?>>
                         </div>
                     </div>
                     <div class="flex">
@@ -39,7 +38,7 @@
                         </div>
                         <div class="pr1">
                             <p>Teléfono:</p>
-                            <input type="text" name="Tlf_cliente">
+                            <input type="text" name="Tlf_cliente" value="<?php echo $Tlf_cliente; ?>" <?php echo $readonly; ?>>
                         </div>
                     </div>
                     <div class="flex">
@@ -63,7 +62,7 @@
                     <img src="Assets/img/usuario.png" alt="">
                     <div class="buttons">
                         <div>
-                            <input type="submit" name="guardar" id="boton1" value="Guardar">
+                            <input type="submit" name="guardar" id="boton1" value="Guardar" <?php echo $readonly; ?>>
                         </div>
                         <div>
                             <input type="button" value="Actualizar">

@@ -199,63 +199,6 @@ section h2 {
 }
 
 
-/*-------------------proveedores2.png---------------*/
 
-.primer_div {
-    width: 50%;
-    margin-left: 10%;
-}
+/*------------clientes2.php------------------*/
 
-.pr {
-    margin-right: 20%;
-}
-
-.pr p {
-    font-size: 150%;
-}
-
-.pr1 p {
-    font-size: 150%;
-}
-
-.pr input {
-    width: 140%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.segundo_div {
-    width: 20%;
-    margin-left: 5%;
-}
-
-.imagen-botones img {
-    width: 50%;
-}
-
-.buttons {
-    margin-left: 30px;
-}
-
-.buttons input {
-    flex-direction: column;
-    margin-top: 15px;
-    padding: 5px 20px;
-    border-radius: 10px;
-}
-
-
-/* ------------------- */
-
-.pr1 input,
-textarea {
-    width: 140%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}

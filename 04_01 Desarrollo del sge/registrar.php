@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insertar datos en la base de datos
     $sql = "INSERT INTO Usuarios (Nom_usuario, Email_usuario, Contraseña_usuario) VALUES ('$nombre', '$email', '$hash_contrasena')";
 
-    if ($conexion->query($sql) === TRUE) {
+    if ($mysqli->query($sql) === TRUE) {
         echo "Usuario registrado con éxito.";
     } else {
-        echo "Error al registrar el usuario: " . $conexion->error;
+        echo "Error al registrar el usuario: " . $mysqli->error;
     }
 }
 ?>
