@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/busqueda.php"; ?>
     
     <section class="fondo_section">
         <div class="flex div1">
@@ -19,7 +20,7 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <form class="fondo_form" action="clientes1.php" method="post">
+            <form class="fondo_form" action="clientes2.php" method="post">
                 <table>
                     <div class="tabla">
                         <tr>
@@ -48,7 +49,7 @@
                     </div>   
                 </table>
                 <div class="button_prov">
-                     <input type="submit" name="add_proveedor" value="Añadir">
+                    <input type="submit" name="add_proveedor" value="Añadir">
                 </div>
             </form>
         </div>
@@ -60,8 +61,6 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
 
     header("Location: clientes2.php");
     exit();
