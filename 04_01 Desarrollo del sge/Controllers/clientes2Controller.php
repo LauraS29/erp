@@ -15,15 +15,15 @@
     // Llamada a la conexión
     require_once '../Db/ConDb.php';
     // Llamada al modelo
-    require_once '../Models/clienteModel.php';
+    require_once '../Models/clientes2Model.php';
 
     // Instancia del objeto
     $oData = new Datos;
 
     // Llamada al método
-    $sql = "insert into trabajo (Cod_cliente, DNI_cliente, Nom_cliente, Ape_cliente, Localidad, Provincia, Tlf_cliente, email_cliente,
+    $sql = "insert into Cliente (DNI_cliente, Nom_cliente, Ape_cliente, Localidad_cliente, Provincia_cliente, Tlf_cliente, email_cliente,
     Dni_cliente, Cod_postal) values ('$textoInsercion1', '$textoInsercion2', '$textoInsercion3', '$textoInsercion4', '$textoInsercion5', '$textoInsercion6', '$textoInsercion7', '$textoInsercion8', '$textoInsercion9', '$textoInsercion10');";
-    $sql .= "select * from trabajo order by Cod_cliente, DNI_cliente, Nom_cliente, Ape_cliente, Localidad, Provincia, Tlf_cliente, email_cliente,
+    $sql .= "select * from Cliente order by  DNI_cliente, Nom_cliente, Ape_cliente, Localidad_cliente, Provincia_cliente, Tlf_cliente, email_cliente,
     Dni_cliente, Cod_postal";
     $data = $oData->setGetData1($sql);
 

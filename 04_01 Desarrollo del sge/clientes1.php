@@ -23,22 +23,12 @@
             <form class="fondo_form" action="clientes2.php" method="post">
                 <table>
                     <div class="tabla">
-                        <tr>
-                            <th>Cod.Cliente</th>
-                            <th>Nom.cliente</th>
-                            <th>Dni</th>
-                        </tr> 
-                    
+                         
                         <tr>
                             <td>
-                                <a href="clientes2.php?codigo="></a>
+                                <a href="clientes2.php?codigo="><?php require_once "Controllers/clientes1Controller.php"; ?></a>
                             </td>
-                            <td>
-                                <a href="clientes2.php?codigo="></a>
-                            </td>
-                            <td>
-                                <a href="clientes2.php?codigo="></a>
-                            </td>
+                            
                             <td class="pequeño">
                                 <a href="clientes2.php?codigo=">
                                 <img src="Assets/img/actualizar.png" alt="">
@@ -56,14 +46,4 @@
     </section>
 </body>
 </html>
-                <!------------PHP------------->
-<?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-
-    header("Location: clientes2.php");
-    exit();
-}
-
-?>
