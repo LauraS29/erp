@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Assets/css/estilos.css">
 </head>
 <body>
-    <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/Encabezado/Menu.php"; ?>
     <?php require_once "Views/busqueda.php"; ?>
     
     <section class="fondo_section">

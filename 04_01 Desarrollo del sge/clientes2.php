@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class = "flex">
-    <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/Encabezado/Menu.php"; ?>
     
     <section class="fondo_section">
         <div class="flex div1">
