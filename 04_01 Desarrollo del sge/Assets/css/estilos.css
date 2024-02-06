@@ -13,7 +13,152 @@ a {
     text-decoration: none;
     color: black;
 }
+/*----------------------Inicio.php-------------------*/
+.fondo_inicio
+{
+    background-image: url('../img/paisaje.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Asegura que no haya márgenes en el cuerpo */
+    margin: 0; 
+    /* Asegura que no haya relleno en el cuerpo */
+    padding: 0; 
+    /* Hace que la imagen de fondo cubra toda la altura de la ventana gráfica */
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.inicio {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
+}
+
+.contenedor_inicio {
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 110px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.iniciar h2 {
+    margin-bottom: 20px;
+}
+
+.iniciar img {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.iniciar input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ---------- */
+
+.links {
+    display: flex;
+}
+
+.links a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 103px;
+}
+
+
+/* .links
+{
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 103px;
+
+} */
+
+.btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #4caf50;
+    color: #fff;
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+/*--------------------menuprinc.php-----------------*/
+
+.espacio {
+    margin: 20px;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    width: 10%;
+}
+
+.right img {
+    width: 50px;
+}
+
+.mg {
+    margin-left: 20px;
+}
+
+.separacion {
+    justify-content: center;
+    align-items: center;
+}
+
+.separacion div {
+    margin: 3%;
+    text-align: center;
+}
+
+.separacion img {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.separacion a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.separacion a:hover {
+    font-weight: bold;
+}
 
 /*-------------------navegacion.php------------------*/
 
@@ -90,15 +235,14 @@ body {
 form {
     margin-left: 30%;
 }
+.fondo_section {
+    background-color: #7bebe2;
+    min-width: 174.7vh;
+}
 
 .fondo_div {
     background-color: #79c1e0;
     min-height: 90.7vh;
-}
-
-.fondo_section {
-    background-color: #7bebe2;
-    min-width: 174.7vh;
 }
 
 .fondo_form {
@@ -204,6 +348,168 @@ section h2 {
 }
 
 
+/*-------------------proveedores1.php----------------*/
 
-/*------------clientes2.php------------------*/
+
+/* TABLA */
+table {
+    margin-top: 20px;
+    width: 85%;
+    /* border-collapse: collapse; */
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin: 0 auto;
+  }
+  
+  table th,
+  td {
+    padding-left: 10px;
+    padding-right: 10px;  
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  
+  }
+  
+  table th {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  table td {
+    background-color: #fff;
+  }
+  
+/* table {
+    min-width: 174vh;
+    min-height: 70vh;
+    padding: 20px;
+    table-layout: fixed;
+  }
+  
+  table th,
+  td {
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  table th,
+  td {
+    background-color: white;
+    border: black;
+    text-align: center;
+  } */
+  
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+  }
+  
+  .image img {
+    width: 2%;
+  }
+  
+  .peq img {
+    width: 50%;
+    max-width: 100px;
+  }
+  
+  table td:hover {
+    cursor: pointer;
+  }
+  
+  .form1 {
+    background-color: #666;
+    margin: 0 1%;
+  }
+
+
+/* BOTON */
+.button_prov {
+    text-align: center;
+    padding-bottom: 1%;
+    margin-top: 10px;
+}
+
+.button_prov input {
+    padding: 5px 10%;
+    border-radius: 10px;
+    background-color: #ae85e0;
+}
+
+.button_prov input:hover {
+    cursor: pointer;
+}
+
+.pequeño img
+{
+    width: 30px;
+}
+.rect1, .rect2 {
+    padding: 4px;
+    border: 1px solid black;
+  }
+  
+
+/*-------------------proveedores2.png---------------*/
+
+.primer_div {
+    width: 65%;
+    margin-left: 5%;
+}
+
+.pr {
+    margin-right: 20%;
+}
+
+.pr p {
+    font-size: 150%;
+}
+
+.pr1 p {
+    font-size: 150%;
+}
+
+.pr input {
+    width: 140%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pr1 input,
+textarea {
+    width: 140%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.segundo_div {
+    width: 20%;
+}
+
+.imagen-botones img {
+    width: 50%;
+}
+
+.buttons {
+    margin-left: 15px;
+}
+
+.buttons input {
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+/* productos2.php */
 
