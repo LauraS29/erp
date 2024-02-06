@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Base de datos
-include_once('Db/ConDb.php');
+require_once('Db/ConDb.php');
 
     
     
