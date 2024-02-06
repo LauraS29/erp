@@ -2,8 +2,7 @@
 session_start();
 // Base de datos
 include_once('Db/ConDb.php');
-// HEADER
-include_once('Models/navegacion.php');
+
     
     
 // Inicializa el mensaje de error como vacío
