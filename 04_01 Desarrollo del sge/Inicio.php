@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $errorMsg = "Formato de correo electrónico no válido.";
         } else {
             // Realiza la consulta para obtener el nombre del usuario
-            $sql = "SELECT Nombre_usuario, Contraseña_usuario FROM Usuarios WHERE Correo_usuario = '$correo'";
-            $resultado = mysqli_query($conexion, $sql);
+            $sql = "SELECT Nom_usuario, Contraseña_usuario FROM Usuarios WHERE Correo_usuario = '$correo'";
+            $resultado = mysqli_query($mysqli, $sql);
 
             if ($resultado && mysqli_num_rows($resultado) > 0) 
             {

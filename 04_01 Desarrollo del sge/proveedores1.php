@@ -1,19 +1,3 @@
-<?php
-session_start();
-// Base de datos
-include_once('Db/ConDb.php');
-// HEADER
-include_once('Models/navegacion.php');
-
-    // Consulta a la base de datos
-$sqlProveedores = "SELECT * FROM proveedores";
-$resultadoProveedores = mysqli_query($conexion, $sqlProveedores);
-
-if (!$resultadoProveedores) 
-{
-    die("Error en la consulta: " . mysqli_error($conexion));
-}
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -25,6 +9,9 @@ if (!$resultadoProveedores)
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body>
+    <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/busqueda.php"; ?>
+
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/repartidor.png" alt="">
@@ -34,7 +21,7 @@ if (!$resultadoProveedores)
             <div>
                 <h2>Datos de proveedores</h2>
             </div>
-            <form class="fondo_form" action="proveedores1.php" method="post">
+            <form class="fondo_form" action="proveedores2.php" method="post">
                 <table>
                     <div class="tabla">
                         <tr>
