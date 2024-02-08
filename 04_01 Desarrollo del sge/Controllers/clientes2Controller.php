@@ -12,9 +12,9 @@ $Tlf_cliente = empty($_POST['Tlf_cliente']) ? '' : $_POST['Tlf_cliente'];
 $Observaciones = empty($_POST['Observaciones']) ? '' : $_POST['Observaciones'];
 
 // Llamada a la conexión
-require_once '../Db/ConDb.php';
+require_once './Db/ConDb.php';
 // Llamada al modelo
-require_once '../Models/clientes2Model.php';
+require_once './Models/clientes2Model.php';
 
 // Instancia del objeto
 $oData = new Datos;
