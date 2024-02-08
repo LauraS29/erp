@@ -26,7 +26,7 @@
                          
                         <tr>
                             <td>
-                                <a href="clientes2.php"><?php require_once "Controllers/clientes1Controller.php";?></a>
+                                <a href="clientes2.php"><?php require_once "Controllers/clientes1_1Controller.php";?></a>
                             </td>
                             
                             <td class="pequeño">

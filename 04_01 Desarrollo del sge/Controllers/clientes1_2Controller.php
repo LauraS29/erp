@@ -1,9 +1,9 @@
 <?php
   
     // Llamada a la conexión
-    require_once 'Db/ConDb.php';
+    require_once '../Db/Con1Db.php';
     // Llamada al modelo
-    require_once 'Models/clientes1Model.php';
+    require_once '../Models/clientes1_2Model.php';
 
     // Instancia del objeto
     $oData = new Datos;
