@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     $_SESSION['UsuarioNombre'] = $row['Nom_usuario'];
 
                     // Redirige a index.php solo si la autenticación es exitosa
-                    header("Location: mantenimiento.php");
+                    header("Location: menuprinc.php");
                     // Asegura que no se procese nada más después de la redirección
                     exit(); 
                 } else {

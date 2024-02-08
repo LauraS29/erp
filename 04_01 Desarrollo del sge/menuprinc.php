@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Verifica si el usuario ha iniciado sesión
+if (!isset($_SESSION['UsuarioNombre'])) {
+    // Si no ha iniciado sesión, redirige a la página de inicio de sesión
+    header("Location: Inicio.php");
+    exit();
+}
+
+// Recupera el nombre de usuario de la sesión
+$nombreUsuario = $_SESSION['UsuarioNombre'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
