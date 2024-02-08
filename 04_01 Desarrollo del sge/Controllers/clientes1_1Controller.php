@@ -44,9 +44,13 @@
                 <div class='bloque1'>$row->Cod_cliente</div>
                 <div class='bloque1'>$row->Nom_cliente</div>
                 <div class='bloque1'>$row->DNI_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
+                <div class='bloque1'>$row->Ape_cliente</div>
+                <div class='bloque1'>$row->Cod_postal_cliente</div>
+                <div class='bloque1'>$row->Localidad_cliente</div>
+                <div class='bloque1'>$row->Provincia_cliente</div>
+                <div class='bloque1'>$row->Email_cliente</div>
+                <div class='bloque1'>$row->Tlf_cliente</div>
+                <div class='bloque1'>$row->Observaciones</div>
             </div>
             ";
         }
