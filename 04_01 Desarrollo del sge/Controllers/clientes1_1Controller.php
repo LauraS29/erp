@@ -1,9 +1,9 @@
 <?php
   
     // Llamada a la conexión
-    require_once '../Db/ConDb.php';
+    require_once './Db/ConDb.php';
     // Llamada al modelo
-    require_once '../Models/clientes1_1Model.php';
+    require_once './Models/clientes1_1Model.php';
 
     // Tratamiento de los imput text
     $textoConsulta1 = empty($_POST['textoConsulta1']) ? '' : $_POST['textoConsulta1'];
