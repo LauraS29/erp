@@ -3,16 +3,16 @@ session_start();
 // Base de datos
 require_once('Db/ConDb.php');
 
-    
-    
-// Inicializa el mensaje de error como vacío
-$errorMsg = '';
+// Verifica si la conexión se estableció correctamente
+if (!$mysqli) {
+    die("La conexión a la base de datos falló: " . mysqli_connect_error());
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
     // Obtén los datos del formulario
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
+    $correo = isset($_POST['usuario']) ? $_POST['usuario'] : '';
+    $contrasena = isset($_POST['contraseña']) ? $_POST['contraseña'] : '';
 
     // Validar que ambos campos estén completos
     if (empty($correo) || empty($contrasena)) 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $errorMsg = "Formato de correo electrónico no válido.";
         } else {
             // Realiza la consulta para obtener el nombre del usuario
-            $sql = "SELECT Nom_usuario, Contraseña_usuario FROM Usuarios WHERE Correo_usuario = '$correo'";
+            $sql = "SELECT Nom_usuario, Contraseña_usuario FROM Usuarios WHERE Email_usuario = '$correo'";
             $resultado = mysqli_query($mysqli, $sql);
 
             if ($resultado && mysqli_num_rows($resultado) > 0) 
@@ -36,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 // Verificar la contraseña
                 if (password_verify($contrasena, $hashContrasena)) 
                 {
-                    $_SESSION['UsuarioNombre'] = $row['Nombre_usuario'];
+                    $_SESSION['UsuarioNombre'] = $row['Nom_usuario'];
 
-                    // Redirige a menuprinc.php solo si la autenticación es exitosa
-                    header("Location: menuprinc.php");
+                    // Redirige a index.php solo si la autenticación es exitosa
+                    header("Location: mantenimiento.php");
                     // Asegura que no se procese nada más después de la redirección
                     exit(); 
                 } else {
@@ -69,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             <img src="./Assets/img/usuario.png" alt="">
             <h2>Inicio de sesión</h2>
             <form action="Inicio.php" method="post" onsubmit="return onSubmitForm()">
-                <input type="email" name="correo" placeholder="Correo" required>
-                <input type="password" name="contrasena" placeholder="Contraseña" required>
+                <input type="email" name="usuario" placeholder="Correo" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
                 <div class="links">
                     <p><a href="#">¿Olvidaste la contraseña?</a></p>
                     <p><a href="registrar.php">Registrarse</a></p>

@@ -26,11 +26,11 @@
                          
                         <tr>
                             <td>
-                                <a href="clientes2.php?codigo="><?php require_once "Controllers/clientes1Controller.php"; ?></a>
+                                <a href="clientes2.php"><?php require_once "Controllers/clientes1Controller.php";?></a>
                             </td>
                             
                             <td class="pequeño">
-                                <a href="clientes2.php?codigo=">
+                                <a href="clientes2.php">
                                 <img src="Assets/img/actualizar.png" alt="">
                                 </a>
                                 <img class="img_elim" src="Assets/img/eliminar.png" alt="">

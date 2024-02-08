@@ -19,16 +19,16 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <form class="flex fondo_form" action="clientes2.php" method="post">
+            <form class="flex fondo_form" action="clientes1.php" method="post">
                 <div class="primer_div">
                     <div class="flex">
-                        <div class="pr1">
+                        <div class="pr">
                             <p>Nombre:</p>
                             <input type="text" name="Nom_cliente">
                         </div>
-                        <div class="pr">
+                        <div class="pr1">
                             <p>Apellidos:</p>
-                            <input type="text" name="Ap_cliente">
+                            <input type="text" name="Ape_cliente">
                         </div>
                     </div>
                     <div class="flex">
@@ -42,20 +42,30 @@
                         </div>
                     </div>
                     <div class="flex">
-                        <div class="pr1">
+                        <div class="pr">
                             <p>DNI:</p>
                             <input type="text" name="DNI_cliente">
                         </div>
                         <div class="pr1">
-                            <p>Localidad:</p>
-                            <input type="text" name="Localidad">
+                            <p>Codigo Postal:</p>
+                            <input type="text" name="Cod_postal_cliente">
                         </div>
                     </div>
                     <div class="flex">
-                       <div class="pr">
+                        <div class="pr">
+                            <p>Localidad:</p>
+                            <input type="text" name="Localidad_cliente">
+                        </div>
+                       <div class="pr1">
                             <p>Dirección:</p>
-                            <input type="text" name="Provincia">
+                            <input type="text" name="Provincia_cliente">
                         </div> 
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Observaciones:</p>
+                            <textarea name="Observaciones" cols="30" rows="10"></textarea>
+                        </div>
                     </div>
                 </div>
                 <div class="segundo_div imagen-botones">

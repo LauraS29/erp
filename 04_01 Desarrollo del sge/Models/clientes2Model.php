@@ -19,9 +19,6 @@
             if(!$this->mysqli->multi_query($sql))
             {
                 echo "La operación no se ha podido realizar.";
-                // echo "Detalle del error en la consulta (setGetData1) - ";
-                // echo "Número de error: " . $this->mysqli->errno . " - ";
-                // echo "Descripción del error: " . $this->mysqli->error;
             }
             else
             {

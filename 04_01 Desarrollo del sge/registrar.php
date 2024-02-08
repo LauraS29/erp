@@ -2,6 +2,9 @@
 session_start();
 include_once('Db/ConDb.php');
 
+// Obtener la conexión utilizando el método estático
+$mysqli = Connection::conn1();
+
 // Procesar el formulario cuando se envía
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recuperar datos del formulario
@@ -13,10 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hash_contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
 
     // Insertar datos en la base de datos
-    $sql = "INSERT INTO Usuarios (Nom_usuario, Email_usuario, Contraseña_usuario) VALUES ('$nombre', '$email', '$hash_contrasena')";
+    $sql = "INSERT INTO usuarios (Nom_usuario, Email_usuario, Contraseña_usuario) VALUES ('$nombre', '$email', '$hash_contrasena')";
 
     if ($mysqli->query($sql) === TRUE) {
-        echo "Usuario registrado con éxito.";
+        header("Location: Inicio.php");
+        exit();
     } else {
         echo "Error al registrar el usuario: " . $mysqli->error;
     }
@@ -31,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Registro</title>
 </head>
 <body>
-    <h2>Registro</h2>
+    <h2>Registrarse</h2>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label for="nombre">Usuario:</label>
         <input type="text" name="nombre" required>

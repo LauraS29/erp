@@ -15,25 +15,21 @@
         // Devuelve datos de la BD (select)
         public function getData1($sql)
         {
-            if(!$this->mysqli->query($sql))
+            $result = $this->mysqli->query($sql);
+
+            if (!$result) 
             {
-                echo "La operación no se ha podido realizar.";
-                // echo "Detalle del error en la consulta (getData1) - ";
-                // echo "Número de error: " . $this->mysqli->errno . " - ";
-                // echo "Descripción del error: " . $this->mysqli->error;
-            }
-            else
-            {
-                $result=$this->mysqli->query($sql);
-                while($rows=$result->fetch_object())
+                echo "Error al ejecutar la consulta: " . $this->mysqli->error;
+            } else {
+                while ($rows = $result->fetch_object()) 
                 {
-                    $this->data[]=$rows;
+                    $this->data[] = $rows;
                 }
-                $this->mysqli->close();
-                return $this->data;
+                    $result->close();
+                    $this->mysqli->close();
+                    return $this->data;
             }
         }
-
     }
 
 ?>

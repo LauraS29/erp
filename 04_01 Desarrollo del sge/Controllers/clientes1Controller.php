@@ -9,7 +9,7 @@
     $oData = new Datos;
 
     // Llamada al método
-    $sql = "select * from clientes order by Cod_cliente, Nom_cliente, DNI_cliente";
+    $sql = "select * from cliente order by Cod_cliente, Nom_cliente, DNI_cliente";
     $data = $oData->getData1($sql);
 
     if(empty($data))
@@ -27,7 +27,7 @@
         "
         <div class='bloque0 negrita'>
             <div class='bloque1'>Código cliente</div>
-            <div class='bloque1'>Nom.cliente</div>
+            <div class='bloque1'>Nom_cliente</div>
             <div class='bloque1'>DNI</div>
         </div>
         ";

@@ -17,4 +17,11 @@ class Connection
         }
     }
 }
+// Establecer la conexión global
+$mysqli = Connection::conn1();
+
+// Verificar si la conexión se estableció correctamente
+if (!$mysqli) {
+    die("La conexión a la base de datos falló: " . mysqli_connect_error());
+}
 ?>
