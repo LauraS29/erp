@@ -26,7 +26,7 @@
         echo
         "
         <div class='bloque0 negrita'>
-            <div class='bloque1'>Código cliente</div>
+            <div class='bloque1'>Cód.cliente</div>
             <div class='bloque1'>Nom_cliente</div>
             <div class='bloque1'>DNI</div>
         </div>
