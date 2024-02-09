@@ -9,7 +9,6 @@
 </head>
 <body>
     <?php require_once "Views/Encabezado/Menu.php"; ?>
-    <?php require_once "Views/busqueda.php"; ?>
     
     <section class="fondo_section">
         <div class="flex div1">
@@ -20,7 +19,9 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
+            <div class="busqueda"><?php require_once "Views/busqueda.php"; ?></div>
             <form class="fondo_form" action="clientes2.php" method="post">
+                
                 <table>
                     <div class="tabla">
                         <tr>

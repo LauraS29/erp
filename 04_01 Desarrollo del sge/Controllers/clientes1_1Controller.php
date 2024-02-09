@@ -26,9 +26,9 @@ if (empty($data)) {
 
         echo "
             <tr>
-                <td>$codigo</td>
-                <td>$nombre</td>
-                <td>$dni</td>
+                <td class='derecha'>$codigo</td>
+                <td class='derecha'>$nombre</td>
+                <td class='derecha'>$dni</td>
             </tr>
         ";
     }
