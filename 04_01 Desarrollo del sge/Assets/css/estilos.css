@@ -269,19 +269,21 @@ form {
 .fondo_section {
     background-color: #7bebe2;
     min-width: 174.7vh;
+    margin-left: 9%;
+    padding-right: 2%;
 }
 
 .fondo_div {
     background-color: #79c1e0;
-    min-height: 90.7vh;
+    min-height: 88vh;
 }
 
 .fondo_form {
     justify-content: center;
     align-items: center;
     background-color: #a8a8a8;
-    min-height: 81vh;
-    margin: 0 0.4%;
+    min-height: 60vh;
+    margin: 0 5%;
 }
 
 
@@ -328,8 +330,28 @@ td img {
 /* TABLA */
 
 table {
-    margin-left: 33.7%;
-}
+    margin-top: 20px;
+    width: 60%;
+    /* border-collapse: collapse; */
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin: 0 auto;
+  }
+  
+  table th,
+  td {
+    padding-left: 10px;
+    padding-right: 10px;  
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  
+  }
+  
+  table th {
+    background-color: #ccc;
+    font-weight: bold;
+  }
 
 .tabla {
     padding-top: 3%;
@@ -385,55 +407,11 @@ section h2 {
 
 /*-------------------proveedores1.php----------------*/
 
-
-/* TABLA */
-table {
-    margin-top: 20px;
-    width: 85%;
-    /* border-collapse: collapse; */
-    border: 1px solid black;
-    margin-bottom: 10px;
-    margin: 0 auto;
-  }
-  
-  table th,
-  td {
-    padding-left: 10px;
-    padding-right: 10px;  
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-  
-  }
-  
-  table th {
-    background-color: #ccc;
-    font-weight: bold;
-  }
   
   table td {
     background-color: #fff;
   }
-  
-/* table {
-    min-width: 174vh;
-    min-height: 70vh;
-    padding: 20px;
-    table-layout: fixed;
-  }
-  
-  table th,
-  td {
-    font-size: 20px;
-    padding: 20px;
-  }
-  
-  table th,
-  td {
-    background-color: white;
-    border: black;
-    text-align: center;
-  } */
+
   
   .image {
     display: flex;
