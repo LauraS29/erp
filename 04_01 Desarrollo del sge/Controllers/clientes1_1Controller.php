@@ -12,39 +12,25 @@ $oData = new Datos;
 $sql = "SELECT Cod_cliente, Nom_cliente, DNI_cliente FROM cliente ORDER BY Cod_cliente, Nom_cliente, DNI_cliente";
 $data = $oData->getData1($sql);
 
-    if(empty($data))
-    {
-        echo
-        "
-            <div class='bloque1 negrita'>
-                No hay datos.
-            </div>
-        ";
-    }
-    else
-    {
-        echo
-        "
-        <div class='bloque0 negrita'>
-            <div class='bloque1'>Cód.cliente</div>
-            <div class='bloque1'>Nom.cliente</div>
-            <div class='bloque1'>DNI</div>
-        </div>
-        ";
-        foreach ($data as $row)
-        {
-            echo
-            "
-            <div class='bloque0'>
-                <div class='bloque1'>$row->Cod_cliente</div>
-                <div class='bloque1'>$row->Nom_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
-            </div>
-            ";
-        }
-    }
+if (empty($data)) {
+    echo "
+        <tr>
+            <td colspan='3'>No hay datos.</td>
+        </tr>
+    ";
+} else {
+    foreach ($data as $row) {
+        $codigo = $row['Cod_cliente'];
+        $nombre = $row['Nom_cliente'];
+        $dni = $row['DNI_cliente'];
 
+        echo "
+            <tr>
+                <td>$codigo</td>
+                <td>$nombre</td>
+                <td>$dni</td>
+            </tr>
+        ";
+    }
+}
 ?>
