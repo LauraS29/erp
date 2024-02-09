@@ -19,7 +19,7 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <form class="flex fondo_form" action="clientes1.php" method="post">
+            <form class="flex fondo_form" action="Controllers/clientes1_2Controller.php" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">

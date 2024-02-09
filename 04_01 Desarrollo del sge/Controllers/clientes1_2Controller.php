@@ -1,47 +1,46 @@
 <?php
-  
-    // Llamada a la conexión
-    require_once './Db/ConDb.php';
-    // Llamada al modelo
-    require_once './Models/clientes1_2Model.php';
+require_once '../Db/ConDb.php';
 
-    // Instancia del objeto
-    $oData = new Datos;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $DNI_cliente = $_POST['DNI_cliente'];
+    $Nom_cliente = $_POST['Nom_cliente'];
+    $Ape_cliente = $_POST['Ape_cliente'];
+    $Cod_postal_cliente = $_POST['Cod_postal_cliente'];
+    $Localidad_cliente = $_POST['Localidad_cliente'];
+    $Provincia_cliente = $_POST['Provincia_cliente'];
+    $Email_cliente = $_POST['Email_cliente'];
+    $Tlf_cliente = $_POST['Tlf_cliente'];
+    $Observaciones = $_POST['Observaciones'];
 
-    // Llamada al método
-    $sql = "select * from cliente order by Cod_cliente, Nom_cliente, DNI_cliente";
-    $data = $oData->getData1($sql);
+    $insertar = "INSERT INTO cliente (DNI_cliente, Nom_cliente, Ape_cliente, Cod_postal_cliente, Localidad_cliente, Provincia_cliente, Email_cliente, Tlf_cliente, Observaciones) VALUES ('$DNI_cliente','$Nom_cliente','$Ape_cliente','$Cod_postal_cliente','$Localidad_cliente','$Provincia_cliente','$Email_cliente','$Tlf_cliente','$Observaciones')";
 
-    if(empty($data))
-    {
-        echo
-        "
-            <div class='bloque1 negrita'>
-                No hay datos.
-            </div>
-        ";
+    $query = mysqli_query($mysqli, $insertar);
+
+    if($query) {
+        header("Location: ../clientes1.php");
+    } else {
+        echo "incorrecto: " . mysqli_error($mysqli);
     }
-    else
-    {
-        echo
-        "
-        <div class='bloque0 negrita'>
-            <div class='bloque1'>Cód.cliente</div>
-            <div class='bloque1'>Nom_cliente</div>
-            <div class='bloque1'>DNI</div>
-        </div>
-        ";
-        foreach ($data as $row)
-        {
-            echo
-            "
-            <div class='bloque0'>
-                <div class='bloque1'>$row->Cod_cliente</div>
-                <div class='bloque1'>$row->Nom_cliente</div>
-                <div class='bloque1'>$row->DNI_cliente</div>
-            </div>
-            ";
+}
+
+function obtenerClientes() {
+    global $mysqli; // Asegúrate de que $mysqli esté disponible en este ámbito
+
+    $clientes = array();
+
+    $consulta = "SELECT * FROM cliente";
+    $resultado = mysqli_query($mysqli, $consulta);
+
+    if ($resultado) {
+        while ($fila = mysqli_fetch_assoc($resultado)) {
+            $clientes[] = $fila;
         }
+
+        mysqli_free_result($resultado);
+    } else {
+        echo "Error en la consulta: " . mysqli_error($mysqli);
     }
 
+    return $clientes;
+}
 ?>

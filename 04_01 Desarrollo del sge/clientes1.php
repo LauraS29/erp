@@ -23,12 +23,14 @@
             <form class="fondo_form" action="clientes2.php" method="post">
                 <table>
                     <div class="tabla">
-                         
                         <tr>
-                            <td>
-                                <a href="clientes2.php"><?php require_once "Controllers/clientes1_1Controller.php";?></a>
-                            </td>
-                            
+                            <th>Cód.Cliente</th>
+                            <th>Nom.cliente</th>
+                            <th>Dni</th>
+                            <th></th>
+                        </tr>
+                        <?php require_once "Controllers/clientes1_1Controller.php"; ?>
+                        <tr>
                             <td class="pequeño">
                                 <a href="clientes2.php">
                                 <img src="Assets/img/actualizar.png" alt="">
