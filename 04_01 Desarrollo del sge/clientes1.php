@@ -19,7 +19,7 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <div class="busqueda"><?php require_once "Views/busqueda.php"; ?></div>
+            <?php require_once "Views/busqueda.php"; ?>
             <form class="fondo_form" action="clientes2.php" method="post">
                 
                 <table>
@@ -42,7 +42,7 @@
                     </div>   
                 </table>
                 <div class="button_prov">
-                    <input type="submit" name="add_proveedor" value="Añadir">
+                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir">
                 </div>
             </form>
         </div>
