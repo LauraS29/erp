@@ -17,7 +17,6 @@ $dato = $modificar->fetch_array();
 
 ?>
 
->>>>>>> 1d69c1d0a4bc265ce7eb74b4fb568a6880cdd9e7
 <!DOCTYPE html>
 <html lang="es">
 <head>
