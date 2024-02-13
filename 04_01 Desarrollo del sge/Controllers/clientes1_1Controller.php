@@ -35,7 +35,6 @@ foreach ($data as $row) {
                         <a href='actualizar_fila.php?Cod_cliente=<?php echo $row->Cod_cliente; ?>'>
                             <img src='Assets/img/actualizar.png' alt=''>
                     </a>
-                
                         <a href='eliminar_fila.php?Cod_cliente={$row->Cod_cliente}'>
                             <img class='img_elim' src='Assets/img/eliminar.png' alt=''>
                         </a>
