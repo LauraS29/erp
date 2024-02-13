@@ -6,7 +6,7 @@ require_once "Db/ConDb.php";
 $usuario = $_SESSION['Usuario'];
 if(!isset($usuario))
 {
-    header("Location: clientes1.php");
+    /*header("Location: inicio.php");*/
 }
 // Generar la consulta para extraer los datos
 $id = $_GET['Cod_cliente'];
