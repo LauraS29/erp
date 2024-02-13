@@ -29,16 +29,18 @@
                             <th>Nom.cliente</th>
                             <th>Dni</th>
                             <th></th>
-                        </tr>
-                        <?php require_once "Controllers/clientes1_1Controller.php"; ?>
-                        <tr>
+                        </tr>                
+<!-- <php require_once "Controllers/clientes1_1Controller.php"; ?> -->
+
+                        <?php require_once "Controllers/clientes1Consulta_Controller.php"; ?>
+                        <!-- <tr>
                             <td class="pequeño">
                                 <a href="clientes2.php">
                                 <img src="Assets/img/actualizar.png" alt="">
                                 </a>
                                 <img class="img_elim" src="Assets/img/eliminar.png" alt="">
                             </td>
-                        </tr>
+                        </tr> -->
                     </div>   
                 </table>
                 <div class="button_prov">
