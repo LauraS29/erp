@@ -30,9 +30,8 @@
                             <th>Dni</th>
                             <th></th>
                         </tr>                
-<!-- <php require_once "Controllers/clientes1_1Controller.php"; ?> -->
 
-                        <?php require_once "Controllers/clientes1Consulta_Controller.php"; ?>
+                        <?php require_once "Controllers/clientes1_1Controller.php"; ?>
                         <!-- <tr>
                             <td class="pequeño">
                                 <a href="clientes2.php">
