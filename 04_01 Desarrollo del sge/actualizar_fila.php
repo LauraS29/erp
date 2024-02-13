@@ -1,3 +1,23 @@
+<?php
+session_start();
+// Llamada a la conexión
+require_once "Db/ConDb.php";
+
+$usuario = $_SESSION['Usuario'];
+if(!isset($usuario))
+{
+    /*header("Location: inicio.php");*/
+}
+// Generar la consulta para extraer los datos
+$id = $_GET['Cod_cliente'];
+$modif = "SELECT * FROM cliente WHERE Cod_cliente = '$id";
+$modificar = $mysqli->query($modif);
+$dato = $modificar->fetch_array();
+
+
+?>
+
+>>>>>>> 1d69c1d0a4bc265ce7eb74b4fb568a6880cdd9e7
 <!DOCTYPE html>
 <html lang="es">
 <head>
