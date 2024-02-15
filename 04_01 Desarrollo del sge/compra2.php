@@ -1,7 +1,3 @@
-<?php
-session_start();
-include_once('Db/ConDb.php');
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +9,7 @@ include_once('Db/ConDb.php');
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class = "flex">
-    <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/Encabezado/Menu.php"; ?>
     
     <section class="fondo_section">
         <div class="flex div1">
@@ -25,38 +21,75 @@ include_once('Db/ConDb.php');
                 <h2>Datos de las compras</h2>
             </div>
             <form class="flex fondo_form" action="compra2.php" method="post">
-                <div class="primer_div">
+                <section class="primer_div">
                     <div class="flex">
                         <div class="pr">
                             <p>Nº de factura:</p>
                             <input type="text" name="numeroFactura">
                         </div>
-                        <div class="pr1">
-                            <p>Detalles:</p>
-                            <textarea name="detalles" id="" cols="30" rows="10"></textarea>
-                        </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Fecha de realización:</p>
+                            <p>Fecha de emisión:</p>
                             <input type="text" name="fechaRealizacion">
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Provincia/Pais:</p>
-                            <input type="text" name="pais">
+                            <p>Nº del pedido:</p>
+                            <input type="text" name="Cod_pedido">
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Localidad:</p>
-                            <input type="text" name="localidad">
+                            <p>Vencimiento:</p>
+                            <input type="text" name="pais">
                         </div>
                     </div>
-                </div>
+                </section>
+                <section class="primer_div">
+                    <h3>Cliente</h3>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Nombre del Cliente:</p>
+                            <input type="text" name="Nom_cliente">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Domicilio:</p>
+                            <input type="text" name="Localidad_cliente">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Provincia:</p>
+                            <input type="text" name="Provincia_cliente">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Dni:</p>
+                            <input type="text" name="DNI_cliente">
+                        </div>
+                    </div>
+                </section>
             </form>
         </div>
+        <section class="fondo-div primer_div">
+            <table class="tabla">
+                <tr>
+                    <th>Nº</th>
+                    <th>Productos</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario Neto</th>
+                    <th>Total neto</th>
+                    <th>IVA%</th>
+                    <th>IVA Total</th>
+                    <th>Precio total</th>
+                </tr>
+            </table>
+        </section>
     </section>
 </body>
 </html>
