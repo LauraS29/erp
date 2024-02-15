@@ -79,8 +79,17 @@ include_once('Db/ConDb.php');
                     </div>
                 </section>
                 <section class="fondo-section">
+                    <tr>
+                        <th>Nº</th>
+                        <th>Productos</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario Neto</th>
+                        <th>Total neto</th>
+                        <th>IVA%</th>
+                        <th>IVA Total</th>
+                        <th>Precio total</th>
+                    </tr>
 
-                
                 </section>
             </form>
         </div>
