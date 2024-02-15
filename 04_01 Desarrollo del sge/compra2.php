@@ -1,7 +1,3 @@
-<?php
-session_start();
-include_once('Db/ConDb.php');
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -78,24 +74,23 @@ include_once('Db/ConDb.php');
                         </div>
                     </div>
                 </section>
-                <section class="fondo-section">
-                    <div class="tabla">
-                        <tr>
-                            <th>Nº</th>
-                            <th>Productos</th>
-                            <th>Cantidad</th>
-                            <th>Precio Unitario Neto</th>
-                            <th>Total neto</th>
-                            <th>IVA%</th>
-                            <th>IVA Total</th>
-                            <th>Precio total</th>
-                        </tr>
-                    </div>
-                </section>
             </form>
         </div>
+        <section class="fondo-div primer_div">
+            <table class="tabla">
+                <tr>
+                    <th>Nº</th>
+                    <th>Productos</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario Neto</th>
+                    <th>Total neto</th>
+                    <th>IVA%</th>
+                    <th>IVA Total</th>
+                    <th>Precio total</th>
+                </tr>
+            </table>
+        </section>
     </section>
-    
 </body>
 </html>
 
