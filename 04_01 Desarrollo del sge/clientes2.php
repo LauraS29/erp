@@ -17,48 +17,48 @@
         </div>
         <div class="fondo_div">
             <div>
-                <h2>Datos de clientes</h2>
+                <h2>Datos de los clientes</h2>
             </div>
             <form class="flex fondo_form" action="Controllers/clientes1_2Controller.php" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
                             <p>Nombre:</p>
-                            <input type="text" name="Nom_cliente">
+                            <input type="text" name="Nom_cliente" required>
                         </div>
                         <div class="pr1">
                             <p>Apellidos:</p>
-                            <input type="text" name="Ape_cliente">
+                            <input type="text" name="Ape_cliente" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Email:</p>
-                            <input type="email" name="Email_cliente">
+                            <input type="email" name="Email_cliente" required>
                         </div>
                         <div class="pr1">
                             <p>Teléfono:</p>
-                            <input type="text" name="Tlf_cliente">
+                            <input type="text" name="Tlf_cliente" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>DNI:</p>
-                            <input type="text" name="DNI_cliente">
+                            <input type="text" name="DNI_cliente" required>
                         </div>
                         <div class="pr1">
                             <p>Codigo Postal:</p>
-                            <input type="text" name="Cod_postal_cliente">
+                            <input type="text" name="Cod_postal_cliente" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Localidad:</p>
-                            <input type="text" name="Localidad_cliente">
+                            <input type="text" name="Localidad_cliente" required>
                         </div>
                        <div class="pr1">
                             <p>Dirección:</p>
-                            <input type="text" name="Provincia_cliente">
+                            <input type="text" name="Provincia_cliente" required>
                         </div> 
                     </div>
                     <div class="flex">
