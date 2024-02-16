@@ -27,18 +27,18 @@
                             <input type="text" name="Cod_empresa" required>
                         </div>
                         <div class="pr1">
-                            <p>Nombre:</p>
+                            <p>Nombre Empresa:</p>
                             <input type="text" name="Nom_empresa" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Teléfono:</p>
-                            <input type="email" name="Tlf_empresa" required>
+                            <input type="text" name="Tlf_empresa" required>
                         </div>
                         <div class="pr1">
                             <p>Email:</p>
-                            <input type="text" name="Email_empresa" required>
+                            <input type="email" name="Email_empresa" required>
                         </div>
                     </div>
                     <div class="flex">

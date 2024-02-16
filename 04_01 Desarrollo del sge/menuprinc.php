@@ -20,7 +20,7 @@ $nombreUsuario = $_SESSION['UsuarioNombre'];
     <script src="./Assets/js/motor.js"></script>
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
-<body class="fondo_section">
+<body class="fondo_menu">
     <header class="flex espacio">
         <div class="left">
             <img src="Assets/img/usuario.png" alt="">
