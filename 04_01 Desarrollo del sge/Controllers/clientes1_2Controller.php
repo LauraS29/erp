@@ -43,4 +43,7 @@ function obtenerClientes() {
 
     return $clientes;
 }
+
+
+
 ?>

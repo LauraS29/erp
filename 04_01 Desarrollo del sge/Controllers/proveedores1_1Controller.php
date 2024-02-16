@@ -14,7 +14,7 @@ $oData = new Datos;
 $rowsHTML = '';
 
 // Verificar si se ha realizado una búsqueda
-if (!empty($Consulta1)) {
+if (!empty($Consulta1)){
     // Construir la consulta SQL para la búsqueda
     $sql = "SELECT Cod_proveedor, Nom_proveedor, Tlf_proveedor FROM proveedores WHERE Cod_proveedor = '$Consulta1' OR Nom_proveedor = '$Consulta1' OR Tlf_proveedor = '$Consulta1' ORDER BY Cod_proveedor, Nom_proveedor, Tlf_proveedor";
 } else {

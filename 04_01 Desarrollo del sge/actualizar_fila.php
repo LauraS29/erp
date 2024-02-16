@@ -1,18 +1,9 @@
 <?php
-session_start();
-// Llamada a la conexión
-require_once "Db/ConDb.php";
+include 'Db/ConDb.php';
 
-$usuario = $_SESSION['Usuario'];
-if(!isset($usuario))
-{
-    /*header("Location: inicio.php");*/
-}
-// Generar la consulta para extraer los datos
 $id = $_GET['Cod_cliente'];
-$modif = "SELECT * FROM cliente WHERE Cod_cliente = '$id";
-$modificar = $mysqli->query($modif);
-$dato = $modificar->fetch_array();
+$sql = $mysqli->query('SELECT * FROM cliente WHERE Cod_cliente = $id');
+
 
 
 ?>
@@ -38,26 +29,28 @@ $dato = $modificar->fetch_array();
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <form class="flex fondo_form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <div class="primer_div">
+            <form class="flex fondo_form" action="" method="post">
+                <?php 
+                    while ($datos=$sql->fetch_object()) {?>
+                        <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
                             <p>Nombre:</p>
-                            <input type="text" name="Nom_cliente" value="<?php echo $dato['Nom_cliente']; ?>" required>
+                            <input type="text" name="Nom_cliente" value="<?php $datos->$Nom_cliente ?>" required>
                         </div>
                         <div class="pr1">
                             <p>Apellidos:</p>
-                            <input type="text" name="Ape_cliente" value="<?php echo $dato['Ape_cliente']; ?>" required>
+                            <input type="text" name="Ape_cliente" value="<?php $datos->$Ape_cliente?>" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Email:</p>
-                            <input type="email" name="Email_cliente" value="<?php echo $dato['Email_cliente']; ?>" required>
+                            <input type="email" name="Email_cliente" value="<?php $datos->$Email_cliente?>" required>
                         </div>
                         <div class="pr1">
                             <p>Teléfono:</p>
-                            <input type="text" name="Tlf_cliente" value="<?php echo $dato['Tlf_cliente']; ?>" required>
+                            <input type="text" name="Tlf_cliente" value="<?php $datos->$Tlf_cliente?>" required>
                         </div>
                     </div>
                     <div class="flex">
@@ -87,6 +80,8 @@ $dato = $modificar->fetch_array();
                         </div>
                     </div>
                 </div>
+                 <?php }
+                ?>
                 <div class="segundo_div imagen-botones">
                     <img src="Assets/img/usuario.png" alt="">
                     <div class="buttons">
@@ -94,7 +89,7 @@ $dato = $modificar->fetch_array();
                             <input type="submit" name="guardar" id="boton1" value="Guardar">
                         </div>
                         <div>
-                            <input type="button" value="Actualizar">
+                            <button type="submit" name="guardar" id="boton1">Modificar</button>
                         </div>
                     </div>
                 </div>
