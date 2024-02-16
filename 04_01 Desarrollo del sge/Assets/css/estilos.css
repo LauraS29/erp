@@ -270,7 +270,6 @@ body {
     background-color: #a8a8a8;
     min-height: 60vh;
     margin: 0 5%;
-    padding-top: 3%;
 }
 
 
@@ -381,7 +380,7 @@ td img {
 }
 
 .fondo_div h2 {
-    padding-top: 2%;
+    padding: 2% 0;
 }
 
 
