@@ -19,10 +19,10 @@
             <div>
                 <h2>Datos de la empresa</h2>
             </div>
-            <?php require_once "Views/busqueda.php"; ?>
+            
             <form class="fondo_form" action="empresa2.php" method="post">
-                
                 <table>
+                  <?php require_once "Views/busqueda.php"; ?>  
                     <div class="tabla">
                         <tr>
                             <th>Cód.Empresa</th>
