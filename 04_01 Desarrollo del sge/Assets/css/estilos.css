@@ -255,8 +255,8 @@ body {
 .fondo_section {
     background-color: #7bebe2;
     min-width: 174.7vh;
-    margin-left: 9%;
-    padding-right: 2%;
+    padding-left: 9%;
+    /* padding-right: 2%; */
 }
 
 .fondo_div {
@@ -269,7 +269,7 @@ body {
     align-items: center;
     background-color: #a8a8a8;
     min-height: 60vh;
-    margin: 0 5%;
+    margin: 0 3%;
 }
 
 
