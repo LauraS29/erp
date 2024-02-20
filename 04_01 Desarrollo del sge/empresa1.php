@@ -23,7 +23,6 @@
                 <?php require_once "Views/busqueda.php"; ?>    
                 <form action="empresa2.php" method="post">
                     <table>
-                    
                         <div class="tabla">
                             <tr>
                                 <th>Cód.Empresa</th>
