@@ -74,9 +74,7 @@
                         </div>
                     </div>
                 </section>
-            </form>
-        </div>
-        <section class="fondo-div primer_div">
+                <div class="fondo-div primer_div">
             <table class="tabla">
                 <tr>
                     <th>Nº</th>
@@ -89,7 +87,11 @@
                     <th>Precio total</th>
                 </tr>
             </table>
-        </section>
+        
+        </div>
+            </form>
+            
+        </div>
     </section>
 </body>
 </html>
