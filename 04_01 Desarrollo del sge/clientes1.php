@@ -19,17 +19,17 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            <div class="fondo_form">
-                <?php require_once "Views/busqueda.php"; ?>
-                <form action="clientes2.php" method="post">
-                    <table>
-                        <div class="tabla">
-                            <tr>
-                                <th>Cód.Cliente</th>
-                                <th>Nom.cliente</th>
-                                <th>Dni</th>
-                                <th></th>
-                            </tr>                
+            <?php require_once "Views/busqueda.php"; ?>
+            <form class="fondo_form" action="clientes2.php" method="post">
+                <table>
+                    
+                    <div class="tabla">
+                        <tr>
+                            <th>Cód.Cliente</th>
+                            <th>Nom.cliente</th>
+                            <th>Dni</th>
+                            <th></th>
+                        </tr>                
 
                             <?php require_once "Controllers/clientes1_1Controller.php"; ?>
                             <!-- <tr>
