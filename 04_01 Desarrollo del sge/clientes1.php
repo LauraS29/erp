@@ -19,11 +19,10 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
-            
+            <?php require_once "Views/busqueda.php"; ?>
+                    <div class="tabla">
             <form class="fondo_form" action="clientes2.php" method="post">
                 <table>
-                    <?php require_once "Views/busqueda.php"; ?>
-                    <div class="tabla">
                         <tr>
                             <th>Cód.Cliente</th>
                             <th>Nom.cliente</th>
