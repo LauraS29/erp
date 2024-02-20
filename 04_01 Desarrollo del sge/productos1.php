@@ -9,7 +9,7 @@
 </head>
 <body class = "flex">
     
-    <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/Encabezado/Menu.php"; ?>
 
     <section class="fondo_section">
         <div class="flex div1">
@@ -28,29 +28,7 @@
                             <th>Nombre del Producto</th>
                             <th>Precio del Producto</th>
                             <th>Cantidad del Producto</th>
-                        </tr> 
-                    
-                        <?php
-                        while ($row = mysqli_fetch_assoc($resultadoProductos)) 
-                        {
-                        ?>
-                            <tr>
-                                <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Cod_producto']; ?></a></td>
-                                <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Nombre_producto']; ?></a></td>
-                                <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Precio_producto']; ?></a></td>
-                                <td><a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><?php echo $row['Cantidad_producto']; ?></a></td>
-                                <td class="pequeño">
-                                    <div class="rect1">
-                                        <a href="productos2.php?codigo=<?php echo $row['Cod_producto']; ?>&modo=editar"><img src="Assets/img/actualizar.png" alt="Actualizar"></a>
-                                    </div>
-                                <div class="rect2">
-        <img src="Assets/img/eliminar.png" alt="Eliminar">
-    </div>
-</td>
-                            </tr>
-                        <?php
-                        }
-                        ?>
+                        </tr>
                     </div>
                 </table>
                 <div class="button_prov">

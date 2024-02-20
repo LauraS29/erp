@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class = "flex">
-    <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/Encabezado/Menu.php"; ?>
 
     <section class="fondo_section">
         <div class="flex div1">
@@ -20,7 +20,12 @@
                 <h2>Datos de las ventas</h2>
             </div>
             <form class="fondo_form" action="venta.php" method="post">
+                <table>
 
+                </table>
+                <div class="button_prov">
+                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir">
+                </div>
             </form>
         </div>
     </section>
