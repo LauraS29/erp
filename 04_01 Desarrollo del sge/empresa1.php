@@ -21,7 +21,7 @@
             </div>
             <div class="fondo_form">
                 <?php require_once "Views/busqueda.php"; ?>    
-                <form class="fondo_form" action="empresa2.php" method="post">
+                <form action="empresa2.php" method="post">
                     <table>
                     
                         <div class="tabla">
