@@ -20,27 +20,33 @@
             <div>
                 <h2>Datos de las compras</h2>
             </div>
-            <form class="fondo_form" action="compra1.php" method="post">
-                
-                <div class="button_prov">
-                     <input type="submit" name="add_proveedor" value="Añadir">
-                </div>
+            <div class="fondo_form">
+            <?php require_once "Views/busqueda.php"; ?>
+            <form action="compra2.php" method="post">
+                <table>
+                    <div class="tabla">
+                        <tr>
+                            <th>Cód.Cliente</th>
+                            <th>Nom.cliente</th>
+                            <th>Dni</th>
+                            <th></th>
+                        </tr>                
+
+                        <?php require_once "Controllers/compra1_1Controller.php"; ?>
+                        <!-- <tr>
+                            <td class="pequeño">
+                                <a href="clientes2.php">
+                                <img src="Assets/img/actualizar.png" alt="">
+                                </a>
+                                <img class="img_elim" src="Assets/img/eliminar.png" alt="">
+                            </td>
+                        </tr> -->
+                    </div>   
+                </table>
             </form>
+        </div>
+        </div>
         </div>
     </section>
 </body>
 </html>
-
-                <!------------PHP------------->
-<?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
-
-    header("Location: compra2.php");
-    exit();
-}
-
-?>
