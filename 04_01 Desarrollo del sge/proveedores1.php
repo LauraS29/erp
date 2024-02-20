@@ -20,7 +20,8 @@
                 <h2>Datos de los proveedores</h2>
             </div>
             <div class="fondo_form">
-                <?php require_once "Views/busqueda.php"; ?> 
+                <?php require_once "Views/busqueda.php"; ?>
+                 
                 <form class="fondo_form" action="proveedores2.php" method="post">
                     <table>
                         <div class="tabla">
