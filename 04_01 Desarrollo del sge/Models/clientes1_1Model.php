@@ -26,6 +26,7 @@ class Datos
             return $this->data;
         }
     }
+
 }
 
 ?>
