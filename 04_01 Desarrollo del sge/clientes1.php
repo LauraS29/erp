@@ -19,10 +19,10 @@
             <div>
                 <h2>Datos de clientes</h2>
             </div>
+        <div class="fondo_form">
             <?php require_once "Views/busqueda.php"; ?>
-            <form class="fondo_form" action="clientes2.php" method="post">
+            <form action="clientes2.php" method="post">
                 <table>
-                    
                     <div class="tabla">
                         <tr>
                             <th>Cód.Cliente</th>
@@ -31,22 +31,22 @@
                             <th></th>
                         </tr>                
 
-                            <?php require_once "Controllers/clientes1_1Controller.php"; ?>
-                            <!-- <tr>
-                                <td class="pequeño">
-                                    <a href="clientes2.php">
-                                    <img src="Assets/img/actualizar.png" alt="">
-                                    </a>
-                                    <img class="img_elim" src="Assets/img/eliminar.png" alt="">
-                                </td>
-                            </tr> -->
-                        </div>   
-                    </table>
-                    <div class="button_prov">
-                        <input class="negrita" type="submit" name="add_proveedor" value="Añadir">
-                    </div>
-                </form>
-            </div>
+                        <?php require_once "Controllers/clientes1_1Controller.php"; ?>
+                        <!-- <tr>
+                            <td class="pequeño">
+                                <a href="clientes2.php">
+                                <img src="Assets/img/actualizar.png" alt="">
+                                </a>
+                                <img class="img_elim" src="Assets/img/eliminar.png" alt="">
+                            </td>
+                        </tr> -->
+                    </div>   
+                </table>
+                <div class="button_prov">
+                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir">
+                </div>
+            </form>
+        </div>
         </div>
     </section>
 </body>
