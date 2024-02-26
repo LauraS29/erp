@@ -27,6 +27,20 @@ class Datos
         }
     }
 
+    public function authenticate($usuario, $contraseña) {
+        // Consulta la base de datos para verificar las credenciales
+        $query = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND contraseña = '$contraseña'";
+        $result = $this->mysqli->query($query);
+
+        if ($result->num_rows == 1) {
+            // Usuario autenticado
+            return true;
+        } else {
+            // Usuario no autenticado
+            return false;
+        }
+
+}
 }
 
 ?>
