@@ -21,6 +21,7 @@
             <div>
                 <h2>Datos de los clientes</h2>
             </div>
+<<<<<<< HEAD
             <?php
                 // ["(Esto de dentro es el name de los input)"]
                 $id=$_POST["Cod_cliente"];
@@ -49,12 +50,12 @@
                     // 1º nombre de la tabla, 2º cada nombre de las columnas q editaremos
                     // la ? es para la proteccion a inyeccion sql
                     // WHERE = q edite esos registros don el id sea igual al id q elijamos
-                    $query="UPDATE cliente SET Nom_cliente=?, Ape_cliente=?, Email_cliente=?, Tlf_cliente=?, DNI_cliente=?, Cod_postal_cliente=?, Localidad_cliente=?, Provincia_cliente=? WHERE Cod_cliente=?";
+                    $query="UPDATE cliente SET Nom_cliente=?, Ape_cliente=?, Email_cliente=?, Tlf_cliente=?, DNI_cliente=?, Cod_postal_cliente=?, Localidad_cliente=?, Provincia_cliente=?, Observaciones=? WHERE Cod_cliente=?";
                     // preparar este query
                     $sentencia=mysqli_prepare($getconn1, $query);
                     // cargaremos los valores q iran en cada ?
                     // e iran a la variable $sentencia, y definiremos el tipo de valores (s=string,  =entero)
-                    mysqli_stmt_bind_param($sentencia,"ssssssssi", $nombre, $apellido, $email, $telefono, $dni, $cod_postal, $localidad, $provincia, $id);
+                    mysqli_stmt_bind_param($sentencia,"sssssssssi", $nombre, $apellido, $email, $telefono, $dni, $cod_postal, $localidad, $provincia, $observaciones, $id);
                     // ahora podremos hacer toda la ejecucion de la sentencia
                     mysqli_stmt_execute($sentencia);
                     // para saber si se ejecuto y las filas q fueron afectadas
@@ -73,6 +74,7 @@
                     mysqli_close($getconn1);
                 }
             ?>
+            <?php require_once "Controllers/clientes1_actualizar.php"; ?>
             <form class="flex fondo_form" action="actualizar_fila.php" method="post">
                 <div class="primer_div">
                 <input type="hidden" value="<?php echo $id ?>" name="Cod_cliente">
@@ -119,7 +121,10 @@
                     <div class="flex">
                         <div class="pr">
                             <p>Observaciones:</p>
-                            <textarea name="Observaciones" cols="30" rows="10"></textarea>
+
+                            <textarea name="Observaciones" id="Observaciones" cols="30" rows="10"><?php echo $observaciones ?></textarea>
+
+                            <textarea name="Observaciones" id ="Observaciones" cols="30" rows="10" value="<?php echo $observaciones ?>"></textarea>
                         </div>
                     </div>
                 </div>
