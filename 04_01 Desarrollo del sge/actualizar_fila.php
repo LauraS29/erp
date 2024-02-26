@@ -123,7 +123,6 @@
 
                             <textarea name="Observaciones" id="Observaciones" cols="30" rows="10"><?php echo $observaciones ?></textarea>
 
-                            <textarea name="Observaciones" id ="Observaciones" cols="30" rows="10" value="<?php echo $observaciones ?>"></textarea>
                         </div>
                     </div>
                 </div>
