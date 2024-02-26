@@ -20,7 +20,7 @@
                 <h2>Datos de la empresa</h2>
             </div>
             <div class="fondo_form">
-                <?php require_once "Views/busqueda.php"; ?>    
+                <?php require_once "Views/busquedas/busqueda_empresa.php"; ?>    
                 <form action="empresa2.php" method="post">
                     <table>
                         <div class="tabla">

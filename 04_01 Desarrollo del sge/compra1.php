@@ -21,7 +21,7 @@
                 <h2>Datos de las compras</h2>
             </div>
             <div class="fondo_form">
-            <?php require_once "Views/busqueda.php"; ?>
+            <?php require_once "Views/busquedas/busqueda_compra.php"; ?>
             <form action="compra2.php" method="post">
                 <table>
                     <div class="tabla">
