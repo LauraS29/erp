@@ -21,7 +21,6 @@
             <div>
                 <h2>Datos de los clientes</h2>
             </div>
-<<<<<<< HEAD
             <?php
                 // ["(Esto de dentro es el name de los input)"]
                 $id=$_POST["Cod_cliente"];
