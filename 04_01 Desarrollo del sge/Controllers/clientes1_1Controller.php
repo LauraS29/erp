@@ -4,7 +4,7 @@
             $getconn1 = $getconnection->conn1();
 
             $consulta = "SELECT * FROM cliente";
-            $resultado = mysqli_query($conn1, $consulta);
+            $resultado = mysqli_query($getconn1, $consulta);
             while ($fila = mysqli_fetch_assoc($resultado))
             {
                 echo "<tr>";
