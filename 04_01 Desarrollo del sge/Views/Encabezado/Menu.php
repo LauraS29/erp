@@ -46,7 +46,7 @@
                         <span class="flex alineado icono">
                             <img src="Assets/img/compra.png" alt="">
                         </span>
-                        <span class="flex alineado titulo negrita">Compra</span>
+                        <span class="flex alineado titulo">Compra</span>
                     </a>
                 </li>
                 <li>
