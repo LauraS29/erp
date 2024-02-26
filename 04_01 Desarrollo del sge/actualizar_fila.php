@@ -24,34 +24,6 @@ if (isset($_POST["actualizar"])) {
     }
 }
 ?>
-                    // query q realizara la edicion
-                    // 1º nombre de la tabla, 2º cada nombre de las columnas q editaremos
-                    // la ? es para la proteccion a inyeccion sql
-                    // WHERE = q edite esos registros don el id sea igual al id q elijamos
-                    $query="UPDATE cliente SET Nom_cliente=?, Ape_cliente=?, Email_cliente=?, Tlf_cliente=?, DNI_cliente=?, Cod_postal_cliente=?, Localidad_cliente=?, Provincia_cliente=?, Observaciones=? WHERE Cod_cliente=?";
-                    // preparar este query
-                    $sentencia=mysqli_prepare($getconn1, $query);
-                    // cargaremos los valores q iran en cada ?
-                    // e iran a la variable $sentencia, y definiremos el tipo de valores (s=string,  =entero)
-                    mysqli_stmt_bind_param($sentencia,"sssssssssi", $nombre, $apellido, $email, $telefono, $dni, $cod_postal, $localidad, $provincia, $observaciones, $id);
-                    // ahora podremos hacer toda la ejecucion de la sentencia
-                    mysqli_stmt_execute($sentencia);
-                    // para saber si se ejecuto y las filas q fueron afectadas
-                    $afectado=mysqli_stmt_affected_rows($sentencia);
-                    // condicion
-                    // si se edito un registro nos mostrara un mensaje, si no pues otro mensaje
-                    if($afectado==1)
-                    {
-                        echo "<script> alert('El empleado $nombre se edito correctamente :) '); location.href='clientes1.php' </script>";
-                    } else{
-                        echo "<script> alert('El empleado $nombre no se edito :( '); location.href='clientes1.php' </script>";
-                    }
-                    // ahora solo cerramos la sentencia
-                    mysqli_stmt_close($sentencia);
-                    // y cerramos la conexion
-                    mysqli_close($getconn1);
-                }
-            ?>
             <?php require_once "Controllers/clientes1_actualizar.php"; ?>
             <form class="flex fondo_form" action="actualizar_fila.php" method="post">
                 <div class="primer_div">
