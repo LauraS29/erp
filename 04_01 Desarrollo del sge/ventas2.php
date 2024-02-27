@@ -24,7 +24,7 @@
 
                 </table>
                 <div class="button_prov">
-                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir">
+                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir venta">
                 </div>
             </form>
         </div>

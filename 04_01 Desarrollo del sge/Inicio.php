@@ -1,9 +1,12 @@
 <?php
 session_start();
-include_once('Db/ConDb.php');
+// Base de datos
+require_once('Db/ConDb.php');
 
-// Inicializa el mensaje de error como vacío
-$errorMsg = '';
+// Verifica si la conexión se estableció correctamente
+if (!$mysqli) {
+    die("La conexión a la base de datos falló: " . mysqli_connect_error());
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -22,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $errorMsg = "Formato de correo electrónico no válido.";
         } else {
             // Realiza la consulta para obtener el nombre del usuario
-            $sql = "SELECT Nom_usuario, Contraseña_usuario FROM Usuarios WHERE Email_usuario = '$email'";
+            $sql = "SELECT Nom_usuario, Contraseña_usuario FROM Usuarios WHERE Email_usuario = '$correo'";
             $resultado = mysqli_query($mysqli, $sql);
 
             if ($resultado && mysqli_num_rows($resultado) > 0) 
@@ -49,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
