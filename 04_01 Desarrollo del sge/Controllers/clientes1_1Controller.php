@@ -46,7 +46,7 @@ foreach ($resultados as $fila) {
                 <input type='hidden' name='Cod_postal_cliente' value='" . $fila->Cod_postal_cliente . "'>
                 <input type='hidden' name='Localidad_cliente' value='" . $fila->Localidad_cliente . "'>
                 <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
-                
+            
                 <input type='submit' name='editar' value='editar'>
             </form>
           </td>";
@@ -56,3 +56,5 @@ foreach ($resultados as $fila) {
 
 // No es necesario cerrar la conexión aquí, ya que la gestiona la clase Datos
 ?>
+
+<!-- <a href='#' name='eliminar'><img src='Assets/img/eliminar.png' alt=""></a> -->
