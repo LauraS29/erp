@@ -1,31 +1,28 @@
 <?php
 session_start();
-// Base de datos
-require_once('Db/ConDb.php');
+include_once('Db/ConDb.php');
 
-// Verifica si la conexión se estableció correctamente
-if (!$mysqli) {
-    die("La conexión a la base de datos falló: " . mysqli_connect_error());
-}
+// Inicializa el mensaje de error como vacío
+$errorMsg = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
     // Obtén los datos del formulario
-    $correo = isset($_POST['usuario']) ? $_POST['usuario'] : '';
-    $contrasena = isset($_POST['contraseña']) ? $_POST['contraseña'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
 
     // Validar que ambos campos estén completos
-    if (empty($correo) || empty($contrasena)) 
+    if (empty($email) || empty($contrasena)) 
     {
-        $errorMsg = "Ambos campos (correo y contraseña) son obligatorios.";
+        $errorMsg = "Ambos campos (email y contraseña) son obligatorios.";
     } else {
         // Validar el formato del correo electrónico
-        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) 
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
         {
             $errorMsg = "Formato de correo electrónico no válido.";
         } else {
             // Realiza la consulta para obtener el nombre del usuario
-            $sql = "SELECT Nom_usuario, Contraseña_usuario FROM Usuarios WHERE Email_usuario = '$correo'";
+            $sql = "SELECT Nom_usuario, Contraseña_usuario FROM Usuarios WHERE Email_usuario = '$email'";
             $resultado = mysqli_query($mysqli, $sql);
 
             if ($resultado && mysqli_num_rows($resultado) > 0) 
@@ -36,9 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 // Verificar la contraseña
                 if (password_verify($contrasena, $hashContrasena)) 
                 {
-                    $_SESSION['UsuarioNombre'] = $row['Nom_usuario'];
+                    $_SESSION['UsuarioNombre'] = $row['Nombre_usuario'];
 
-                    // Redirige a index.php solo si la autenticación es exitosa
+                    // Redirige a menuprinc.php solo si la autenticación es exitosa
                     header("Location: menuprinc.php");
                     // Asegura que no se procese nada más después de la redirección
                     exit(); 
@@ -68,12 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         <div class="iniciar">
             <img src="./Assets/img/usuario.png" alt="">
             <h2>Inicio de sesión</h2>
-
             <form action="Inicio.php" method="post" onsubmit="return onSubmitForm()">
-
-            <form action="./Controllers/Inicio_Controller.php" method="post">
-                <input type="email" name="usuario" placeholder="Correo" required>
-                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="contrasena" placeholder="Contraseña" required>
                 <div class="links">
                     <p><a href="#">¿Olvidaste la contraseña?</a></p>
                     <p><a href="registrar.php">Registrarse</a></p>
