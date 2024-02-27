@@ -68,7 +68,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         <div class="iniciar">
             <img src="./Assets/img/usuario.png" alt="">
             <h2>Inicio de sesión</h2>
+
             <form action="Inicio.php" method="post" onsubmit="return onSubmitForm()">
+
+            <form action="./Controllers/Inicio_Controller.php" method="post">
                 <input type="email" name="usuario" placeholder="Correo" required>
                 <input type="password" name="contraseña" placeholder="Contraseña" required>
                 <div class="links">
