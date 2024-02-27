@@ -23,7 +23,13 @@ foreach ($resultados as $fila) {
             <form action='eliminar_fila.php' method='POST'>
                 <input type='hidden' name='Cod_cliente' value='" . $fila->Cod_cliente . "'>
                 <input type='hidden' name='Nom_cliente' value='" . $fila->Nom_cliente . "'>
-                <!-- Otros campos ocultos -->
+                <input type='hidden' name='Ape_cliente' value='" . $fila->Ape_cliente . "'>
+                <input type='hidden' name='Email_cliente' value='" . $fila->Email_cliente . "'>
+                <input type='hidden' name='Tlf_cliente' value='" . $fila->Tlf_cliente . "'>
+                <input type='hidden' name='DNI_cliente' value='" . $fila->DNI_cliente . "'>
+                <input type='hidden' name='Cod_postal_cliente' value='" . $fila->Cod_postal_cliente . "'>
+                <input type='hidden' name='Localidad_cliente' value='" . $fila->Localidad_cliente . "'>
+                <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
                 <input type='submit' name='eliminar' value='eliminar' onclick='return confirmacion()'>
             </form>
           </td>";
@@ -33,8 +39,14 @@ foreach ($resultados as $fila) {
             <form action='actualizar_fila.php' method='POST'>
                 <input type='hidden' name='Cod_cliente' value='" . $fila->Cod_cliente . "'>
                 <input type='hidden' name='Nom_cliente' value='" . $fila->Nom_cliente . "'>
+                <input type='hidden' name='Ape_cliente' value='" . $fila->Ape_cliente . "'>
+                <input type='hidden' name='Email_cliente' value='" . $fila->Email_cliente . "'>
+                <input type='hidden' name='Tlf_cliente' value='" . $fila->Tlf_cliente . "'>
                 <input type='hidden' name='DNI_cliente' value='" . $fila->DNI_cliente . "'>
-                <!-- Otros campos ocultos -->
+                <input type='hidden' name='Cod_postal_cliente' value='" . $fila->Cod_postal_cliente . "'>
+                <input type='hidden' name='Localidad_cliente' value='" . $fila->Localidad_cliente . "'>
+                <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
+                
                 <input type='submit' name='editar' value='editar'>
             </form>
           </td>";
