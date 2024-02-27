@@ -26,7 +26,7 @@
                 <table>
                     <div class="tabla">
                         <tr>
-                            <th>Cód.Cliente</th>
+                            <th>Cód.Compra</th>
                             <th>Nom.cliente</th>
                             <th>Dni</th>
                             <th></th>
