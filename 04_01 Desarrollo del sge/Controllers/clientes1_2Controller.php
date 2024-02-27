@@ -1,6 +1,9 @@
 <?php
 require_once '../Db/ConDb.php';
 
+require_once '../Models/clientes1_1Model.php';
+$mysqli = Connection::conn1();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DNI_cliente = $_POST['DNI_cliente'];
     $Nom_cliente = $_POST['Nom_cliente'];
