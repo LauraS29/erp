@@ -21,6 +21,10 @@
             </div>
             <form class="fondo_form" action="venta.php" method="post">
                 <table>
+                    <th>Cód.Venta</th>
+                    <th>Nom.cliente</th>
+                    <th>Dni</th>
+                    <th></th>
 
                 </table>
                 <div class="button_prov">
