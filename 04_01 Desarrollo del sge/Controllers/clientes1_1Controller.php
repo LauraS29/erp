@@ -30,7 +30,7 @@ foreach ($resultados as $fila) {
                 <input type='hidden' name='Cod_postal_cliente' value='" . $fila->Cod_postal_cliente . "'>
                 <input type='hidden' name='Localidad_cliente' value='" . $fila->Localidad_cliente . "'>
                 <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
-                <button type='submit' name='eliminar'>
+                <button type='submit' name='eliminar' value='eliminar' onclick='return confirmacion()'>
                     <img src='Assets/img/eliminar.png'>
                 </button>
             </form>
