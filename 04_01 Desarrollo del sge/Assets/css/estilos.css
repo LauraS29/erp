@@ -383,6 +383,18 @@ td img {
     padding: 2% 0;
 }
 
+/*-------------------clientes1_1Controller.php----------------*/
+
+button{
+    border: none;
+    background: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+button img{
+    cursor: pointer;
+}
 
 /*-------------------proveedores1.php----------------*/
 

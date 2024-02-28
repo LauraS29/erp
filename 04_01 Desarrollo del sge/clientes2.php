@@ -74,9 +74,6 @@
                         <div>
                             <input type="submit" name="guardar" id="boton1" value="Guardar">
                         </div>
-                        <div>
-                            <input type="button" value="Actualizar">
-                        </div>
                     </div>
                 </div>
             </form>
