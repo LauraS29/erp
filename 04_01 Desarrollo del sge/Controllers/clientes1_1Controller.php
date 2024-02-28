@@ -54,5 +54,5 @@ foreach ($resultados as $fila) {
     echo "</tr>";
 }
 
-// No es necesario cerrar la conexión aquí, ya que la gestiona la clase Datos
+
 ?>

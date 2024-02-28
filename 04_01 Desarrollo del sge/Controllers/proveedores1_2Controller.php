@@ -1,6 +1,9 @@
 <?php
 require_once '../Db/ConDb.php';
 
+require_once '../Models/proveedores1_1Model.php';
+$mysqli = Connection::conn1();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Nom_proveedor = $_POST['Nom_proveedor'];
     $Tlf_proveedor = $_POST['Tlf_proveedor'];
@@ -23,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 function obtenerProveedores() {
-    global $mysqli; // Asegúrate de que $mysqli esté disponible en este ámbito
+    global $mysqli;
 
     $proveedores = array();
 

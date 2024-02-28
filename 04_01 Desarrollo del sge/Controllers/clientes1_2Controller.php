@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 function obtenerClientes() {
-    global $mysqli; // Asegúrate de que $mysqli esté disponible en este ámbito
+    global $mysqli; 
 
     $clientes = array();
 
