@@ -17,6 +17,7 @@
         </div>
         <div class="fondo_div">
             <div>
+                
                 <h2>Datos de los clientes</h2>
             </div>
             <form class="flex fondo_form" action="Controllers/clientes1_2Controller.php" method="post">
@@ -24,7 +25,8 @@
                     <div class="flex">
                         <div class="pr">
                             <p>Nombre:</p>
-                            <input type="text" name="Nom_cliente" value="<?php echo isset($Nom_cliente) ? $Nom_cliente : ''; ?>"required>
+                            <input type="text" name="Nom_cliente" 
+                            r0equired>
                         </div>
                         <div class="pr1">
                             <p>Apellidos:</p>

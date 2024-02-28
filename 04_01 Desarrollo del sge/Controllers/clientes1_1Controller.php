@@ -60,6 +60,7 @@ foreach ($resultados as $fila) {
     echo "</tr>";
 }
 
+
 ?>
 
 <!-- <a href='./actualizar_fila.php' name='editar'><img src='Assets/img/actualizar.png'></a> -->

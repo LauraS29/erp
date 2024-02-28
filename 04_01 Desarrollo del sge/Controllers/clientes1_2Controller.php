@@ -2,7 +2,7 @@
 require_once '../Db/ConDb.php';
 
 require_once '../Models/clientes1_1Model.php';
-$mysqli = Connection::conn1();
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DNI_cliente = $_POST['DNI_cliente'];
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 function obtenerClientes() {
-    global $mysqli; // Asegúrate de que $mysqli esté disponible en este ámbito
+    global $mysqli; 
 
     $clientes = array();
 

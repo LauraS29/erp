@@ -9,7 +9,7 @@
 </head>
 <body class="flex">
     <?php require_once "Views/Encabezado/Menu.php"; ?>
-    
+   
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/clientes.png" alt="">
@@ -33,6 +33,8 @@
                 $observaciones = isset($_POST["Observaciones"]) ? $_POST["Observaciones"] : '';
 
 
+
+
                 // Condición para que se ejecute el código cuando le hagamos click al botón actualizar
                 if (isset($_POST["actualizar"])) {
                     // Esto hará la actualización a la base de datos
@@ -41,6 +43,7 @@
                     $getconnection = new Connection();
                     // Llamamos a la función de esa clase (conn1 = nombre de la función que tenemos en ConDb.php)
                     $getconn1 = $getconnection->conn1();
+
 
                     // Query que realizará la edición
                     // 1º nombre de la tabla, 2º cada nombre de las columnas que editaremos
@@ -110,7 +113,7 @@
                        <div class="pr1">
                             <p>Dirección:</p>
                             <input type="text" name="Provincia_cliente" id="Provincia_cliente" value="<?php echo $provincia ?>">
-                        </div> 
+                        </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
@@ -132,3 +135,5 @@
     </section>
 </body>
 </html>
+
+
