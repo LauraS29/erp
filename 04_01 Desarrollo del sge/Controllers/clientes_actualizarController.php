@@ -1,34 +1,22 @@
 <?php
-
-    /* Inicio de los input y para la variable $readonly que se utilizará para controlar si los campos son de solo lectura */
-$Cod_cliente = '';
-$Nom_cliente = '';
-$Ap_cliente = '';
-$Tlf_cliente = '';
-$Email_cliente = '';
-$DNI_cliente = '';
-$Provincia = '';
-$Localidad = '';
-$readonly = '';
-
-    // ["(Esto de dentro es el name de los input)"]
-    $id = isset($_POST["Cod_cliente"]) ? $_POST["Cod_cliente"] : '';
-    $nombre = isset($_POST["Nom_cliente"]) ? $_POST["Nom_cliente"] : '';
-    $apellido = isset($_POST["Ape_cliente"]) ? $_POST["Ape_cliente"] : '';
-    $email = isset($_POST["Email_cliente"]) ? $_POST["Email_cliente"] : '';
-    $telefono = isset($_POST["Tlf_cliente"]) ? $_POST["Tlf_cliente"] : '';
-    $dni = isset($_POST["DNI_cliente"]) ? $_POST["DNI_cliente"] : '';
-    $cod_postal = isset($_POST["Cod_postal_cliente"]) ? $_POST["Cod_postal_cliente"] : '';
-    $localidad = isset($_POST["Localidad_cliente"]) ? $_POST["Localidad_cliente"] : '';
-    $provincia = isset($_POST["Provincia_cliente"]) ? $_POST["Provincia_cliente"] : '';
-    $observaciones = isset($_POST["Observaciones"]) ? $_POST["Observaciones"] : '';
+                // ["(Esto de dentro es el name de los input)"]
+                $id = isset($_POST["Cod_cliente"]) ? $_POST["Cod_cliente"] : '';
+                $nombre = isset($_POST["Nom_cliente"]) ? $_POST["Nom_cliente"] : '';
+                $apellido = isset($_POST["Ape_cliente"]) ? $_POST["Ape_cliente"] : '';
+                $email = isset($_POST["Email_cliente"]) ? $_POST["Email_cliente"] : '';
+                $telefono = isset($_POST["Tlf_cliente"]) ? $_POST["Tlf_cliente"] : '';
+                $dni = isset($_POST["DNI_cliente"]) ? $_POST["DNI_cliente"] : '';
+                $cod_postal = isset($_POST["Cod_postal_cliente"]) ? $_POST["Cod_postal_cliente"] : '';
+                $localidad = isset($_POST["Localidad_cliente"]) ? $_POST["Localidad_cliente"] : '';
+                $provincia = isset($_POST["Provincia_cliente"]) ? $_POST["Provincia_cliente"] : '';
+                $observaciones = isset($_POST["Observaciones"]) ? $_POST["Observaciones"] : '';
 
 
 
 
-    // Condición para que se ejecute el código cuando le hagamos click al botón actualizar
-    if (isset($_POST["actualizar"])) {
-        // Esto hará la actualización a la base de datos
+                // Condición para que se ejecute el código cuando le hagamos click al botón actualizar
+                if (isset($_POST["actualizar"])) {
+                    // Esto hará la actualización a la base de datos
                     include("./Db/ConDb.php");
                     // Instancia de la clase
                     $getconnection = new Connection();
