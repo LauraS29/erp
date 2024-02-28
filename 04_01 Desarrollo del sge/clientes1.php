@@ -7,19 +7,6 @@
     <script src="./Assets/js/motor.js"></script>
     <link rel="stylesheet" href="Assets/css/estilos.css">
 </head>
-<script>
-    // Eliminar
-    function confirmacion()
-    {
-        var respuesta = confirm("¿Desea realmente borrar el registro?");
-        if (respuesta == true)
-        {
-            return true;
-        } else {
-            return false;
-        }
-    }
-</script>
 <body>
     <?php require_once "Views/Encabezado/Menu.php"; ?>
     

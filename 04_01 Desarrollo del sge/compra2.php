@@ -25,25 +25,25 @@
                     <div class="flex">
                         <div class="pr">
                             <p>Nº de factura:</p>
-                            <input type="text" name="numeroFactura">
+                            <input type="text" name="numeroFactura" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Fecha de emisión:</p>
-                            <input type="text" name="fechaRealizacion">
+                            <input type="text" name="fechaRealizacion"  required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Nº del pedido:</p>
-                            <input type="text" name="Cod_pedido">
+                            <input type="text" name="Cod_pedido"  required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Vencimiento:</p>
-                            <input type="text" name="pais">
+                            <input type="text" name="pais"  required>
                         </div>
                     </div>
                 </section>
@@ -52,25 +52,25 @@
                     <div class="flex">
                         <div class="pr">
                             <p>Nombre del Cliente:</p>
-                            <input type="text" name="Nom_cliente">
+                            <input type="text" name="Nom_cliente"  required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Domicilio:</p>
-                            <input type="text" name="Localidad_cliente">
+                            <input type="text" name="Localidad_cliente"  required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Provincia:</p>
-                            <input type="text" name="Provincia_cliente">
+                            <input type="text" name="Provincia_cliente"  required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="pr">
                             <p>Dni:</p>
-                            <input type="text" name="DNI_cliente">
+                            <input type="text" name="DNI_cliente"  required>
                         </div>
                     </div>
                 </section>
@@ -95,30 +95,3 @@
     </section>
 </body>
 </html>
-
-                <!------------PHP------------->
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    // Verifica si todos los campos están llenos
-    $campos_llenos = true;
-    $campos = ['codigo', 'telefono', 'nombre', 'email', 'apellidos', 'dni', 'localidad', 'codigopostal', 'pais', 'observaciones'];
-
-    foreach ($campos as $campo) 
-    {
-        if (empty($_POST[$campo])) 
-        {
-            $campos_llenos = false;
-            break;
-        }
-    }
-
-    if ($campos_llenos) 
-    {
-        // Aquí puedes realizar la lógica de guardar en la base de datos u otras operaciones necesarias
-
-        // Muestra una alerta de éxito en JavaScript
-        echo '<script>alert("Guardado exitosamente");</script>';
-    }
-}
-?>

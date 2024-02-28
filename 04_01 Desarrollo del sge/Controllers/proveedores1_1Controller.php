@@ -4,43 +4,53 @@ require_once "Db/ConDb.php";
 // Llamada al modelo
 require_once "Models/proveedores1_1Model.php";
 
-// Tratamiento de los input text
-$Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
+// Crear instancia de la clase Datos
+$datosController = new Datos();
 
-// Instanciación de un objeto
-$oData = new Datos;
+// Consulta SQL para obtener datos de la tabla proveedores
+$consulta = "SELECT * FROM proveedores";
 
-// Inicializar una cadena para almacenar las filas HTML
-$rowsHTML = '';
+// Obtener los resultados utilizando la clase Datos
+$resultados = $datosController->getData1($consulta);
 
-// Verificar si se ha realizado una búsqueda
-if (!empty($Consulta1)){
-    // Construir la consulta SQL para la búsqueda
-    $sql = "SELECT Cod_proveedor, Nom_proveedor, Tlf_proveedor FROM proveedores WHERE Cod_proveedor = '$Consulta1' OR Nom_proveedor = '$Consulta1' OR Tlf_proveedor = '$Consulta1' ORDER BY Cod_proveedor, Nom_proveedor, Tlf_proveedor";
-} else {
-    // Construir la consulta SQL para obtener todos los datos
-    $sql = "SELECT Cod_proveedor, Nom_proveedor, Tlf_proveedor FROM proveedores ORDER BY Cod_proveedor, Nom_proveedor, Tlf_proveedor";
+// Mostrar los resultados en formato de tabla HTML
+foreach ($resultados as $fila) {
+    echo "<tr>";
+    echo "<td>" . $fila->Cod_proveedor . "</td>";
+    echo "<td>" . $fila->Nom_proveedor . "</td>";
+    echo "<td>" . $fila->Tlf_proveedor . "</td>";
+    
+    // Form para el botón eliminar
+    echo "<td>
+            <form action='eliminar_fila.php' method='POST'>
+                <input type='hidden' name='Cod_proveedor' value='" . $fila->Cod_proveedor . "'>
+                <input type='hidden' name='Nom_proveedor' value='" . $fila->Nom_proveedor . "'>
+                <input type='hidden' name='Email_proveedor' value='" . $fila->Email_proveedor . "'>
+                <input type='hidden' name='Tlf_proveedor' value='" . $fila->Tlf_proveedor . "'>
+                <input type='hidden' name='Cod_postal_proveedor' value='" . $fila->Cod_postal_proveedor . "'>
+                <input type='hidden' name='Localidad_proveedor' value='" . $fila->Localidad_proveedor . "'>
+                <input type='hidden' name='Provincia_proveedor' value='" . $fila->Provincia_proveedor . "'>
+                <input type='submit' name='eliminar' value='eliminar' onclick='return confirmacion()'>
+            </form>
+          </td>";
+
+    // Form para el botón actualizar
+    echo "<td>
+            <form action='actualizar_fila.php' method='POST'>
+            <input type='hidden' name='Cod_proveedor' value='" . $fila->Cod_proveedor . "'>
+            <input type='hidden' name='Nom_proveedor' value='" . $fila->Nom_proveedor . "'>
+            <input type='hidden' name='Email_proveedor' value='" . $fila->Email_proveedor . "'>
+            <input type='hidden' name='Tlf_proveedor' value='" . $fila->Tlf_proveedor . "'>
+            <input type='hidden' name='Cod_postal_proveedor' value='" . $fila->Cod_postal_proveedor . "'>
+            <input type='hidden' name='Localidad_proveedor' value='" . $fila->Localidad_proveedor . "'>
+            <input type='hidden' name='Provincia_proveedor' value='" . $fila->Provincia_proveedor . "'>
+                
+                <input type='submit' name='editar' value='editar'>
+            </form>
+          </td>";
+
+    echo "</tr>";
 }
 
-// Ejecutar la consulta
-$data = $oData->getData1($sql);
 
-// Mostrar los resultados obtenidos
-foreach ($data as $row) {
-    $rowsHTML .= "<tr>
-                    <td>{$row->Cod_proveedor}</td>
-                    <td>{$row->Nom_proveedor}</td>
-                    <td>{$row->Tlf_proveedor}</td>
-                    <td class='pequeño'>
-                        <a href='actualizar_fila.php?Cod_proveedor=<?php echo $row->Cod_proveedor; ?>'>
-                            <img src='Assets/img/actualizar.png' alt=''>
-                    </a>
-                        <a href='eliminar_fila.php?Cod_proveedor={$row->Cod_proveedor}'>
-                            <img class='img_elim' src='Assets/img/eliminar.png' alt=''>
-                        </a>
-                    </td>
-                  </tr>";
-}
-// Devolver las filas HTML
-echo $rowsHTML;
 ?>

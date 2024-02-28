@@ -24,7 +24,7 @@
 
                 </table>
                 <div class="button_prov">
-                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir">
+                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir venta">
                 </div>
             </form>
         </div>
@@ -32,16 +32,3 @@
 </body>
 </html>
 
-                <!------------PHP------------->
-<?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
-
-    header("Location: clientes2.php");
-    exit();
-}
-
-?>
