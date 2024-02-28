@@ -126,9 +126,6 @@
                     <img src="Assets/img/usuario.png" alt="">
                     <div class="buttons">
                         <div>
-                            <input type="submit" name="guardar" id="boton1" value="Guardar">
-                        </div>
-                        <div>
                             <input type="submit" name="actualizar" value="Actualizar">
                         </div>
                     </div>
