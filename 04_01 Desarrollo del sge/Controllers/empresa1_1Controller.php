@@ -5,7 +5,7 @@ require_once "Db/ConDb.php";
 require_once "Models/empresa1_1Model.php";
 
 // Tratamiento de los input text
-$Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
+$Consulta1 = isset($_POST['Consulta1']) ? $_POST['Consulta1'] : '';
 
 // Instanciación de un objeto
 $oData = new Datos;

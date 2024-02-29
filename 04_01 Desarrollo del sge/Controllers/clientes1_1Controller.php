@@ -11,6 +11,7 @@ $consulta = "SELECT * FROM cliente";
 // Obtener los resultados utilizando la clase Datos
 $resultados = $datosController->getData1($consulta);
 
+
 // Mostrar los resultados en formato de tabla HTML
 foreach ($resultados as $fila) {
     echo "<tr>";

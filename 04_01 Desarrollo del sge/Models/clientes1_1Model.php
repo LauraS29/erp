@@ -18,6 +18,7 @@ class Datos
         if (!$result) {
             echo "Error al ejecutar la consulta: " . $this->mysqli->error;
         } else {
+            $result=$this->mysqli->query($sql);
             while ($rows = $result->fetch_object()) {
                 $this->data[] = $rows;
             }
