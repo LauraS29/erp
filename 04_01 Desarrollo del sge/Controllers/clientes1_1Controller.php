@@ -11,16 +11,7 @@ $Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
 
 // Construir la consulta SQL para la búsqueda
 if (!empty($Consulta1)) {
-    $consulta = "SELECT * FROM cliente WHERE 
-        Cod_cliente LIKE '%$Consulta1%' OR
-        Nom_cliente LIKE '%$Consulta1%' OR
-        DNI_cliente LIKE '%$Consulta1%' OR
-        Cod_postal_cliente LIKE '%$Consulta1%' OR
-        Localidad_cliente LIKE '%$Consulta1%' OR
-        Provincia_cliente LIKE '%$Consulta1%' OR
-        Email_cliente LIKE '%$Consulta1%' OR
-        Tlf_cliente LIKE '%$Consulta1%' OR
-        Observaciones LIKE '%$Consulta1%'";
+    $consulta = "SELECT * FROM cliente WHERE Cod_cliente = '$Consulta1' OR Nom_cliente = '$Consulta1' OR DNI_cliente = '$Consulta1' OR Cod_postal_cliente = '$Consulta1' OR Localidad_cliente = '$Consulta1' OR Provincia_cliente = '$Consulta1' OR Email_cliente = '$Consulta1' OR Tlf_cliente = '$Consulta1' OR Observaciones = '$Consulta1'";
 } else {
     // Consulta SQL para obtener todos los datos de la tabla cliente
     $consulta = "SELECT * FROM cliente";
@@ -62,6 +53,7 @@ foreach ($resultados as $fila) {
                 <input type='hidden' name='Cod_postal_cliente' value='" . $fila->Cod_postal_cliente . "'>
                 <input type='hidden' name='Localidad_cliente' value='" . $fila->Localidad_cliente . "'>
                 <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
+                <input type='hidden' name='Observaciones' value='" . $fila->Observaciones . "'>
 
                 <button type='submit' name='eliminar'  onclick='return confirmacion()'>
                     <img src='Assets/img/eliminar.png'>
@@ -81,6 +73,7 @@ foreach ($resultados as $fila) {
                 <input type='hidden' name='Cod_postal_cliente' value='" . $fila->Cod_postal_cliente . "'>
                 <input type='hidden' name='Localidad_cliente' value='" . $fila->Localidad_cliente . "'>
                 <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
+                <input type='hidden' name='Observaciones' value='" . $fila->Observaciones . "'>
 
                 <button type='submit' name='editar'>
                     <img src='Assets/img/actualizar.png'>
