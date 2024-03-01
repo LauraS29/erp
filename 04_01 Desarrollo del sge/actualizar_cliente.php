@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class="flex">
-    <?php require_once "Views/Encabezado/Menu.php"; ?>
+    <?php require_once "./Views/Encabezado/Menu.php"; ?>
    
     <section class="fondo_section">
         <div class="flex div1">
@@ -22,7 +22,7 @@
 
             <?php require_once "Controllers/clientes_actualizarController.php"; ?>
 
-            <form class="flex fondo_form" action="actualizar_fila.php" method="post">
+            <form class="flex fondo_form" action="actualizar_cliente.php" method="post">
                 <div class="primer_div">
                     <input type="hidden" value="<?php echo $id ?>" name="Cod_cliente">
                     <div class="flex">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="segundo_div imagen-botones">
-                    <img src="Assets/img/usuario.png" alt="">
+                    <img src="./Assets/img/usuario.png" alt="">
                     <div class="buttons">
                         <div>
                             <input type="submit" name="actualizar" value="Actualizar">
