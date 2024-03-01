@@ -6,13 +6,13 @@
     require_once "../Models/clientes1_1Model.php";
 
     // Tratamiento de los imput text
-    $Consulta1 = empty($_POST['Consulta1']) ? '' : $_POST['Consulta1'];
+    $Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
 
     // Instanciación de un objeto
     $oData = new Datos;
 
     // Llamada al método
-    $sql = "select * from pasteleria where tipo_pastel like '%$Consulta1%' or desc_pastel like '%$Consulta1%' or precio_pastel like '%$Consulta1%' order by tipo_pastel, desc_pastel, precio_pastel";
+    $sql = "select * from cliente where Cod_cliente like '%$Consulta1%' or Nom_cliente like '%$Consulta1%' or DNi_cliente like '%$Consulta1%' order by Cod_cliente, Nom_cliente, DNi_cl8iente";
 
     $data = $oData->getData1($sql);
 
@@ -28,27 +28,14 @@
     }
     else
     {
-        echo
-        "
-            <div class='bloque1 negrita'>
-                <div class='bloque1'>Tipo</div>
-                <div class='bloque1'>Descripción</div>
-                <div class='bloque1'>Precio</div>
-            </div>     
-        ";
         foreach($data as $row)
         {
-            echo
-            "
-            <div class='bloque0'>
-                <a class='bloque0' href='edicion-con-declaraciones-preparadas.php?ide_pastel=$row->ide_pastel'> 
-                    <div class='bloque1'>$row->tipo_pastel</div>
-                    <div class='bloque1'>$row->desc_pastel</div>
-                    <div class='bloque1'>$row->precio_pastel</div>
-                    
-                </a>  
-            </div>
-            ";
+            $rowsHTML .= "<tr>
+            <td>{$row->Cod_cliente}</td>
+            <td>{$row->Nom_cliente}</td>
+            <td>{$row->DNI_cliente}</td>
+            
+          </tr>";
         }
     }
     

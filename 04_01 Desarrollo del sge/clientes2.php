@@ -24,7 +24,7 @@
                     <div class="flex">
                         <div class="pr">
                             <p>Nombre:</p>
-                            <input type="text" name="Nom_cliente" value="<?php echo isset($Nom_cliente) ? $Nom_cliente : ''; ?>"required>
+                            <input type="text" name="Nom_cliente" required>
                         </div>
                         <div class="pr1">
                             <p>Apellidos:</p>
