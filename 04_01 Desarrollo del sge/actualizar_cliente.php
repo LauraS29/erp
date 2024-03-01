@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
     <script src="./Assets/js/motor.js"></script>
-    <link rel="stylesheet" href="./../../Assets/css/estilos.css">
+    <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class="flex">
     <?php require_once "./Views/Encabezado/Menu.php"; ?>
    
     <section class="fondo_section">
         <div class="flex div1">
-            <img src="./../../Assets/img/clientes.png" alt="">
+            <img src="Assets/img/clientes.png" alt="">
             <p class="medio">Clientes</p>
         </div>
         <div class="fondo_div">
@@ -20,7 +20,7 @@
                 <h2>Datos de los clientes</h2>
             </div>
 
-            <?php require_once "../../Controllers/clientes_actualizarController.php"; ?>
+            <?php require_once "Controllers/clientes_actualizarController.php"; ?>
 
             <form class="flex fondo_form" action="actualizar_cliente.php" method="post">
                 <div class="primer_div">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="segundo_div imagen-botones">
-                    <img src="./../../Assets/img/usuario.png" alt="">
+                    <img src="./Assets/img/usuario.png" alt="">
                     <div class="buttons">
                         <div>
                             <input type="submit" name="actualizar" value="Actualizar">

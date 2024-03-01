@@ -62,7 +62,7 @@ foreach ($resultados as $fila) {
 
     // Form para el botón actualizar
     echo "<td>
-            <form action='actualizar_fila.php' method='POST'>
+            <form action='actualizar_cliente.php' method='POST'>
                 <input type='hidden' name='Cod_cliente' value='" . $fila->Cod_cliente . "'>
                 <input type='hidden' name='Nom_cliente' value='" . $fila->Nom_cliente . "'>
                 <input type='hidden' name='Ape_cliente' value='" . $fila->Ape_cliente . "'>
