@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="ventas.php">
+                    <a href="ventas1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/venta.png" alt="">
                         </span>

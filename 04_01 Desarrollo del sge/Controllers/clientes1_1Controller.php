@@ -20,6 +20,20 @@ if (!empty($Consulta1)) {
 // Obtener los resultados utilizando la clase Datos
 $resultados = $datosController->getData1($consulta);
 
+// Tratamiento de los input text
+$Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
+
+
+// Verificar si se ha realizado una búsqueda
+if (!empty($Consulta1)) {
+    // Construir la consulta SQL para la búsqueda
+    $sql = "SELECT Cod_cliente, Nom_cliente, DNI_cliente FROM cliente WHERE Cod_cliente = '%$Consulta1%' OR Nom_cliente = '%$Consulta1%' OR DNI_cliente = '%$Consulta1%' ORDER BY Cod_cliente, Nom_cliente, DNI_cliente";
+} else {
+    // Construir la consulta SQL para obtener todos los datos
+    $sql = "SELECT Cod_cliente, Nom_cliente, DNI_cliente FROM cliente ORDER BY Cod_cliente, Nom_cliente, DNI_cliente";
+}
+
+
 // Mostrar los resultados en formato de tabla HTML
 foreach ($resultados as $fila) {
     echo "<tr>";
@@ -71,7 +85,3 @@ foreach ($resultados as $fila) {
 
 
 ?>
-
-<!-- <a href='./actualizar_fila.php' name='editar'><img src='Assets/img/actualizar.png'></a> -->
-
-<!-- <input type='submit' name='editar' value='editar'> -->
