@@ -1,30 +1,12 @@
 <?php
-// Incluir archivos necesarios
 include("./Db/ConDb.php");
 include("./Models/clientes1_1Model.php");
 
 // Crear instancia de la clase Datos
 $datosController = new Datos();
 
-// Tratar la entrada del formulario de búsqueda
-$Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
-
-// Construir la consulta SQL para la búsqueda
-if (!empty($Consulta1)) {
-    $consulta = "SELECT * FROM cliente WHERE 
-        Cod_cliente LIKE '%$Consulta1%' OR
-        Nom_cliente LIKE '%$Consulta1%' OR
-        DNI_cliente LIKE '%$Consulta1%' OR
-        Cod_postal_cliente LIKE '%$Consulta1%' OR
-        Localidad_cliente LIKE '%$Consulta1%' OR
-        Provincia_cliente LIKE '%$Consulta1%' OR
-        Email_cliente LIKE '%$Consulta1%' OR
-        Tlf_cliente LIKE '%$Consulta1%' OR
-        Observaciones LIKE '%$Consulta1%'";
-} else {
-    // Consulta SQL para obtener todos los datos de la tabla cliente
-    $consulta = "SELECT * FROM cliente";
-}
+// Consulta SQL para obtener datos de la tabla cliente
+$consulta = "SELECT * FROM cliente";
 
 // Obtener los resultados utilizando la clase Datos
 $resultados = $datosController->getData1($consulta);
