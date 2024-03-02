@@ -1,7 +1,10 @@
 <?php
 require_once '../Db/ConDb.php';
 
+
 require_once '../Models/clientes1_1Model.php';
+
+
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -15,9 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Tlf_cliente = $_POST['Tlf_cliente'];
     $Observaciones = $_POST['Observaciones'];
 
+
     $insertar = "INSERT INTO cliente(DNI_cliente, Nom_cliente, Ape_cliente, Cod_postal_cliente, Localidad_cliente, Provincia_cliente, Email_cliente, Tlf_cliente, Observaciones) VALUES ('$DNI_cliente','$Nom_cliente','$Ape_cliente','$Cod_postal_cliente','$Localidad_cliente','$Provincia_cliente','$Email_cliente','$Tlf_cliente','$Observaciones')";
 
+
     $query = mysqli_query($mysqli, $insertar);
+
 
     if($query) {
         header("Location: ../clientes1.php");
@@ -26,26 +32,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+
 function obtenerClientes() {
-    global $mysqli; 
+    global $mysqli;
+
 
     $clientes = array();
 
+
     $consulta = "SELECT * FROM cliente";
     $resultado = mysqli_query($mysqli, $consulta);
+
 
     if ($resultado) {
         while ($fila = mysqli_fetch_assoc($resultado)) {
             $clientes[] = $fila;
         }
 
+
         mysqli_free_result($resultado);
     } else {
         echo "Error en la consulta: " . mysqli_error($mysqli);
     }
 
+
     return $clientes;
 }
+
+
+
 
 
 

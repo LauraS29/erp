@@ -2,15 +2,18 @@
 include("./Db/ConDb.php");
 include("./Models/clientes1_1Model.php");
 
+
 // Crear instancia de la clase Datos
 $datosController = new Datos();
+
 
 // Tratar la entrada del formulario de búsqueda
 $Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
 
+
 // Construir la consulta SQL para la búsqueda
 if (!empty($Consulta1)) {
-    $consulta = "SELECT * FROM cliente WHERE 
+    $consulta = "SELECT * FROM cliente WHERE
         Cod_cliente LIKE '%$Consulta1%' OR
         Nom_cliente LIKE '%$Consulta1%' OR
         DNI_cliente LIKE '%$Consulta1%' OR
@@ -25,11 +28,15 @@ if (!empty($Consulta1)) {
     $consulta = "SELECT * FROM cliente";
 }
 
+
 // Obtener los resultados utilizando la clase Datos
 $resultados = $datosController->getData1($consulta);
 
+
 // Tratamiento de los input text
 $Consulta1 = isset($_GET['Consulta1']) ? $_GET['Consulta1'] : '';
+
+
 
 
 // Verificar si se ha realizado una búsqueda
@@ -42,13 +49,15 @@ if (!empty($Consulta1)) {
 }
 
 
+
+
 // Mostrar los resultados en formato de tabla HTML
 foreach ($resultados as $fila) {
     echo "<tr>";
     echo "<td>" . $fila->Cod_cliente . "</td>";
     echo "<td>" . $fila->Nom_cliente . "</td>";
     echo "<td>" . $fila->DNI_cliente . "</td>";
-    
+   
     // Form para el botón eliminar
     echo "<td>
             <form action='eliminar_fila.php' method='POST'>
@@ -63,11 +72,13 @@ foreach ($resultados as $fila) {
                 <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
                 <input type='hidden' name='Observaciones' value='" . $fila->Observaciones . "'>
 
+
                 <button type='submit' name='eliminar'  onclick='return confirmacion()'>
                     <img src='Assets/img/eliminar.png'>
                 </button>
             </form>
           </td>";
+
 
     // Form para el botón actualizar
     echo "<td>
@@ -83,14 +94,18 @@ foreach ($resultados as $fila) {
                 <input type='hidden' name='Provincia_cliente' value='" . $fila->Provincia_cliente . "'>
                 <input type='hidden' name='Observaciones' value='" . $fila->Observaciones . "'>
 
+
                 <button type='submit' name='editar'>
                     <img src='Assets/img/actualizar.png'>
                 </button>
 
+
             </form>
           </td>";
 
+
     echo "</tr>";
 }
+
 
 ?>
