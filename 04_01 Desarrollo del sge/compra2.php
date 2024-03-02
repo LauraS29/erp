@@ -76,7 +76,7 @@
                 </section>
                 
             </form>
-            <div class="fondo-form primer_div flex">
+            <div class="fondo_form flex">
                     <table class="tabla">
                         <tr>
                             <th>Nº</th>

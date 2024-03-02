@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body class = "flex">
     <?php require_once "Views/Encabezado/Menu.php"; ?>
-
+    
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/venta.png" alt="">
@@ -19,16 +20,77 @@
             <div>
                 <h2>Datos de las ventas</h2>
             </div>
-            <form class="fondo_form" action="venta.php" method="post">
-                <table>
-
-                </table>
-                <div class="button_prov">
-                    <input class="negrita" type="submit" name="add_proveedor" value="Añadir venta">
-                </div>
+            <form class="flex fondo_form" action="ventas2.php" method="post">
+                <section class="primer_div">
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Nº de factura:</p>
+                            <input type="text" name="numeroFactura" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Fecha de emisión:</p>
+                            <input type="text" name="fechaRealizacion"  required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Nº del pedido:</p>
+                            <input type="text" name="Cod_pedido"  required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Vencimiento:</p>
+                            <input type="text" name="pais"  required>
+                        </div>
+                    </div>
+                </section>
+                <section class="primer_div">
+                    <h3>Cliente</h3>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Nombre del Cliente:</p>
+                            <input type="text" name="Nom_cliente"  required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Domicilio:</p>
+                            <input type="text" name="Localidad_cliente"  required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Provincia:</p>
+                            <input type="text" name="Provincia_cliente"  required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="pr">
+                            <p>Dni:</p>
+                            <input type="text" name="DNI_cliente"  required>
+                        </div>
+                    </div>
+                </section>
+                
             </form>
+            <div class="fondo_form">
+                    <table class="tabla">
+                        <tr>
+                            <th>Nº</th>
+                            <th>Productos</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario Neto</th>
+                            <th>Total neto</th>
+                            <th>IVA%</th>
+                            <th>IVA Total</th>
+                            <th>Precio total</th>
+                        </tr>
+                    </table>
+                </div>
         </div>
     </section>
 </body>
 </html>
-
