@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +9,7 @@
 </head>
 <body class = "flex">
     <?php require_once "Views/Encabezado/Menu.php"; ?>
-    
+   
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/venta.png" alt="">
@@ -74,7 +73,7 @@
                         </div>
                     </div>
                 </section>
-                
+               
             </form>
             <div class="fondo_form">
                     <table class="tabla">

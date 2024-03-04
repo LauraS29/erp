@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +9,7 @@
 </head>
 <body>
     <?php require_once "Views/Encabezado/Menu.php"; ?>
-   
+    
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/clientes.png" alt="">
@@ -32,9 +31,8 @@
                             <th></th>
                         </tr>                
 
-
-                        <?php require_once "Controllers/clientes1_1Controller.php"; ?>
-                    </div>  
+                        <?php require_once "Controllers/clientes/clientes1_1Controller.php"; ?>
+                    </div>   
                 </table>
                 <div class="button_prov">
                     <input class="negrita" type="submit" name="add_proveedor" value="Añadir">
@@ -45,3 +43,4 @@
     </section>
 </body>
 </html>
+

@@ -74,22 +74,23 @@
                         </div>
                     </div>
                 </section>
-                
+                <div class="fondo-div primer_div">
+            <table class="tabla">
+                <tr>
+                    <th>Nº</th>
+                    <th>Productos</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario Neto</th>
+                    <th>Total neto</th>
+                    <th>IVA%</th>
+                    <th>IVA Total</th>
+                    <th>Precio total</th>
+                </tr>
+            </table>
+        
+        </div>
             </form>
-            <div class="fondo_form flex">
-                    <table class="tabla">
-                        <tr>
-                            <th>Nº</th>
-                            <th>Productos</th>
-                            <th>Cantidad</th>
-                            <th>Precio Unitario Neto</th>
-                            <th>Total neto</th>
-                            <th>IVA%</th>
-                            <th>IVA Total</th>
-                            <th>Precio total</th>
-                        </tr>
-                    </table>
-                </div>
+            
         </div>
     </section>
 </body>

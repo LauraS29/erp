@@ -5,6 +5,7 @@
                     <a href="clientes1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/clientes.png" alt="">
+                            <img src="../../Assets/img/clientes.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Clientes</span>
                     </a>
@@ -13,6 +14,7 @@
                     <a href="proveedores1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/repartidor.png" alt="">
+                            <img src="../../Assets/img/repartidor.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Proveedores</span>
                     </a>
@@ -21,6 +23,7 @@
                     <a href="personal1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/personal.png" alt="">
+                            <img src="../../Assets/img/personal.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Personal</span>
                     </a>
@@ -29,6 +32,7 @@
                     <a href="productos1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/caja.png" alt="">
+                            <img src="../../Assets/img/caja.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Productos</span>
                     </a>
@@ -37,6 +41,7 @@
                     <a href="ventas1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/venta.png" alt="">
+                            <img src="../../Assets/img/venta.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Ventas</span>
                     </a>
@@ -45,6 +50,7 @@
                     <a href="compra1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/compra.png" alt="">
+                            <img src="../../Assets/img/compra.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Compra</span>
                     </a>
@@ -53,6 +59,7 @@
                     <a href="pedido1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/pedido.png" alt="">
+                            <img src="../../Assets/img/pedido.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Pedidos</span>
                     </a>
@@ -61,6 +68,7 @@
                     <a href="empresa1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/calendario.png" alt="">
+                            <img src="../../Assets/img/calendario.png" alt="">
                         </span>
                         <span class="flex alineado titulo">Empresa</span>
                     </a>

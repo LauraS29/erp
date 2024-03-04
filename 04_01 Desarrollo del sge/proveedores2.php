@@ -19,7 +19,7 @@
             <div>
                 <h2>Datos de los proveedores</h2>
             </div>
-            <form class="flex fondo_form" action="Controllers/proveedores1_2Controller.php" method="post">
+            <form class="flex fondo_form" action="Controllers/proveedores/proveedores1_2Controller.php" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">
@@ -53,11 +53,11 @@
                     </div>
                     <div class="flex">
                         <div class="pr">
-                            <p>Cod.Empresa:</p>
+                            <p>Cod_Empresa:</p>
                             <input type="text" name="Cod.empresa" required>
                         </div>
                        <div class="pr1">
-                            <p>Nom.empresa:</p>
+                            <p>Nom_empresa:</p>
                             <input type="text" name="Nom_empresa" required>
                         </div> 
                     </div>

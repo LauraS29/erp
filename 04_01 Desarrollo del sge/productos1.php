@@ -20,35 +20,29 @@
             <div>
                 <h2>Datos de los productos</h2>
             </div>
-            <form class="fondo_form" action="productos1.php" method="post">
-                <table>
-                    <div class="tabla">
-                        <tr>
-                            <th>Código</th>
-                            <th>Nombre del Producto</th>
-                            <th>Precio del Producto</th>
-                            <th>Cantidad del Producto</th>
-                        </tr>
+            <div class="fondo_form">
+                <?php require_once "Views/busquedas/busqueda_productos.php"; ?> 
+                <form action="productos2.php" method="post">
+                    <table>
+                        <div class="tabla">
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre del Producto</th>
+                                <th>Precio del Producto</th>
+                                <th>Cantidad del Producto</th>
+                            </tr>
+
+                            <?php require_once "Controllers/productos/productos1_1Controller.php"; ?>
+
+                        </div>
+                    </table>
+                    <div class="button_prov">
+                        <input type="submit" name="add_proveedor" value="Añadir">
                     </div>
-                </table>
-                <div class="button_prov">
-                     <input type="submit" name="add_proveedor" value="Añadir">
-                </div>
-            </form>
+                </form>
+            </div>
+            
         </div>
     </section>
 </body>
 </html>
-
-                <!------------PHP------------->
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
-
-    header("Location: productos2.php");
-    exit();
-}
-?>

@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proveedores</title>
+    <title>Pedidos</title>
     <script src="./Assets/js/motor.js"></script>
-    <link rel="stylesheet" href="Assets/css/estilos.css">
+    <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
-<body>
+<body class = "flex">
     <?php require_once "Views/Encabezado/Menu.php"; ?>
     
     <section class="fondo_section">
         <div class="flex div1">
-            <img src="Assets/img/repartidor.png" alt="">
-            <p class ="medio">Proveedores</p>
+            <img src="Assets/img/pedido.png" alt="">
+            <p class ="medio">Pedidos</p>
         </div>
         <div class="fondo_div">
             <div>
-                <h2>Datos de los proveedores</h2>
+                <h2>Datos de los pedidos</h2>
             </div>
             <div class="fondo_form">
-                <?php require_once "Views/busquedas/busqueda_proveedores.php"; ?>
-                 
-                <form class="fondo_form" action="proveedores2.php" method="post">
+                <?php require_once "Views/busquedas/busqueda_empresa.php"; ?>  
+                <form action="pedidos2.php" method="post">
                     <table>
                         <div class="tabla">
                             <tr>
-                                <th>Cód.Proveedor</th>
-                                <th>Nom.proveedor</th>
-                                <th>Tlf_proveedor</th>
+                                <th>Cód.Empresa</th>
+                                <th>Nom.Empresa</th>
+                                <th>Tlf_empresa</th>
                                 <th></th>
                             </tr>                
 
-                            <?php require_once "Controllers/proveedores/proveedores1_1Controller.php"; ?>
+                            <?php require_once "Controllers/empresa/empresa1_1Controller.php"; ?>
 
                         </div>   
                     </table>
@@ -41,8 +40,8 @@
                     </div>
                 </form>
             </div>
+            
         </div>
     </section>
 </body>
 </html>
-

@@ -19,7 +19,7 @@
             <div>
                 <h2>Datos de la empresa</h2>
             </div>
-            <form class="flex fondo_form" action="Controllers/empresa1_2Controller.php" method="post">
+            <form class="flex fondo_form" action="Controllers/empresa/empresa1_2Controller.php" method="post">
                 <div class="primer_div">
                     <div class="flex">
                         <div class="pr">

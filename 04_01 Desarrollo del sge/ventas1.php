@@ -10,6 +10,7 @@
 <body class = "flex">
     <?php require_once "Views/Encabezado/Menu.php"; ?>
 
+
     <section class="fondo_section">
         <div class="flex div1">
             <img src="Assets/img/venta.png" alt="">
@@ -19,12 +20,13 @@
             <div>
                 <h2>Datos de las ventas</h2>
             </div>
-            <form class="fondo_form" action="venta.php" method="post">
+            <form class="fondo_form" action="ventas2.php" method="post">
                 <table>
                     <th>Cód.Venta</th>
                     <th>Nom.cliente</th>
                     <th>Dni</th>
                     <th></th>
+
 
                 </table>
                 <div class="button_prov">
@@ -35,4 +37,3 @@
     </section>
 </body>
 </html>
-

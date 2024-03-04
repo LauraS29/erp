@@ -31,15 +31,8 @@
                                 <th></th>
                             </tr>                
 
-                            <?php require_once "Controllers/empresa1_1Controller.php"; ?>
-                            <!-- <tr>
-                                <td class="pequeño">
-                                    <a href="empresa2.php">
-                                    <img src="Assets/img/actualizar.png" alt="">
-                                    </a>
-                                    <img class="img_elim" src="Assets/img/eliminar.png" alt="">
-                                </td>
-                            </tr> -->
+                            <?php require_once "Controllers/empresa/empresa1_1Controller.php"; ?>
+
                         </div>   
                     </table>
                     <div class="button_prov">

@@ -1,5 +1,5 @@
 <?php
-include("Db/ConDb.php");
+include("../../Db/ConDb.php");
 $getconnection = new Connection();
 $getconn1 = $getconnection->conn1();
 
@@ -22,9 +22,9 @@ if(isset($_POST["eliminar"]))
     // condicion para verificar
     if($afectado==1)
     {
-        echo "<script> alert('El empleado [$nombre] se elimino correctamente :) '); location.href='clientes1.php'; </script>";
+        echo "<script> alert('El empleado [$nombre] se elimino correctamente :) '); location.href='../../clientes1.php'; </script>";
     } else{
-        echo "<script> alert('El empleado [$nombre] no se elimino correctamente :('); location.href='clientes1.php'; </script>";
+        echo "<script> alert('El empleado [$nombre] no se elimino correctamente :('); location.href='../../clientes1.php'; </script>";
     }
 }
 

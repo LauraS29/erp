@@ -1,17 +1,3 @@
-<?php
-session_start();
-include_once('Db/ConDb.php');
-
-// Consulta a la base de datos
-$sqlPersonal = "SELECT * FROM empleados";
-$resultadoPersonal = mysqli_query($conexion, $sqlPersonal);
-
-if (!$resultadoPersonal) 
-{
-    die("Error en la consulta: " . mysqli_error($conexion));
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,7 +8,7 @@ if (!$resultadoPersonal)
     <link rel="stylesheet" href="./Assets/css/estilos.css">
 </head>
 <body class = "flex">
-    <?php require_once "Views/encabezado.php"; ?>
+    <?php require_once "Views/Encabezado/Menu.php"; ?>
     
     <section class="fondo_section">
         <div class="flex div1">
@@ -33,58 +19,29 @@ if (!$resultadoPersonal)
             <div>
                 <h2>Datos del personal</h2>
             </div>
-            <form class="fondo_form" action="personal1.php" method="post">
-                <table>
-                    <div class="tabla">
-                        <tr>
-                            <th>Cód.Empleado</th>
-                            <th>Nombre</th>
-                            <th>Teléfono contacto</th>
-                        </tr> 
-                    
-                        <?php
-                        // Bucle para mostrar los datos de proveedores
-                        /* Verifica que $resultadoProveedores sea válido */
-                        while ($row = mysqli_fetch_assoc($resultadoPersonal)) 
-                        {
-                        ?>
+            <div class="fondo_form">
+                <?php require_once "Views/busquedas/busqueda_personal.php"; ?> 
+                <form action="personal2.php" method="post">
+                    <table>
+                        <div class="tabla">
                             <tr>
-                            <td><?php echo $row['Cod_empleado']; ?></td>
-                            <td><a href="personal2.php?codigo=<?php echo $row['Cod_empleado']; ?>&modo=editar"><?php echo $row['Nom_empleado']; ?></a></td>
-                            <td><?php echo $row['Tlf_empleado']; ?></td>
-                            <td class="pequeño">
-                                <div class="rect1">
-                                    <img src="Assets/img/actualizar.png" alt="Actualizar">
-                                </div>
-                                <div class="rect2">
-                                    <img src="Assets/img/eliminar.png" alt="Eliminar">
-                                </div>
-                            </td>
-                        </tr>
-                        <?php
-                        }
-                        ?>
+                                <th>Cód.Empleado</th>
+                                <th>Nombre</th>
+                                <th>Teléfono contacto</th>
+                                <th></th>
+                            </tr>
+
+                            <?php require_once "Controllers/personal/personal1_1Controller.php"; ?>
+
+                        </div>
+                    </table>
+                    <div class="button_prov">
+                        <input type="submit" name="add_proveedor" value="Añadir">
                     </div>
-                </table>
-                <div class="button_prov">
-                     <input type="submit" name="add_proveedor" value="Añadir">
-                </div>
-            </form>
+                </form>
+            </div>
+
         </div>
     </section>
 </body>
 </html>
-
-                <!------------PHP------------->
-<?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : '';
-    $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
-
-    header("Location: personal2.php");
-    exit();
-}
-
-?>

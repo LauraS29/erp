@@ -1,27 +1,21 @@
 <?php
 class Connection
 {
+    private static $mysqli;
+
     public static function conn1()
     {
+        if (!isset(self::$mysqli)) {
+            self::$mysqli = new mysqli('localhost', 'root', '', 'trabajo');
 
-        $mysqli = new mysqli('localhost', 'admin', 'madrid', 'trabajo');
+            if (self::$mysqli->connect_errno) {
+                printf("Error en la conexión: %s\n", self::$mysqli->connect_error);
+            } else {
+                self::$mysqli->set_charset("utf8");
+            }
+        }
 
-        if($mysqli->connect_errno)
-        {
-            printf("Error en la conexion: %s\n", $mysqli->connect_errno);
-        }
-        else
-        {
-            $mysqli->set_charset("utf8");
-            return $mysqli;
-        }
+        return self::$mysqli;
     }
-}
-// Establecer la conexión global
-$mysqli = Connection::conn1();
-
-// Verificar si la conexión se estableció correctamente
-if (!$mysqli) {
-    die("La conexión a la base de datos falló: " . mysqli_connect_error());
 }
 ?>
